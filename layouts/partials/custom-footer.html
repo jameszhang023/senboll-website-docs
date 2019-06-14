@@ -1,0 +1,34 @@
+
+    <section id="body">
+      <center style = "background-color:#ffffff;">
+        <p style="color:rgb(0, 0, 0);">©<span id="year" style="color:rgb(0, 0, 0)"></span>年著作权，盛波尔科技所有权。技术支持：James Zhang</p>
+        <p style="margin:0;"><a style="color:black" href="http://www.senboll.com">www.senboll.com</a><p>
+        <br/>
+      </center>
+    </section>
+<script>
+  function auto_copyright($year) {
+    var $currentdate = new Date();
+    var $currentyear = $currentdate.getFullYear();
+    var $cty = $currentyear.toString();
+    var $sty = $year.toString();
+    if ($currentyear > $year) {
+      document.getElementById("year").innerHTML=$sty + ' - ' + $cty;
+      console.log($cty);
+    } else {
+      document.getElementById("year").innerHTML = $cty;
+    }
+  }
+  auto_copyright(1999);
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

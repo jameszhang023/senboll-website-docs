@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+<span id="sidebar-toggle-span">
+<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> 导航</a>
+</span>
+
+{{if .Site.Home.Content }} 
+{{.Site.Home.Content}}	
+{{else}}         
+		<h2>关于</h2>
+		<p>
+		  这是一个在线技术文档系统，会不定期更新，恕不另行通知！欢迎大家提宝贵意见。如果有好的意见和建议，请通过下面的方式联系我们。
+		</p> 
+		<p>
+			西安高新区西万路口高山流水和城，13201640833，13201640833@qq.com
+		</p>
+{{ end }}  
+{{ partial "footer.html" . }}

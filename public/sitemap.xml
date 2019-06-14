@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node2/babyware/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node3/hardware/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/important-knowledge/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node9/privacy/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node2/infield/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/detector-installation-notes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node3/software/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node3/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node2/insite-gold/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/must-keyboard/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node9/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/wiring-method/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node2/paradox-to-control4-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/rf-radiation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/lock-safety-analysis/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/life-detection/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node1/intellizone/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/node2/anydesk/</loc>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://support.senboll.com:8888/help/</loc>
+  </url>
+  
+</urlset>

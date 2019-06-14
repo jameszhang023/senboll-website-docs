@@ -1,0 +1,24 @@
+baseurl = "http://support.senboll.com:8888/help"
+# baseurl = "https://jameszhangchina.github.io/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "枫叶在线帮助"
+theme = "hugo-theme-learn"
+themesdir = "themes/"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= false
+
+enableGitInfo = true
+
+[params]
+  editURL = ""
+  description = ""
+  author = "James"
+  showVisitedLinks = true
+
+[[Languages.en.menu.shortcuts]] 
+name = "系统拓扑图"
+identifier = "ds"
+url = "/paradox-frame/"
+weight = 10
