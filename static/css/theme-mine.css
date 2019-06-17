@@ -102,3 +102,11 @@ a:hover {
     border-color: var(--MENU-SECTION-HR-color);
 }
 
+.qrcode {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto; /*水平居中*/
+    top: 50%; /*偏移*/
+    transform: translateY(-50%);
+}
