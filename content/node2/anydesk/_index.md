@@ -5,7 +5,7 @@ title : "远程协助软件(Anydesk)使用说明"
 
 ## 简介
 
-Teamviewer确实是当今最好用的远程工具，但免费版越来越多的限制，很难满足正常的技术支持和个人用途。
+Teamviewer确实是当今最好用的远程工具，但免费版越来越多的限制，很难满足正常的网站支持和个人用途。
 
 因此为大家推荐Anydesk。AnyDesk Software GmbH由前TeamViewer员工于2014年创立。它提供运行Windows，macOS，Linux，FreeBSD，Android，iOS的个人计算机之间的双向远程访问。
 

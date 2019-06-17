@@ -3,8 +3,6 @@ weight: 30
 title : "枫叶APP(Insite Gold)使用说明"
 ---
 
-<h5 align="center">(更新时间：20190604)</h5>
-
 **目录**
 
 - [简介](#简介)

@@ -3,8 +3,6 @@ weight: 10
 title : "工具软件(Babyware)使用说明"
 ---
 
-<h5 align="center">(更新时间：20190525)</h5>
-
 **目录**
 
 - [简介](#j10)

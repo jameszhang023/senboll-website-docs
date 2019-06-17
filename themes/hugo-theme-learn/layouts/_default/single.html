@@ -1,11 +1,4 @@
-{{ partial "header.html" . }} 
-
-{{ partial "page-update-data.html" . }}
-
-{{ .Lastmod.Format "January 2, 2006" }}
-
-
-{{ .Content }}
+{{ partial "header.html" . }} {{ .Content }}
 
 <footer class=" footline">
 	{{with .Params.LastModifierDisplayName}}
