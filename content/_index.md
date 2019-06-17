@@ -47,4 +47,5 @@ title : "首页"
 
 ---
 
+枫叶工程现场实拍：[枫叶相册](http://support.senboll.com:8888/usage)
 更多资料请访问：[资料服务器](http://support.senboll.com:8888/)
