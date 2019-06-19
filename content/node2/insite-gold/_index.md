@@ -9,7 +9,7 @@ title : "枫叶APP(Insite Gold)使用说明"
 - [版本日志](#版本日志)
 - [准备工作](#准备工作)
 - [首次使用](#首次使用)
-- [后期缴费](#后期缴费)
+- [缴费](#缴费)
 
 ## 简介
 
@@ -27,6 +27,11 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
   - Bug and stability fixes.
   
 - 更新日期：20190530，版本：2.5.1，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.1.apk)；
+  - Migration of “Paradox my home” sites to new SWAN.
+  - Fixed push notification language support (only on IP150 v4.40.011)
+  - Bug and stability fixes.
+  
+- 更新日期：20190611，版本：2.5.2，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.2.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
   - Fixed push notification language support (only on IP150 v4.40.011)
   - Bug and stability fixes.
@@ -78,11 +83,11 @@ For more information see[http://aboutswan.paradox.com/version_insitegold](http:/
 如果含有HD77/HD78等系列视频探测器，需要填帐户名和用户密码，默认最高权限帐户名是`master`，默认用户密码是`1234`。
 ![通过视频探测器登录](/help/node2/insite-gold/images/login-video-detector.png)
 
-## 后期缴费
+## 缴费
 
 ---
 
 两种方案：
 
 1. 通过APP直接缴费，要求需要准备具备Visa标志的银行卡，请自行按照APP支付页面支付费用；
-2. 代付，如果没有跨境⽀付渠道，[枫叶官方代付网站](http://support.senboll.com:8888/swan)。
+2. 代付，如果没有跨境⽀付渠道，[枫叶云服务缴费](http://support.senboll.com:8888/swan)。
