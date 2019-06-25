@@ -18,6 +18,16 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
 ## 版本日志
 
 ---
+  
+- 更新日期：20190611，版本：2.5.2，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.2.apk)；
+  - Migration of “Paradox my home” sites to new SWAN.
+  - Fixed push notification language support (only on IP150 v4.40.011)
+  - Bug and stability fixes.
+  
+- 更新日期：20190530，版本：2.5.1，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.1.apk)；
+  - Migration of “Paradox my home” sites to new SWAN.
+  - Fixed push notification language support (only on IP150 v4.40.011)
+  - Bug and stability fixes.
 
 - 更新日期：20190522，版本：2.5.0，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.0.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
@@ -26,16 +36,6 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
   - Hostname support on fixed IP mode.
   - Bug and stability fixes.
   
-- 更新日期：20190530，版本：2.5.1，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.1.apk)；
-  - Migration of “Paradox my home” sites to new SWAN.
-  - Fixed push notification language support (only on IP150 v4.40.011)
-  - Bug and stability fixes.
-  
-- 更新日期：20190611，版本：2.5.2，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.2.apk)；
-  - Migration of “Paradox my home” sites to new SWAN.
-  - Fixed push notification language support (only on IP150 v4.40.011)
-  - Bug and stability fixes.
-
 For more information see[http://aboutswan.paradox.com/version_insitegold](http://aboutswan.paradox.com/version_insitegold)
 
 ## 准备工作
