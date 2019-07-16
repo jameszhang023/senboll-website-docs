@@ -24,15 +24,15 @@ title : "首页"
 
 **目录**
 
-- [基础知识](/help/node1/)
-  - [重要知识](/help/node1/important-knowledge/)
-  - [安防系统布线规范](/help/node1/wiring-method/)
+- [行业知识](/help/node1/)
+  - [基础概念](/help/node1/important-knowledge/)
+  - [红外探测器须知](/help/node1/detector-installation-notes/)
+  - [枫叶系统的供电及布线](/help/node1/wiring-method/)
   - [键盘的重要性](/help/node1/must-keyboard/)
-  - [红外探测器注意事项](/help/node1/detector-installation-notes/)
-  - [信号辐射的真相](/help/node1/rf-radiation/)
+  - [了解信号辐射](/help/node1/rf-radiation/)
   - [枫叶智能防区](/help/node1/intellizone/)
   - [防盗锁安全性分析](/help/node1/lock-safety-analysis/)
-  - [人体存在探测到底有多难](/help/node1/life-detection/)
+  - [认识人体存在探测](/help/node1/life-detection/)
 - [软件说明书](/help/node2/)
   - [工具软件(Babyware)使用说明](/help/node2/babyware/)
   - [刷固件工具(In-Field)使用说明](/help/node2/infield/)
