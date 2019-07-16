@@ -5,4 +5,4 @@ title : "其他"
 
 **目录**
 
-- [隐私政策](/help/node9/privacy/)
+- [Insite Gold 隐私政策](/help/node9/privacy/)

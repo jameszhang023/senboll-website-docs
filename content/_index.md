@@ -33,7 +33,7 @@ title : "首页"
   - [枫叶智能防区](/help/node1/intellizone/)
   - [防盗锁安全性分析](/help/node1/lock-safety-analysis/)
   - [认识人体存在探测](/help/node1/life-detection/)
-- [软件说明书](/help/node2/)
+- [软件使用说明](/help/node2/)
   - [工具软件(Babyware)使用说明](/help/node2/babyware/)
   - [刷固件工具(In-Field)使用说明](/help/node2/infield/)
   - [枫叶APP(Insite Gold)使用说明](/help/node2/insite-gold/)
