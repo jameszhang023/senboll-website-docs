@@ -13,27 +13,18 @@ title : "刷固件工具(In-Field)使用说明"
 
 ---
 
-Infield软件是专门用来刷固件的工具软件，支持串口，网络，拨号等通讯方式。
+Infield软件是专门用来刷枫叶设备固件的工具软件，支持串口，网络，拨号等通讯方式。
 
 <h2 id="j20">准备工作</h2>
 
 ---
-
-- 下载软件，Infield软件已经被集成到Babyware里了，下载Babyware请访问[资料服务器](http://support.senboll.com:8888/)。
-
-![Babyware下载](/help/node2/infield/images/babyware-download.png)
-
-- 如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问[资料服务器](http://support.senboll.com:8888/)。请根据Windows系统版本下载并安装驱动，如下图：
-
-![307USB驱动下载](/help/node2/infield/images/307usb-driver-download.png)
-
-如果安装驱动遇到困难，请点[驱动安装方法](/help/node2/babyware/#j202)。
+由于Infield被集成到Babyware中，所以请先下载安装Babyware，具体步骤请访问[Babyware使用说明](/help/node2/babyware/#j20)。
 
 <h2 id="j30">操作说明</h2>
 
 ---
 
-步骤一：启动软件，请先启动Babyware，如图：
+步骤一：启动Babyware，Infield启动入口如图：
 
 ![启动软件](/help/node2/infield/images/infield-start.png)
 

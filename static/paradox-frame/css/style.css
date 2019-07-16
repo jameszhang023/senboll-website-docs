@@ -3,7 +3,7 @@ html,body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: rgb(40, 40, 40);
+  background: rgb(0, 0, 0);
 }
 
 body {
@@ -34,14 +34,13 @@ body {
 /* Header*/
 .htmleaf-header{
 	padding: 1em 190px 1em;
-	letter-spacing: -1px;
+	letter-spacing: 1px;
 	text-align: center;
 }
 .htmleaf-header h1 {
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 3em;
 	line-height: 1;
-	margin-bottom: 0;
 	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
 }
 .htmleaf-header h1 span {

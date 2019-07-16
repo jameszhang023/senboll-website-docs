@@ -1,0 +1,866 @@
+<devicedata>
+  <copyright>Copyright 2015-2019 Senboll Corporation. All rights reserved.</copyright>
+  <version>1006</version>
+  <creator>James</creator>
+  <manufacturer>Paradox</manufacturer>
+  <name>ParadoxDriver</name>
+  <model>Paradox PRT3 or UBS2SER 3.0</model>
+  <created>05/05/2014 9:21 PM</created>
+  <modified>07/10/2019 10:43 AM</modified>
+  <small>icons/paradox_16.png</small>
+  <large>icons/paradox_32.png</large>
+  <control>lua_gen</control>
+  <composer_categories>
+    <category>Security</category>
+  </composer_categories>
+  <proxies qty="14">
+    <proxy name="枫叶安防系统" proxybindingid="5001" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">securitypanel</proxy>
+    <proxy name="分区 1" proxybindingid="5002" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 2" proxybindingid="5003" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 3" proxybindingid="5004" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 4" proxybindingid="5005" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 5" proxybindingid="5006" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 6" proxybindingid="5007" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 7" proxybindingid="5008" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy name="分区 8" proxybindingid="5009" image_source="c4z" large_image="icons/paradox_32.png" small_image="icons/paradox_16.png">security</proxy>
+    <proxy proxybindingid="5010" name="智能按钮 1" image_source="c4z" large_image="icons/btn_32.png" small_image="icons/btn_16.png">uibutton</proxy>
+    <proxy proxybindingid="5011" name="智能按钮 2" image_source="c4z" large_image="icons/btn_32.png" small_image="icons/btn_16.png">uibutton</proxy>
+    <proxy proxybindingid="5012" name="智能按钮 3" image_source="c4z" large_image="icons/btn_32.png" small_image="icons/btn_16.png">uibutton</proxy>
+    <proxy proxybindingid="5013" name="智能按钮 4" image_source="c4z" large_image="icons/btn_32.png" small_image="icons/btn_16.png">uibutton</proxy>
+    <proxy proxybindingid="5014" name="智能按钮 5" image_source="c4z" large_image="icons/btn_32.png" small_image="icons/btn_16.png">uibutton</proxy>
+  </proxies>
+  <driver>DriverWorks</driver>
+  <states />
+  <top />
+  <bottom />
+  <left />
+  <right />
+  <capabilities>
+    <!-- Panel Proxy Capabilities -->
+    <can_set_time>true</can_set_time>
+    <can_activate_partitions>true</can_activate_partitions>
+    <!-- Partition Proxy Capabilities -->
+    <ui_version>2</ui_version>
+    <has_fire>true</has_fire>
+    <has_medical>true</has_medical>
+    <has_police>false</has_police>
+    <has_panic>true</has_panic>
+    <arm_states>常规布防,强制布防,留守布防,立即布防</arm_states>
+    <functions>刷新</functions>
+    <navigator_display_option proxybindingid="5002">
+      <display_icons>
+        <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/paradox_300.png</Icon>
+        <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/paradox_90.png</Icon>
+        <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/paradox_70.png</Icon>
+      </display_icons>
+    </navigator_display_option>
+    <navigator_display_option proxybindingid="5010">
+      <display_icons>
+        <!-- Default Icon -->
+        <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+        <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+        <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        <state id="Settings-off">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        </state>
+        <state id="Settings-ok">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_ok_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_ok_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_ok_70.png</Icon>
+        </state>
+      </display_icons>
+    </navigator_display_option>
+    <navigator_display_option proxybindingid="5011">
+      <display_icons>
+        <!-- Default Icon -->
+        <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+        <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+        <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        <state id="Settings-off">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        </state>
+        <state id="Settings-ok">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_ok_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_ok_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_ok_70.png</Icon>
+        </state>
+      </display_icons>
+    </navigator_display_option>
+    <navigator_display_option proxybindingid="5012">
+      <display_icons>
+        <!-- Default Icon -->
+        <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+        <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+        <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        <state id="Settings-off">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        </state>
+        <state id="Settings-ok">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_ok_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_ok_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_ok_70.png</Icon>
+        </state>
+      </display_icons>
+    </navigator_display_option>
+    <navigator_display_option proxybindingid="5013">
+      <display_icons>
+        <!-- Default Icon -->
+        <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+        <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+        <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        <state id="Settings-off">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        </state>
+        <state id="Settings-ok">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_ok_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_ok_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_ok_70.png</Icon>
+        </state>
+      </display_icons>
+    </navigator_display_option>
+    <navigator_display_option proxybindingid="5014">
+      <display_icons>
+        <!-- Default Icon -->
+        <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+        <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+        <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        <state id="Settings-off">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_off_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_off_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_off_70.png</Icon>
+        </state>
+        <state id="Settings-ok">
+          <Icon width="300" height="300">controller://driver/ParadoxPRT3/icons/device/btn_ok_300.png</Icon>
+          <Icon width="90" height="90">controller://driver/ParadoxPRT3/icons/device/btn_ok_90.png</Icon>
+          <Icon width="70" height="70">controller://driver/ParadoxPRT3/icons/device/btn_ok_70.png</Icon>
+        </state>
+      </display_icons>
+    </navigator_display_option>
+  </capabilities>
+  <config>
+    <script file="driver.lua" encryption="2"></script>
+    <documentation file="documentation.rtf"></documentation>
+    <actions>
+      <action>
+        <name>显示全局变量</name>
+        <command>DisplayGlobals</command>
+      </action>
+      <action>
+        <name>分配防区</name>
+        <command>ZoneToPartition</command>
+      </action>
+      <action>
+        <name>一键升级驱动</name>
+        <command>UpdateDriver</command>
+      </action>
+    </actions>
+    <properties>
+      <property>
+        <name>Product Key</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default></default>
+        <tooltip>产品秘钥</tooltip>
+      </property>
+      <property>
+        <name>PRT3 SN</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default></default>
+        <tooltip>枫叶PRT3序列号(对接模块)</tooltip>
+      </property>
+      <property>
+        <name>Active Code</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default></default>
+        <tooltip>注册码</tooltip>
+      </property>
+      <property>
+        <name>Is Actived</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <default>trial - 试用期限还剩300分钟</default>
+        <tooltip>激活状态</tooltip>
+      </property>
+      <property>
+        <name>User Code</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>1234</default>
+        <tooltip>用户密码，布/撤防密码(默认:1234)。</tooltip>
+      </property>
+      <property>
+        <name>Number of Partitions</name>
+        <type>RANGED_INTEGER</type>
+        <readonly>false</readonly>
+        <default>1</default>
+        <minimum>1</minimum>
+        <maximum>8</maximum>
+        <tooltip>启用分区的数量</tooltip>
+      </property>
+      <property>
+        <name>Number of Zones</name>
+        <type>RANGED_INTEGER</type>
+        <readonly>false</readonly>
+        <default>1</default>
+        <minimum>0</minimum>
+        <maximum>192</maximum>
+        <tooltip>启用防区的数量</tooltip>
+      </property>
+      <property>
+        <name>Keep Open When Zone Alarm</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>true</default>
+        <tooltip>防区报警后状态是否需要保持</tooltip>
+        <items>
+          <item>true</item>
+          <item>false</item>
+        </items>
+      </property>
+      <property>
+        <name>Auto Get Panel Status Interval</name>
+        <type>RANGED_INTEGER</type>
+        <readonly>false</readonly>
+        <default>120</default>
+        <minimum>1</minimum>
+        <maximum>720</maximum>
+        <tooltip>自动获取状态间隔(单位:分钟)。</tooltip>
+      </property>
+      <property>
+        <name>Exit Delay</name>
+        <type>RANGED_INTEGER</type>
+        <readonly>false</readonly>
+        <default>60</default>
+        <minimum>1</minimum>
+        <maximum>255</maximum>
+        <tooltip>退出延时(单位:秒)。</tooltip>
+      </property>
+      <property>
+        <name>Log Mode</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>Print and Log</default>
+        <items>
+          <item>Off</item>
+          <item>Print</item>
+          <item>Log</item>
+          <item>Print and Log</item>
+        </items>
+      </property>
+      <property>
+        <name>Log Level</name>
+        <type>LIST</type>
+        <readonly>false</readonly>
+        <default>5 - Trace</default>
+        <items>
+          <item>0 - Fatal</item>
+          <item>1 - Error</item>
+          <item>2 - Warning</item>
+          <item>3 - Info</item>
+          <item>4 - Debug</item>
+          <item>5 - Trace</item>
+        </items>
+      </property>
+      <property>
+        <name>Version</name>
+        <type>STRING</type>
+        <readonly>true</readonly>
+        <tooltip>版本</tooltip>
+        <default></default>
+      </property>
+      <property>
+        <name>Monitoring</name>
+        <type>STRING</type>
+        <readonly>false</readonly>
+        <default>**************</default>
+      </property>
+    </properties>
+    <serialsettings>9600 8 none 1 none 232</serialsettings>
+    <power_management_method>ContactSensing</power_management_method>
+    <power_delay>0</power_delay>
+    <power_command_delay>0</power_command_delay>
+    <power_command_needed>False</power_command_needed>
+  </config>
+  <connections>
+    <connection>
+      <id>5010</id>
+      <facing>6</facing>
+      <connectionname>UIBUTTON</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>UIBUTTON</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5011</id>
+      <facing>6</facing>
+      <connectionname>UIBUTTON</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>UIBUTTON</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5012</id>
+      <facing>6</facing>
+      <connectionname>UIBUTTON</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>UIBUTTON</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5013</id>
+      <facing>6</facing>
+      <connectionname>UIBUTTON</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>UIBUTTON</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5014</id>
+      <facing>6</facing>
+      <connectionname>UIBUTTON</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>UIBUTTON</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>1</id>
+      <facing>6</facing>
+      <connectionname>Serial RS-232</connectionname>
+      <type>1</type>
+      <consumer>True</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>RS_232</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>5001</id>
+      <facing>6</facing>
+      <connectionname>Security Panel</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY_PANEL</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5002</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 1</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5003</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 2</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5004</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 3</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5005</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 4</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5006</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 5</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5007</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 6</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5008</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 7</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection>
+      <id>5009</id>
+      <facing>6</facing>
+      <connectionname>Security Partition 8</connectionname>
+      <type>2</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>SECURITY</classname>
+        </class>
+      </classes>
+      <hidden>False</hidden>
+    </connection>
+    <connection proxybindingid="5002">
+      <id>7002</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 1</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5003">
+      <id>7003</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 2</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5004">
+      <id>7004</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 3</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5005">
+      <id>7005</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 4</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5006">
+      <id>7006</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 5</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5007">
+      <id>7007</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 6</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5008">
+      <id>7008</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 7</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection proxybindingid="5009">
+      <id>7009</id>
+      <facing>6</facing>
+      <connectionname>Room Selection Partition 8</connectionname>
+      <type>7</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <autobind>True</autobind>
+          <classname>SECURITY_SYSTEM</classname>
+        </class>
+      </classes>
+    </connection>
+  </connections>
+  <controlmethod>serial</controlmethod>
+  <events>
+    <event>
+      <id>50</id>
+      <name>Utility Key1 is pressed</name>
+      <description>智能按钮 1 被按下的时候</description>
+    </event>
+    <event>
+      <id>51</id>
+      <name>Utility Key2 is pressed</name>
+      <description>智能按钮 2 被按下的时候</description>
+    </event>
+    <event>
+      <id>52</id>
+      <name>Utility Key3 is pressed</name>
+      <description>智能按钮 3 被按下的时候</description>
+    </event>
+    <event>
+      <id>53</id>
+      <name>Utility Key4 is pressed</name>
+      <description>智能按钮 4 被按下的时候</description>
+    </event>
+    <event>
+      <id>54</id>
+      <name>Utility Key5 is pressed</name>
+      <description>智能按钮 5 被按下的时候</description>
+    </event>
+    <event>
+      <id>60</id>
+      <name>RequestForExitDoor1</name>
+      <description>外出请求成功 - 1号门</description>
+    </event>
+    <event>
+      <id>62</id>
+      <name>RequestForExitDoor2</name>
+      <description>外出请求成功 - 2号门</description>
+    </event>
+    <event>
+      <id>63</id>
+      <name>AccessDeniedDoor1</name>
+      <description>进入请求失败 - 1号门</description>
+    </event>
+    <event>
+      <id>64</id>
+      <name>AccessDeniedDoor2</name>
+      <description>进入请求失败 - 2号门</description>
+    </event>
+    <event>
+      <id>65</id>
+      <name>DoorLeftOpenAlarmDoor1</name>
+      <description>开门时间超时报警 - 1号门</description>
+    </event>
+    <event>
+      <id>66</id>
+      <name>DoorLeftOpenAlarmDoor2</name>
+      <description>开门时间超时报警 - 2号门</description>
+    </event>
+    <event>
+      <id>67</id>
+      <name>DoorLeftOpenRestoreDoor1</name>
+      <description>开门时间超时报警后恢复 - 1号门</description>
+    </event>
+    <event>
+      <id>68</id>
+      <name>DoorLeftOpenRestoreDoor2</name>
+      <description>开门时间超时报警后恢复 - 2号门</description>
+    </event>
+    <event>
+      <id>69</id>
+      <name>DoorForcedAlarmDoor1</name>
+      <description>门被强制打开报警 - 1号门</description>
+    </event>
+    <event>
+      <id>70</id>
+      <name>DoorForcedAlarmDoor2</name>
+      <description>门被强制打开报警 - 2号门</description>
+    </event>
+    <event>
+      <id>71</id>
+      <name>DoorForcedOpenRestoreDoor1</name>
+      <description>门被强制打开报警后恢复 - 1号门</description>
+    </event>
+    <event>
+      <id>72</id>
+      <name>DoorForcedOpenRestoreDoor2</name>
+      <description>门被强制打开报警后恢复 - 2号门</description>
+    </event>
+    <event>
+      <id>81</id>
+      <name>AccessGrantedToUser001</name>
+      <description>用户 001 请求进入成功</description>
+    </event>
+    <event>
+      <id>82</id>
+      <name>AccessDeniedToUser001</name>
+      <description>用户 001 请求进入失败</description>
+    </event>
+    <event>
+      <id>83</id>
+      <name>AccessGrantedToUser002</name>
+      <description>用户 002 请求进入成功</description>
+    </event>
+    <event>
+      <id>84</id>
+      <name>AccessDeniedToUser002</name>
+      <description>用户 002 请求进入失败</description>
+    </event>
+    <event>
+      <id>85</id>
+      <name>AccessGrantedToUser003</name>
+      <description>用户 003 请求进入成功</description>
+    </event>
+    <event>
+      <id>86</id>
+      <name>AccessDeniedToUser003</name>
+      <description>用户 003 请求进入失败</description>
+    </event>
+    <event>
+      <id>87</id>
+      <name>AccessGrantedToUser004</name>
+      <description>用户 004 请求进入成功</description>
+    </event>
+    <event>
+      <id>88</id>
+      <name>AccessDeniedToUser004</name>
+      <description>用户 004 请求进入失败</description>
+    </event>
+    <event>
+      <id>89</id>
+      <name>AccessGrantedToUser005</name>
+      <description>用户 005 请求进入成功</description>
+    </event>
+    <event>
+      <id>90</id>
+      <name>AccessDeniedToUser005</name>
+      <description>用户 005 请求进入失败</description>
+    </event>
+    <event>
+      <id>91</id>
+      <name>Trouble - TLM</name>
+      <description>电话线故障</description>
+    </event>
+    <event>
+      <id>92</id>
+      <name>Trouble Restore - TLM</name>
+      <description>电话线故障恢复</description>
+    </event>
+    <event>
+      <id>93</id>
+      <name>Trouble - Auxiliary Current Failure</name>
+      <description>交流电故障</description>
+    </event>
+    <event>
+      <id>94</id>
+      <name>Trouble Restore - Auxiliary Current Failure</name>
+      <description>交流电故障恢复</description>
+    </event>
+    <event>
+      <id>95</id>
+      <name>Trouble - Battery Failure</name>
+      <description>蓄电池故障</description>
+    </event>
+    <event>
+      <id>96</id>
+      <name>Trouble Restore - Battery Failure</name>
+      <description>蓄电池故障恢复</description>
+    </event>
+    <event>
+      <id>97</id>
+      <name>Trouble - Auxiliary Current Limit</name>
+      <description>AUX输出过载故障</description>
+    </event>
+    <event>
+      <id>98</id>
+      <name>Trouble Restore - Auxiliary Current Limit</name>
+      <description>AUX输出过载故障恢复</description>
+    </event>
+    <event>
+      <id>99</id>
+      <name>Trouble - Bell Current Limit</name>
+      <description>警号输出过载故障</description>
+    </event>
+    <event>
+      <id>100</id>
+      <name>Trouble Restore - Bell Current Limit</name>
+      <description>警号输出过载故障恢复</description>
+    </event>
+    <event>
+      <id>101</id>
+      <name>Trouble - Bell Absent</name>
+      <description>警号未接故障</description>
+    </event>
+    <event>
+      <id>102</id>
+      <name>Trouble Restore - Bell Absent</name>
+      <description>警号未接故障恢复</description>
+    </event>
+    <event>
+      <id>103</id>
+      <name>Trouble - Clock</name>
+      <description>时钟丢失故障</description>
+    </event>
+    <event>
+      <id>104</id>
+      <name>Trouble Restore - Clock</name>
+      <description>时钟丢失故障恢复</description>
+    </event>
+  </events>
+</devicedata>

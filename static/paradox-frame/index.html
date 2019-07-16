@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/jquery.orgchart.min.css">
     <link rel="stylesheet" href="css/style.css">  
     <style type="text/css">
-      .orgchart { background: rgb(40, 40, 40); }
+      /*.orgchart { background: rgb(0, 0, 0); }*/
       .orgchart td.left, .orgchart td.right, .orgchart td.top { border-color: #aaa; }
       .orgchart td>.down { background-color: #aaa; }
       .orgchart .necessary .title { background-color: #006699; }
@@ -27,205 +27,273 @@
       .orgchart .relay .title { background-color: #5603b4; }
       .orgchart .relay .content { border-color: #5603b4; }
     </style>
+        
+    <style type="text/css">
+      .footerinfo
+      {
+          font-size:1.5em;
+          bottom:0px;
+          width:100%; 
+          background: rgb(39, 39, 39); 
+      }
+      .footerinfo a
+      {
+          white-space:nowrap;
+          color:#00bdf3;
+      }
+      .footerinfo p
+      {
+          bottom:10px;
+          padding:0;
+          color:rgb(255, 255, 255);
+          width:100%; 
+      }
+      #container{
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+      }
+      #section{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        overflow: visible;
+      }
+      .main1 {
+        border:0px solid red;
+        min-height:100%;
+        height:100%;
+      width : 100% ;
+      }  
+  </style>
+  
+  <style>
+    @media screen and (orientation: portrait) {
+      #container{
+      position : absolute ;
+      width : 100% ;
+      height : 100% ;
+      top : 0 ; 
+      left : 0 ;
+      }
+    } 
+    @media screen and (orientation: landscape) {
+      #container{
+      position : absolute ;
+      top : 0 ; 
+      left : 0 ;
+      width : 100% ;
+      height : 100% ;
+      }
+    }
+    </style>
   </head>
-  <body  >
-    <div id="container1" >
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" >
-          <tr class="htmleaf-header">
-            <td align="center">
-              <h1>枫叶安防系统框架 
-                <span>盛波尔科技</span>
-              </h1>
-            </td>
-          </tr>
-          <tr>
-            <td id="chart-container-core"></td>
-          </tr>
-          <tr>
-            <td align="center">
-              更新时间：2017-12，网站支持：James Zhang，企业网站 <a style="color:red" href="http://www.senboll.com">http://www.senboll.com</a>
-            </td>
-          </tr>
-        </table>
+
+  <body >
+    <div id="container" >
+      <table class="main1" border="0" cellpadding="0" cellspacing="0">
+        <tr class="htmleaf-header">
+          <td align="center" >
+            <h1>枫叶安防系统框架</h1>
+          </td>
+        </tr>
+        <tr>
+          <td id="chart-container-core"></td>
+        </tr>
+        <tr>
+          <td align="center">
+            <section id="section">
+              <div class="footerinfo">
+                <br/>
+                <p align="center">
+                  <a href="http://www.paradox.com">英文官网</a> | 
+                  <a href="http://www.senboll.com">中文官网</a> | 
+                  <a href="http://support.senboll.com:8888/help">在线帮助中心</a> | 
+                  <a href="http://support.senboll.com:8888">资料服务器</a> | 
+                  <a href="http://support.senboll.com:8888/usage">案例相册</a> | 
+                  <a href="http://support.senboll.com:8888/swan">枫叶APP缴费</a>
+                  <br/>
+                  <br/>
+                  全国服务热线：400-002-5577 | 
+                  <a href="http://support.senboll.com:8888/help/contact.html">网站支持：James Zhang</a>
+                  <br/>
+                  <br/>
+                  ©<span id="year"></span>年著作权，盛波尔科技所有权。
+                </p>
+                <br/>
+              </div>
+            </section>
+          </td>
+        </tr>
+      </table>
+
+      
 
     </div>
     
+    
+    
+    <script>
+      function auto_copyright($year) {
+        var $currentdate = new Date();
+        var $currentyear = $currentdate.getFullYear();
+        var $cty = $currentyear.toString();
+        var $sty = $year.toString();
+        if ($currentyear > $year) {
+          document.getElementById("year").innerHTML=$sty + ' - ' + $cty;
+          console.log($cty);
+        } else {
+          document.getElementById("year").innerHTML = $cty;
+        }
+      }
+      auto_copyright(1999);
+    </script>
+    
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.orgchart.min.js"></script>
+    <script type="text/javascript" src="js/js/jquery.orgchart.js"></script>
     <script type="text/javascript">
       $(function() {
         var datascource = {
-
-          'name': '其他(必配)', 'title': '警号<br>蓄电池' ,
+          'name': '报警主机(必需)','title': '主机-EVO192<br>主机-EVOHD',
           'children': [ 
-            {'name': '报警主机(必配)','title': 'Panel-EVO192<br>Panel-EVOHD',
-              'children': [ 
-                {'name': '总线驱动模块','title': 'Interface-HUB2','className': 'interface',
+            { 'name': '操作键盘(必需)', 'title': '5寸-TM50<br>7寸-TM70',},
+            { 'name': '声光报警(必需)', 'title': '声光警号',},
+            { 'name': '后备电源(必需)', 'title': '蓄电池-BAT7A' },
+            {'name': '总线驱动模块','title': '通信模块-HUB2','className': 'interface',
+              'children': [
+                { 'name': '电源(必配)', 'title': '主电源-PS25/45<br>后备电源-BAT7A' ,},
+                { 'name': '门禁系统', 'title': '门禁控制器-ACM12', 'className': 'access',
                   'children': [
-                    { 'name': '键盘(必配)', 'title': 'Keypad',
-                      'children': [
-                        { 'name': '操作键盘', 'title': 'Keypad-TM50' },
-                        { 'name': '操作键盘', 'title': 'Keypad-TM70' },
-                      ]
-                    },
-                    { 'name': '系统电源(必配)', 'title': 'Power' ,
-                      'children': [
-                        { 'name': '专用电源', 'title': 'Power-PS25/45' },
-                        { 'name': '蓄电池', 'title': 'Power-BAT7A' },
-                      ]
-                    },
-                    { 'name': '门禁模块', 'title': 'Access-ACM12', 'className': 'access',
-                      'children': [
-                        { 'name': '读卡器', 'title': 'Access-R915' , 'className': 'access', },
-                        { 'name': '开门按钮', 'title': 'Access-REX' , 'className': 'access', },
-                        { 'name': '门锁', 'title': '磁力锁<br>电插锁' , 'className': 'access', },
-                        { 'name': '门禁卡', 'title': 'Access-C702<br>Access-C705' , 'className': 'access', },
-                      ]
-                    },
-                    { 'name': '无线信号覆盖模块', 'title': 'Interface-RTX3' ,'className': 'detector-wireless',
-                      'children': [
-                        { 'name': '遥控器', 'title': 'Remote' , 'className': 'detector-wireless',
-                          'children': [
-                            { 'name': '遥控器', 'title': 'Remote-REM15' , 'className': 'detector-wireless',},
-                            { 'name': '双向遥控器', 'title': 'Remote-REM25' , 'className': 'detector-wireless',},
-                          ]},
-                        { 'name': '无线求助按钮', 'title': 'Remote-REM101' , 'className': 'detector-wireless',},
-                        { 'name': '无线警号', 'title': 'Siren-SR130' , 'className': 'detector-wireless',},
-                        { 'name': '无线防区扩展', 'title': 'Detector' , 'className': 'detector-wireless',
-                          'children': [
-                            { 'name': '室外广角探测器', 'title': 'Detector-PMD85' , 'className': 'detector-wireless',}, 
-                            { 'name': '室外幕帘探测器', 'title': 'Detector-NV780MR' , 'className': 'detector-wireless',}, 
-                            { 'name': '室外幕帘探测器', 'title': 'Detector-NV35MR' , 'className': 'detector-wireless',}, 
-                            { 'name': '室内广角探测器', 'title': 'Detector-NV75MR' , 'className': 'detector-wireless',}, 
-                            { 'name': '室内广角探测器', 'title': 'Detector-PMD75' , 'className': 'detector-wireless',}, 
-                            { 'name': '室内广角探测器', 'title': 'Detector-PMD2P' , 'className': 'detector-wireless',}, 
-                            { 'name': '门磁', 'title': 'Detector-DCT2' , 'className': 'detector-wireless',}, 
-                            { 'name': '门磁', 'title': 'Detector-DCT6' , 'className': 'detector-wireless',}, 
-                            { 'name': '门磁', 'title': 'Detector-DCT10' , 'className': 'detector-wireless',}, 
-                            { 'name': '玻璃破碎探测器', 'title': 'Detector-G550' , 'className': 'detector-wireless',}, 
-                            { 'name': '位移探测器', 'title': 'Detector-G550' , 'className': 'detector-wireless',}, 
-                            { 'name': '一氧化碳探测器', 'title': 'Detector-WC588P' , 'className': 'detector-wireless',}, 
-                            { 'name': '烟雾探测器', 'title': 'Detector-SD360' , 'className': 'detector-wireless',},
-                          ]
-                        }
-                      ]
-                    },
-                    { 'name': '有线防区扩展', 'title': 'Zone-ZC1<br>Zone-ZX82' , 'className': 'detector-wire',
-                      'children': [
-                        { 'name': '室外广角探测器', 'title': 'Detector-DG85' , 'className': 'detector-wire', }, 
-                        { 'name': '室外幕帘探测器', 'title': 'Detector-NV780M' , 'className': 'detector-wire', }, 
-                        { 'name': '室外幕帘探测器', 'title': 'Detector-NV790M' , 'className': 'detector-wire', }, 
-                        { 'name': '室外幕帘探测器', 'title': 'Detector-NV35M<br>Detector-NV35MX' , 'className': 'detector-wire', }, 
-                        { 'name': '室内广角探测器', 'title': 'Detector-NV75M<br>Detector-NV75MW<br>Detector-NV75MX' , 'className': 'detector-wire', },
-                        { 'name': '室内广角探测器', 'title': 'Detector-525DM' , 'className': 'detector-wire', }, 
-                        { 'name': '震动探测器', 'title': 'Detector-950' , 'className': 'detector-wire', }, 
-                        { 'name': '震动位移双鉴探测器', 'title': 'Detector-980' , 'className': 'detector-wire', }, 
-                        { 'name': '玻璃破碎探测器', 'title': 'Detector-DG457' , 'className': 'detector-wire', }, 
-                        { 'name': '紧急按钮', 'title': 'Detector-EB1' , 'className': 'detector-wire', },     
-                        { 'name': '煤气瓦斯探测器', 'title': 'Detector-912' , 'className': 'detector-wire', }, 
-                        { 'name': '烟雾温度探测器', 'title': 'Detector-9935' , 'className': 'detector-wire', },
-                        { 'name': '温湿度探测器', 'title': 'Detector-981' , 'className': 'detector-wire', },
-                        { 'name': '水浸探测器', 'title': 'Detector-918' , 'className': 'detector-wire', },
-                      ]
-                    },
-                    { 'name': '继电器扩展模块', 'title': 'Relay-PGM82' , 'className': 'relay',
-                      'children': [
-                        { 'name': '家用电器', 'title': '冰箱<br>插座<br>电视' , 'className': 'relay', },
-                        { 'name': '车库门', 'title': '开关车库门' , 'className': 'relay', },
-                        { 'name': '灯光', 'title': '开关灯光 等等' , 'className': 'relay', },
-                      ]
-                    },
-                    { 'name': '中控对接模块', 'title': 'Interface-PRT3' , 'className': 'integration',
-                      'children': [
-                        { 'name': 'Control4', 'title': 'Control4中控主机' , 'className': 'integration', },
-                        { 'name': 'Crestron', 'title': 'Crestron中控主机' , 'className': 'integration', },
-                        { 'name': 'AMX', 'title': '安玛斯中控主机 等等' , 'className': 'integration', },
-                      ]
-                    },
+                    { 'name': '主要组成', 'title': '读卡器-R915<br>开门按钮-REX<br>门锁-磁力锁<br>门锁-电插锁<br>门禁卡-C702<br>门禁卡-C705' , 'className': 'access', },
+                    { 'name': '门禁电源', 'title': 'PS25/45' , 'className': 'access', },
+                    { 'name': '后备电源', 'title': '蓄电池-BAT7A' , 'className': 'access', },
                   ]
                 },
-                { 'name': '通讯和报告', 'title': '以太网<br>4G(联通/移动)<br>3G(联通/移动)<br>2G(联通/移动)<br>GSM(联通/移动)<br>GPRS(联通/移动)<br>短信(联通/移动)<br>PSTN<br>串口' ,'className': 'interface',
+                { 'name': '无线功能扩展', 'title': '无线信号模块-RTX3' ,'className': 'detector-wireless',
                   'children': [
-                    {'name': '报告个人', 'title': '短信<br>电话<br>APP' ,'className': 'interface', 
+                    { 'name': '遥控器', 'title': '单向遥控器-REM15<br>双向遥控器-REM25' , 'className': 'detector-wireless',},
+                    { 'name': '无线求助按钮', 'title': 'Remote-REM101' , 'className': 'detector-wireless',},
+                    { 'name': '无线警号', 'title': 'Siren-SR130' , 'className': 'detector-wireless',},
+                    { 'name': '无线防区扩展', 'title': '无线探测器' , 'className': 'detector-wireless',
                       'children': [
-                        {'name': '仅短信通知', 'title': 'Interface-PCS250G' ,'className': 'interface', },
-                        {'name': '电话+短信通知', 'title': '注:电话通知需VDMP3' ,'className': 'interface', 
-                          'children': [
-                            {'name': 'SIM卡拨号+短信通知', 'title': 'Interface-PCS250<br>Interface-PCS260<br>Interface-PCS265' ,'className': 'interface', }
-                          ]
-                        },
-                        {'name': '电话通知(PSTN)', 'title': '主机接电话线<br>注:需VDMP3' ,'className': 'interface',},
-                        {'name': '手机APP', 'title': 'SIM卡模块<br>以太网模块' ,'className': 'interface', 
-                          'children': [
-                            {'name': 'SIM卡模块', 'title': 'Interface-PCS250<br>Interface-PCS260<br>Interface-PCS265' ,'className': 'interface', },
-                            {'name': '以太网模块', 'title': 'Interface-IP150' ,'className': 'interface', },
-                          ]
-                        },
-                        ]
-                    },
-                    {'name': '报告中心', 'title': '流量方式<br>电话拨号方式<br>串口方式' ,'className': 'interface',
-                      'children': [
-                        {'name': 'PSTN拨号方式', 'title': '主机接电话线' ,'className': 'interface', 
-                          'children': [
-                            {'name': '电话接收机', 'title': 'DRC2P<br>DRC4P' ,'className': 'interface', 
-                              'children': [
-                                {'name': '接警平台软件', 'title': 'PA2000' ,'className': 'interface',}
-                              ]
-                            },
-                          ]
-                        },
-                        {'name': 'SIM卡拨号方式', 'title': 'Interface-PCS250<br>Interface-PCS260<br>Interface-PCS265' ,'className': 'interface', 
-                          'children': [
-                            {'name': '电话接收机', 'title': 'DRC2P<br>DRC4P' ,'className': 'interface', 
-                              'children': [
-                                {'name': '接警平台软件', 'title': 'PA2000' ,'className': 'interface',}
-                              ]
-                            },
-                          ]
-                        },
-                        {'name': '流量方式', 'title': 'Interface-PCS250<br>Interface-PCS250G<br>Interface-PCS260<br>Interface-PCS265' ,'className': 'interface', 
-                          'children': [
-                            {'name': '网络接收机', 'title': 'IPR1000<br>IPR512' ,'className': 'interface', 
-                              'children': [
-                                {'name': '接警平台软件', 'title': 'PA2000' ,'className': 'interface',}
-                              ]
-                            },
-                          ]
-                        },
-                        {'name': '串口方式', 'title': 'Interface-307USB' ,'className': 'interface', 
-                          'children': [
-                            {'name': '接警平台软件', 'title': 'NE2008' ,'className': 'interface', },
-                          ]
-                        },
-                      ]  
-                    },
-                    {'name': '调试软件', 'title': 'Software-Babyware' ,'className': 'interface', 
-                      'children': [
-                        {'name': '以太网方式', 'title': 'Interface-IP150' ,'className': 'interface',},
-                        {'name': '串口方式', 'title': 'Interface-307USB' ,'className': 'interface',},
-                        {'name': 'SIM卡拨号方式', 'title': 'Interface-PCS250<br>Interface-PCS260<br>Interface-PCS265' ,'className': 'interface', },
-                        {'name': 'PSTN拨号方式', 'title': 'Software-Babyware<br>(需调制解调器5633A)' ,'className': 'interface', },
-                        {'name': '流量方式', 'title': 'Interface-PCS260<br>Interface-PCS265' ,'className': 'interface',},
-                      ]  
-                    },
+                        { 'name': '室外(内)红外探测器', 'title': '广角-PMD85<br>幕帘-NV780MR<br>幕帘-NV35MR' , 'className': 'detector-wireless',}, 
+                        { 'name': '室内红外探测器', 'title': '广角-NV75MR<br>广角探测器-PMD75<br>广角探测器-PMD2P' , 'className': 'detector-wireless',}, 
+                        { 'name': '门磁', 'title': '迷你型-DCT2<br>信号距离远型-DCT6<br>嵌入式-DCT6' , 'className': 'detector-wireless',}, 
+                        { 'name': '其他类探测器', 'title': '浸水探测-WD1<br>玻璃破碎探测-G550<br>加速度探测-G550<br>一氧化碳探测-WC588P<br>烟雾探测-SD360' , 'className': 'detector-wireless',}, 
+                      ]
+                    }
                   ]
                 },
-              ]}     
-          ]};
+                { 'name': '有线防区扩展', 'title': '单防区模块-ZC1<br>8防区模块-ZX82' , 'className': 'detector-wire',
+                  'children': [
+                    { 'name': '室外(内)红外探测器', 'title': '广角探测器-DG85<br>幕帘-NV780M<br>幕帘-NV790M<br>幕帘-NV35M<br>幕帘-NV35MX' , 'className': 'detector-wire', }, 
+                    { 'name': '室内红外探测器', 'title': '广角探测器-NV75M<br>广角探测器-NV75MW<br>广角探测器-NV75MX<br>广角探测器-525DM' , 'className': 'detector-wire', },
+                    { 'name': '其他类探测器', 'title': '震动探测-950<br>震动急速度探测-980<br>玻璃破碎探测-DG457<br>煤气瓦斯探测-VE912<br>烟雾温度探测-VE9935<br>温湿度探测-VE981<br>水浸探测-VE918' , 'className': 'detector-wire', }, 
+                    { 'name': '紧急按钮', 'title': '86盒式按钮-EB1' , 'className': 'detector-wire', }, 
+                  ]
+                },
+                { 'name': '继电器扩展模块', 'title': '8路继电器模块-PGM82' , 'className': 'relay',
+                  'children': [
+                    { 'name': '电器', 'title': '冰箱<br>插座<br>电视' , 'className': 'relay', },
+                    { 'name': '车库门', 'title': '开关车库门' , 'className': 'relay', },
+                    { 'name': '灯光', 'title': '开关灯光 等等' , 'className': 'relay', },
+                  ]
+                },
+                { 'name': '集成对接', 'title': '对接模块-PRT3' , 'className': 'integration',
+                  'children': [
+                    { 'name': '对接中控系统', 'title': 'Control4中控<br>Crestron中控<br>安玛斯中控<br>塞万特中控' , 'className': 'integration', },
+                    { 'name': '接打印机', 'title': '并口打印机' , 'className': 'integration', },
+                    { 'name': '集成第三方平台', 'title': '软件平台<br>硬件平台' , 'className': 'integration', },
+                  ]
+                },
+              ]
+            },
+            { 'name': '通知和报告', 'title': '终端用户<br>接警中心<br>' ,'className': 'interface',
+              'children': [
+                {'name': '通知终端用户', 'title': '短信<br>电话<br>APP' ,'className': 'interface', 
+                  'children': [
+                    {'name': '仅短信通知', 'title': 'SIM卡模块-PCS250G' ,'className': 'interface', },
+                    {'name': '电话+短信通知', 'title': '注:电话通知需VDMP3<br>VDMP3+PCS250' ,'className': 'interface', },
+                    {'name': '电话通知(PSTN)', 'title': '接电话线+VDMP3' ,'className': 'interface',},
+                    {'name': '手机APP', 'title': '网络模块-IP150' ,'className': 'interface', },
+                  ]
+                },
+                {'name': '报告接警中心', 'title': '网络方式<br>PSTN拨号<br>移动电话网拨号<br>串口方式' ,'className': 'interface',
+                  'children': [
+                    {'name': '网络方式', 'title': '网络模块+接收机+软件<br>SIM卡模块+接收机+软件' ,'className': 'interface', },
+                    {'name': 'PSTN拨号', 'title': '接收机+软件' ,'className': 'interface', },
+                    {'name': '移动电话网拨号', 'title': 'SIM卡模块+接收机+软件' ,'className': 'interface', },
+                    {'name': '串口方式', 'title': '串口模块+平台软件' ,'className': 'interface',},
+                  ]  
+                },
+              ]
+            },
+            {'name': '安装调试', 'title': '网口-IP150<br>串口-307USB' ,'className': 'interface', 
+              'children': [
+                {'name': '调试安装工具', 'title': '软件-Babyware' ,'className': 'interface',},
+              ]  
+            },
+          ]     
+        };
 
         $('#chart-container-core').orgchart({
           'data' : datascource,
           'nodeContent': 'title',
-          'verticalDepth': 5,
-          'depth': 8,
+          'verticalLevel': 4,
+          'depth': 6,
           'initCompleted': function ($chart) {
             var center_num = $(document).width()/2 - $(window).width()/2 ;
             window.scrollBy(center_num,0);
           }
         });
 
-        $('.orgchart').addClass('noncollapsable'); // deactivate
+        $('.orgchart').addClass(''); // deactivate noncollapsable
       });
     </script>
+    
+    <script> 
+      var width = document.documentElement.clientWidth;
+      var height =  document.documentElement.clientHeight;
+      if( width < height ){
+          console.log(width + " " + height);
+          $container =  $('#container');
+          $container.width(height);
+          $container.height(width);
+          $container.css('top',  (height-width)/2 );
+          $container.css('left',  0-(height-width)/2 );
+          $container.css('transform' , 'rotate(90deg)');
+          $container.css('transform-origin' , '50% 50%');
+      } 
+
+      var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+      window.addEventListener(evt, function() {
+          console.log(evt);
+          var width = document.documentElement.clientWidth;
+            var height =  document.documentElement.clientHeight;
+            $container =  $('#container');
+            if( width > height ){
+              
+              $container.width(width);
+              $container.height(height);
+              $container.css('top',  0 );
+              $container.css('left',  0 );
+              $container.css('transform' , 'none');
+              $container.css('transform-origin' , '50% 50%');
+            }
+            else{
+              $container.width(height);
+              $container.height(width);
+              $container.css('top',  (height-width)/2 );
+              $container.css('left',  0-(height-width)/2 );
+              $container.css('transform' , 'rotate(90deg)');
+              $container.css('transform-origin' , '50% 50%');
+            }
+            
+        }, false);
+    </script>
+
   </body>
 </html>

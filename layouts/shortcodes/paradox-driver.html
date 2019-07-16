@@ -1,0 +1,15 @@
+{{ $files := readFile "/node2/paradox-to-control4-driver/_index.files/ParadoxDriver.c4z" }}
+{{ $driverxml := readFile "/node2/paradox-to-control4-driver/_index.files/driver.xml" }}
+{{ $xml_major_version_table := findRE "<model>(.|\n)*?</model>" $driverxml }}
+{{ $xml_build_version_table := findRE "<version>(.|\n)*?</version>" $driverxml }}
+{{ $modified := findRE "<modified>(.|\n)*?</modified>" $driverxml }}
+{{ $xml_major_version := delimit $xml_major_version_table "" ""}}
+{{ $xml_build_version := delimit $xml_build_version_table "" ""}}
+{{ $major_version_right := substr $xml_major_version 31}}
+{{ $major_version := strings.TrimRight "</model>" $major_version_right}}
+{{ $build_version_right := substr $xml_build_version 9}}
+{{ $build_version := strings.TrimRight "</version>" $build_version_right}}
+
+<section>版本：<web_version>{{$major_version}}.{{$build_version}}</web_version></section>
+<section>时间：{{ delimit $modified "" ""}}</section>
+<section>MD5：{{ md5 $files }}</section>

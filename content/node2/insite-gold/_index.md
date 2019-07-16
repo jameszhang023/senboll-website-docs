@@ -62,7 +62,7 @@ For more information see[http://aboutswan.paradox.com/version_insitegold](http:/
 
 ### 步骤二：激活
 
-请将主机的序列号提供给枫叶技术人员(张工，微信和手机号码：13201640833)
+请将主机的序列号提供给枫叶技术人员。
 
 ### 步骤三：启动APP
 
@@ -90,4 +90,4 @@ For more information see[http://aboutswan.paradox.com/version_insitegold](http:/
 两种方案：
 
 1. 通过APP直接缴费，要求需要准备具备Visa标志的银行卡，请自行按照APP支付页面支付费用；
-2. 代付，如果没有跨境⽀付渠道，[枫叶云服务缴费](http://support.senboll.com:8888/swan)。
+2. 代付，如果没有跨境⽀付渠道，[枫叶APP缴费](http://support.senboll.com:8888/swan)。

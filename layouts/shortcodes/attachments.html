@@ -1,0 +1,31 @@
+<section class="att1achments {{ with .Get "style"}}{{.}}{{ end }}">
+	<label>
+		<i class="fa fa-paperclip" aria-hidden="true"></i>
+		{{with .Get "title"}}{{.}}{{else}}{{T "Attachments-label"}}{{end}}
+	</label>
+	{{if eq .Page.File.BaseFileName "index"}}
+		{{$.Scratch.Add "filesName" "files"}}
+	{{else}}
+		{{$.Scratch.Add "filesName" (printf "%s.files" .Page.File.BaseFileName)}}
+	{{end}}
+	<div class="1attachments-files">
+	{{ range (readDir (printf "./content/%s%s" .Page.File.Dir ($.Scratch.Get "filesName")) ) }}
+		{{ $fileDir := replace $.Page.File.Dir "\\" "/" }}
+		{{if ($.Get "pattern")}}
+			{{if (findRE ($.Get "pattern") .Name)}}文件：
+					<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
+						{{.Name}}
+					</a>
+					(文件大小：{{div .Size 1024 }} KB)
+			{{end}}
+		{{else}}
+				<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
+					{{.Name}}
+				</a>
+				(文件大小：{{div .Size 1024 }} KB)
+		{{end}}
+	{{end}}
+	<div>
+	{{.Inner}}
+</section>
+
