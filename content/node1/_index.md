@@ -7,7 +7,7 @@ title : "基础知识"
 
 - [重要知识](/help/node1/important-knowledge/)
 - [红外探测器须知](/help/node1/detector-installation-notes/)
-- [安防系统布线规范](/help/node1/wiring-method/)
+- [枫叶系统的供电及布线](/help/node1/wiring-method/)
 - [键盘的重要性](/help/node1/must-keyboard/)
 - [信号辐射的真相](/help/node1/rf-radiation/)
 - [枫叶智能防区](/help/node1/intellizone/)
