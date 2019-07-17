@@ -21,26 +21,7 @@ title : "首页"
 
 **目录**
 
-- [行业知识](/help/node1/)
-  - [基础概念](/help/node1/important-knowledge/)
-  - [红外探测器须知](/help/node1/detector-installation-notes/)
-  - [枫叶系统的供电及布线](/help/node1/wiring-method/)
-  - [键盘的重要性](/help/node1/must-keyboard/)
-  - [了解信号辐射](/help/node1/rf-radiation/)
-  - [枫叶智能防区](/help/node1/intellizone/)
-  - [防盗锁安全性分析](/help/node1/lock-safety-analysis/)
-  - [关于信号辐射](/help/node1/life-detection/)
-- [软件使用说明](/help/node2/)
-  - [工具软件(Babyware)使用说明](/help/node2/babyware/)
-  - [刷固件工具(In-Field)使用说明](/help/node2/infield/)
-  - [枫叶APP(Insite Gold)使用说明](/help/node2/insite-gold/)
-  - [枫叶驱动(对接Control4)使用说明](/help/node2/paradox-to-control4-driver/)
-  - [远程协助软件(Anydesk)使用说明](/help/node2/anydesk/)
-- [常见问题](/help/node3/)
-  - [硬件问题](/help/node3/hardware/)
-  - [软件问题](/help/node3/software/)
-- [隐私政策](/help/node9/privacy/)
-- [系统拓扑图](/help/paradox-frame/)
+{{< catalog-home >}}
 
 ---
 

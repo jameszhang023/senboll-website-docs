@@ -1,0 +1,121 @@
+<ul>
+    <li>
+    {{ with .Site.GetPage "/node1" }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a> 
+        ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+    {{end}}   
+        <ul>
+        <li>
+            {{ with .Site.GetPage "/node1/important-knowledge" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node1/detector-installation-notes" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node1/wiring-method" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node1/must-keyboard" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node1/rf-radiation" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node1/intellizone" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+                {{ with .Site.GetPage "/node1/lock-safety-analysis" }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                    ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+                {{end}}
+
+        </li>
+        <li>
+                {{ with .Site.GetPage "/node1/life-detection" }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                    ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+                {{end}}
+
+        </li>
+        </ul>
+    </li>
+    <li>
+    {{ with .Site.GetPage "/node2" }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a> 
+        ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+    {{end}}        
+        <ul>
+        <li>
+            {{ with .Site.GetPage "/node2/babyware" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node2/infield" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node2/insite-gold" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}   
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node2/paradox-to-control4-driver" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+            {{ with .Site.GetPage "/node2/anydesk" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        </ul>
+    </li>
+    <li> 
+        <ul>
+        <li>
+            {{ with .Site.GetPage "/node3/hardware" }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
+                ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+            {{end}}
+        </li>
+        <li>
+        {{ with .Site.GetPage "/node3/software" }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a> 
+            ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+        {{end}}
+        </li>
+        </ul>
+    </li>
+    <li>
+        {{ with .Site.GetPage "/node9/privacy" }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a> 
+            ( 更新时间:{{ .Lastmod.Format "2006年01月02日" }}，{{ with .GitInfo }}<a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">更新日志</a>{{end}})
+        {{end}}
+    </li>
+    <li><a href="/help/paradox-frame/" class="highlight">系统拓扑图</a></li>
+</ul>

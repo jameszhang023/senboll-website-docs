@@ -5,7 +5,7 @@ title : "行业知识"
 
 **目录**
 
-- [行业知识](/help/node1/important-knowledge/)
+- [基础概念](/help/node1/important-knowledge/)
 - [红外探测器须知](/help/node1/detector-installation-notes/)
 - [枫叶系统的供电及布线](/help/node1/wiring-method/)
 - [键盘的重要性](/help/node1/must-keyboard/)

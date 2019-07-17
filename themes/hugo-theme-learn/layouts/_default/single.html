@@ -1,5 +1,7 @@
 {{ partial "header.html" . }} {{ .Content }}
 
+{{ partial "page-update-data.html" . }}
+
 <footer class=" footline">
 	{{with .Params.LastModifierDisplayName}}
 	<i class='fa fa-user'></i>
@@ -8,3 +10,4 @@
 	</div>
 	{{end}}
 </footer>
+
