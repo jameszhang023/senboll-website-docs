@@ -91,8 +91,8 @@
 
 <!-- templates -->
 {{ define "section-tree-nav" }}
-{{ $showvisitedlinks := .showvisitedlinks }}
-{{ $currentNode := .currentnode }}
+ {{ $showvisitedlinks := .showvisitedlinks }}
+ {{ $currentNode := .currentnode }}
  {{with .sect}}
   {{if .IsSection}}
     {{safeHTML .Params.head}}
@@ -104,7 +104,7 @@
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
-            <i class="fa fa-check read-icon"></i>
+            <i class="fa fa-check- read-icon"></i>
           {{ end }}
       </a>
       {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
