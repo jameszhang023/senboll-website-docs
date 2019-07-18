@@ -24,9 +24,3 @@ title : "首页"
 {{< catalog-home >}}
 
 ---
-
-## 更多资料请访问
-
-枫叶案例相册(现场实拍)：[http://support.senboll.com:8888/usage](http://support.senboll.com:8888/usage)
-
-枫叶资料服务器：[http://support.senboll.com:8888](http://support.senboll.com:8888)
