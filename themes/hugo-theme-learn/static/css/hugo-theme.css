@@ -257,3 +257,6 @@ figcaption h4 {
 table {
   table-layout: fixed;
 }
+th {
+  /* text-align: left; */
+}
