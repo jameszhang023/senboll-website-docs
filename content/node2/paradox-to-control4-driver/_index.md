@@ -273,6 +273,8 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 
 <h3 id="j73">编程联动功能</h3>
 
+**基本联动**
+
 安防系统的分区状态，故障状态，门禁状态，防区状态等都可以作为联动的触发信号，依次可实现更加智能化的功能。
 
 下面以防区状态为例来演示具体的联动编程步骤，EVO主机，最多可以支持192个防区，所有防区信号都会通过驱动发送到中控。在驱动初始化完毕，默认的防区数量是1，根据主机实际的防区数量，修改驱动防区数量属性即可。要实现这个功能，需要2步：
@@ -284,6 +286,58 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 下面是一个例子，演示如何设置2个防区和一个继电器的联动，实现当防区1开路，继电器输出开路信号，当防区1闭合，继电器输出闭合信号；防区2开路，继电器切换输出状态。演示如下：
 
 ![建立防区连接1](/help/node2/paradox-to-control4-driver/images/zone-linkage-setting.gif)
+
+**高级联动**
+
+除了上面的联动，驱动还提供了门禁，故障和智能按钮等事件的联动功能，通过这个功能，可以实现一些高级功能，实现场景的智能联动。
+
+|事件名称|描述|
+|:------|:------|
+|Utility Key1 is pressed|智能按钮 1 被按下的时候|
+|Utility Key2 is pressed|智能按钮 2 被按下的时候|
+|Utility Key3 is pressed|智能按钮 3 被按下的时候|
+|Utility Key4 is pressed|智能按钮 4 被按下的时候|
+|Utility Key5 is pressed|智能按钮 5 被按下的时候|
+|RequestForExitDoor1|外出请求成功 - 1号门|
+|RequestForExitDoor2|外出请求成功 - 2号门|
+|AccessDeniedDoor1|进入请求失败 - 1号门|
+|AccessDeniedDoor2|进入请求失败 - 2号门|
+|DoorLeftOpenAlarmDoor1|开门时间超时报警 - 1号门|
+|DoorLeftOpenAlarmDoor2|开门时间超时报警 - 2号门|
+|DoorLeftOpenRestoreDoor1|开门时间超时报警后恢复 - 1号门|
+|DoorLeftOpenRestoreDoor2|开门时间超时报警后恢复 - 2号门|
+|DoorForcedAlarmDoor1|门被强制打开报警 - 1号门|
+|DoorForcedAlarmDoor2|门被强制打开报警 - 2号门|
+|DoorForcedOpenRestoreDoor1|门被强制打开报警后恢复 - 1号门|
+|DoorForcedOpenRestoreDoor2|门被强制打开报警后恢复 - 2号门|
+|AccessGrantedToUser001|用户 001 请求进入成功|
+|AccessDeniedToUser001|用户 001 请求进入失败|
+|AccessGrantedToUser002|用户 002 请求进入成功|
+|AccessDeniedToUser002|用户 002 请求进入失败|
+|AccessGrantedToUser003|用户 003 请求进入成功|
+|AccessDeniedToUser003|用户 003 请求进入失败|
+|AccessGrantedToUser004|用户 004 请求进入成功|
+|AccessDeniedToUser004|用户 004 请求进入失败|
+|AccessGrantedToUser005|用户 005 请求进入成功|
+|AccessDeniedToUser005|用户 005 请求进入失败|
+|Trouble - TLM|电话线故障|
+|Trouble Restore - TLM|电话线故障恢复|
+|Trouble - Auxiliary Current Failure|交流电故障|
+|Trouble Restore - Auxiliary Current Failure|交流电故障恢复|
+|Trouble - Battery Failure|蓄电池故障
+|Trouble Restore - Battery Failure|蓄电池故障恢复|
+|Trouble - Auxiliary Current Limit|AUX输出过载故障|
+|Trouble Restore - Auxiliary Current Limit|AUX输出过载故障恢复|
+|Trouble - Bell Current Limit|警号输出过载故障|
+|Trouble Restore - Bell Current Limit|警号输出过载故障恢复|
+|Trouble - Bell Absent|警号未接故障|
+|Trouble Restore - Bell Absent|警号未接故障恢复|
+|Trouble - Clock|时钟丢失故障|
+|Trouble Restore - Clock|时钟丢失故障恢复|
+    
+编程界面如下：
+![事件](/help/node2/paradox-to-control4-driver/images/events.png)
+
 
 <h3 id="j74">编程智能按钮</h3>
 
@@ -339,11 +393,11 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 
 如果碰到了一些奇怪的问题，通过常见方法都解决不了，请使用复位，重新上电大法。下面介绍复位方法：
 
-| 设备 | 复位方法 |
-| :------ | :------ |
-| EVO主机 | 长安主机板上两个按钮，直到指示灯全部熄灭即可 |
-| 网络模块IP150 | 长按Reset按钮，直到快闪的时候松开短按一下即可 |
-| 总线模块 | 进入编程模块输入4001，输入模块序列号 |
+|设备|复位方法|
+|:------|:------|
+|EVO主机|长安主机板上两个按钮，直到指示灯全部熄灭即可|
+|网络模块IP150|长按Reset按钮，直到快闪的时候松开短按一下即可|
+|总线模块|进入编程模块输入4001，输入模块序列号|
 
 <h2 id="j90">联系方式</h2>
 
