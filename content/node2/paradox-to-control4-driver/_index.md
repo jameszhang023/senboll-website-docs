@@ -273,9 +273,28 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 
 <h3 id="j73">编程联动功能</h3>
 
-**基本联动**
+本驱动提供了安防系统的分区状态，防区状态，门禁，故障和智能按钮等事件的联动功能，通过这个功能，可以实现一些高级功能，实现场景的智能联动。
 
-安防系统的分区状态，故障状态，门禁状态，防区状态等都可以作为联动的触发信号，依次可实现更加智能化的功能。
+**分区联动**
+
+驱动支持8个分区，每一个分区提供了9个事件，都可用于联动，下面是事件的说明：
+
+|事件名称|描述|
+|:-:|:--|
+|Alarm|发生报警|
+|Alarm Clear|取消报警|
+|Disarmed|分区已撤防|
+|Armed|分区已布防|
+|Partition State Changed|分区状态发生变化|
+|Arm Failed|布防分区失败|
+|Disarmed|撤防分区失败|
+|Emergency Triggered|分区发生紧急报警|
+|Arm Status|分区布防状态发生变化|
+
+编程界面如下：
+![建立防区连接1](/help/node2/paradox-to-control4-driver/images/events-partition.png)
+
+**防区联动**
 
 下面以防区状态为例来演示具体的联动编程步骤，EVO主机，最多可以支持192个防区，所有防区信号都会通过驱动发送到中控。在驱动初始化完毕，默认的防区数量是1，根据主机实际的防区数量，修改驱动防区数量属性即可。要实现这个功能，需要2步：
 
@@ -287,39 +306,34 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 
 ![建立防区连接1](/help/node2/paradox-to-control4-driver/images/zone-linkage-setting.gif)
 
-**高级联动**
+**其他联动**
 
-除了上面的联动，驱动还提供了门禁，故障和智能按钮等事件的联动功能，通过这个功能，可以实现一些高级功能，实现场景的智能联动。
+以下是门禁、故障和智能按钮事件描述，请参考：
 
 |事件名称|描述|
 |:------|:------|
-|Utility Key1 is pressed|智能按钮 1 被按下的时候|
-|Utility Key2 is pressed|智能按钮 2 被按下的时候|
-|Utility Key3 is pressed|智能按钮 3 被按下的时候|
-|Utility Key4 is pressed|智能按钮 4 被按下的时候|
-|Utility Key5 is pressed|智能按钮 5 被按下的时候|
-|RequestForExitDoor1|外出请求成功 - 1号门|
-|RequestForExitDoor2|外出请求成功 - 2号门|
-|AccessDeniedDoor1|进入请求失败 - 1号门|
-|AccessDeniedDoor2|进入请求失败 - 2号门|
-|DoorLeftOpenAlarmDoor1|开门时间超时报警 - 1号门|
-|DoorLeftOpenAlarmDoor2|开门时间超时报警 - 2号门|
-|DoorLeftOpenRestoreDoor1|开门时间超时报警后恢复 - 1号门|
-|DoorLeftOpenRestoreDoor2|开门时间超时报警后恢复 - 2号门|
-|DoorForcedAlarmDoor1|门被强制打开报警 - 1号门|
-|DoorForcedAlarmDoor2|门被强制打开报警 - 2号门|
-|DoorForcedOpenRestoreDoor1|门被强制打开报警后恢复 - 1号门|
-|DoorForcedOpenRestoreDoor2|门被强制打开报警后恢复 - 2号门|
-|AccessGrantedToUser001|用户 001 请求进入成功|
-|AccessDeniedToUser001|用户 001 请求进入失败|
-|AccessGrantedToUser002|用户 002 请求进入成功|
-|AccessDeniedToUser002|用户 002 请求进入失败|
-|AccessGrantedToUser003|用户 003 请求进入成功|
-|AccessDeniedToUser003|用户 003 请求进入失败|
-|AccessGrantedToUser004|用户 004 请求进入成功|
-|AccessDeniedToUser004|用户 004 请求进入失败|
-|AccessGrantedToUser005|用户 005 请求进入成功|
-|AccessDeniedToUser005|用户 005 请求进入失败|
+|Request For Exit Door1|外出请求成功 - 1号门|
+|Request For Exit Door2|外出请求成功 - 2号门|
+|Access Denied Door1|进入请求失败 - 1号门|
+|Access Denied Door2|进入请求失败 - 2号门|
+|Door Left Open Alarm Door1|开门时间超时报警 - 1号门|
+|Door Left Open Alarm Door2|开门时间超时报警 - 2号门|
+|Door Left Open Restore Door1|开门时间超时报警后恢复 - 1号门|
+|Door Left Open Restore Door2|开门时间超时报警后恢复 - 2号门|
+|Door Forced Alarm Door1|门被强制打开报警 - 1号门|
+|Door Forced Alarm Door2|门被强制打开报警 - 2号门|
+|Door Forced Open Restore Door1|门被强制打开报警后恢复 - 1号门|
+|Door Forced Open Restore Door2|门被强制打开报警后恢复 - 2号门|
+|Access Granted To User001|用户 001 请求进入成功|
+|Access Denied To User001|用户 001 请求进入失败|
+|Access Granted To User002|用户 002 请求进入成功|
+|Access Denied To User002|用户 002 请求进入失败|
+|Access Granted To User003|用户 003 请求进入成功|
+|Access Denied To User003|用户 003 请求进入失败|
+|Access Granted To User004|用户 004 请求进入成功|
+|Access Denied To User004|用户 004 请求进入失败|
+|Access Granted To User005|用户 005 请求进入成功|
+|Access Denied To User005|用户 005 请求进入失败|
 |Trouble - TLM|电话线故障|
 |Trouble Restore - TLM|电话线故障恢复|
 |Trouble - Auxiliary Current Failure|交流电故障|
@@ -334,10 +348,14 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 |Trouble Restore - Bell Absent|警号未接故障恢复|
 |Trouble - Clock|时钟丢失故障|
 |Trouble Restore - Clock|时钟丢失故障恢复|
+|Utility Key1 is pressed|智能按钮 1 被按下的时候|
+|Utility Key2 is pressed|智能按钮 2 被按下的时候|
+|Utility Key3 is pressed|智能按钮 3 被按下的时候|
+|Utility Key4 is pressed|智能按钮 4 被按下的时候|
+|Utility Key5 is pressed|智能按钮 5 被按下的时候|
     
 编程界面如下：
-![事件](/help/node2/paradox-to-control4-driver/images/events.png)
-
+![事件](/help/node2/paradox-to-control4-driver/images/events-other.png)
 
 <h3 id="j74">编程智能按钮</h3>
 
