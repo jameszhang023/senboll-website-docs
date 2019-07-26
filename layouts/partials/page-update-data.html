@@ -1,9 +1,10 @@
 <div style="height:50px">
-<h5 align="center">
-    {{ $lastmodify := .Lastmod.Format "2006/01/02" }}
-    ( 更新:
-    {{ with .GitInfo }}
-      <a href="{{ $.Site.Params.ghrepo }}commit/{{ .Hash }}">{{$lastmodify}}</a>
-    {{end}}
-    )
+  <p align="center">
+      {{ $lastmodify := .Lastmod.Format "2006/01/02" }}
+      ( 更新:
+      {{ with .GitInfo }}
+        <a href="{{ $.Site.Params.ghrepo }}commit/{{ .Hash }}">{{$lastmodify}}</a>
+      {{end}}
+      )
+  </p>
 </div> 
