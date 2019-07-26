@@ -1,6 +1,6 @@
 ---
 weight: 10
-title : "基础概念"
+title : "基本概念"
 ---
 
 <font color=#DC143C>

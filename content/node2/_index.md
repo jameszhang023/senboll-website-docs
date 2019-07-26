@@ -5,7 +5,7 @@ title : "安装和维护"
 
 **目录**
 
-- [工具软件(Babyware)说明书](/help/node2/babyware/)
+- [编程调试和维护](/help/node2/babyware/)
 - [刷固件工具(In-Field)说明书](/help/node2/infield/)
 - [手机APP(Insite Gold)说明书](/help/node2/insite-gold/)
 - [驱动(对接Control4)说明书](/help/node2/paradox-to-control4-driver/)

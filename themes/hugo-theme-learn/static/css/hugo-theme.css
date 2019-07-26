@@ -167,16 +167,17 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 110% !important;
   margin: 2rem 0 1rem 0;
   font-weight: 400;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 100% !important;
-  margin: 1.5rem 0 0.75rem 0;
+  margin: 2.0rem 0 1.0rem 0;
+  font-weight: 600;
 }
 
 h5 {
