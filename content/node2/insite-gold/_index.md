@@ -1,6 +1,6 @@
 ---
 weight: 30
-title : "枫叶APP(Insite Gold)使用说明"
+title : "手机APP(Insite Gold)说明书"
 ---
 
 **目录**

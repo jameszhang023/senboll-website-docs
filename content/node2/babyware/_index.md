@@ -1,6 +1,6 @@
 ---
 weight: 10
-title : "工具软件(Babyware)使用说明"
+title : "工具软件(Babyware)说明书"
 ---
 
 **目录**

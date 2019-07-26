@@ -1,6 +1,6 @@
 ---
 weight: 90
-title : "远程协助软件(Anydesk)使用说明"
+title : "远程协助软件(Anydesk)说明书"
 ---
 
 ## 简介

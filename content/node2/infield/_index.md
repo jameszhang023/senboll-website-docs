@@ -1,6 +1,6 @@
 ---
 weight: 20
-title : "刷固件工具(In-Field)使用说明"
+title : "刷固件工具(In-Field)说明书"
 ---
 
 **目录**
