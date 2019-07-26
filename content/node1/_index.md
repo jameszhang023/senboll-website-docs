@@ -3,7 +3,7 @@ weight: 10
 title : "理论基础"
 ---
 
-**目录**
+**目录：**
 
 - [基本概念](/help/node1/important-knowledge/)
 - [红外探测器须知](/help/node1/detector-installation-notes/)

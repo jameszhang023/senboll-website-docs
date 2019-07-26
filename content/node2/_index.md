@@ -3,7 +3,7 @@ weight: 20
 title : "安装和维护"
 ---
 
-**目录**
+**目录：**
 
 - [编程调试和维护](/help/node2/babyware/)
 - [刷固件工具(In-Field)说明书](/help/node2/infield/)
