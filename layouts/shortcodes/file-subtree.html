@@ -1,0 +1,106 @@
+{{ $currentNode := . }}
+{{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
+{{ $site := .Site.Params.ghrepo }}
+
+<div class="highlightable">
+	<ul class="topics">			
+		{{if eq .Site.Params.ordersectionsby "title"}}  
+			{{range .Site.Sections.ByTitle}}
+				{{ template "section-tree-nav-" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "site" $site}}
+			{{end}}
+		{{else}}
+			{{range .Site.Sections.ByWeight}}
+				{{ template "section-tree-nav-" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "site" $site}}
+			{{end}}
+		{{end}} 
+	</ul>
+</div>
+
+<!-- templates -->
+{{ define "section-tree-nav-" }}
+	{{ $showvisitedlinks := .showvisitedlinks }}
+	{{ $site := .site }}
+	{{ $currentNode := .currentnode }}
+	{{with .sect}}
+		{{if .IsSection}}
+			{{safeHTML .Params.head}}
+			<li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item 
+				{{if .IsAncestor $currentNode }}parent{{end}}
+				active
+				{{if .Params.alwaysopen}}parent{{end}}
+				">
+				<a href="{{.RelPermalink}}">
+					{{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+					{{ if $showvisitedlinks}}
+						<i class="fa fa-check- read-icon"></i>
+					{{ end }}
+				</a>
+				
+				{{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+				{{ if ne $numberOfPages 0 }} 
+				{{else}}
+					{{ $currentNode.Scratch.Set "pages" .Pages }}
+					{{ if .Sections}}
+						{{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
+					{{end}}
+					{{ $pages := ($currentNode.Scratch.Get "pages") }}
+				
+					{{if eq .Site.Params.ordersectionsby "title"}}  
+						{{ range $pages.ByTitle }}
+							{{ if and .Params.hidden (not $.showhidden) }} 
+							{{else}}
+							{{end}}
+						{{ end }}
+					{{else}}
+						{{ if and .Params.hidden (not $.showhidden) }} 
+						{{else}}
+							{{ $lastmodify := .Lastmod.Format "2006/01/02" }}
+							( 更新:
+							{{ with .GitInfo }}
+								<a href="{{ $site }}commit/{{ .Hash }}">{{$lastmodify}}</a>
+							{{end}}
+							)
+						{{end}}
+					{{end}} 
+				{{end}}  
+					
+				
+				{{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
+				{{ if ne $numberOfPages 0 }}
+					<ul>
+						{{ $currentNode.Scratch.Set "pages" .Pages }}
+						{{ if .Sections}}
+							{{ $currentNode.Scratch.Set "pages" (.Pages | union .Sections) }}
+						{{end}}
+						{{ $pages := ($currentNode.Scratch.Get "pages") }}
+					
+						{{if eq .Site.Params.ordersectionsby "title"}}  
+							{{ range $pages.ByTitle }}
+								{{ if and .Params.hidden (not $.showhidden) }} 
+								{{else}}
+									{{ template "section-tree-nav-" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "site" $site }}
+								{{end}}
+							{{ end }}
+						{{else}}
+							{{ range $pages.ByWeight }}
+								{{ if and .Params.hidden (not $.showhidden) }} 
+								{{else}}
+									{{ template "section-tree-nav-" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "site" $site }}
+								{{end}}
+							{{ end }}
+						{{end}}
+					</ul>
+				{{ end }}        
+			</li>
+		{{else}}
+			{{ if not .Params.Hidden }}
+			<li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item active">
+				<a href="{{ .RelPermalink}}">
+				{{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+				{{ if $showvisitedlinks}}<i class="fa fa-check read-icon"></i>{{end}}
+				</a>
+			</li>
+			{{ end }}
+		{{end}}
+	{{ end }}
+{{ end }}
