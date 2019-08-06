@@ -18,7 +18,6 @@ enableGitInfo = true
   author = "James"
   showVisitedLinks = true
   ## Gh repo (include trailing slash)
-  ghrepo = "https://github.com/JamesZhangChina/support.senboll.com.help/"
 
 [[Languages.en.menu.shortcuts]] 
 name = "系统拓扑图"
