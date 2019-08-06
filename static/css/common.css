@@ -16,28 +16,7 @@ ul, ol {
     margin-bottom: 0.2em;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: fixed;
-    width: 100%;
-}
 
-th {
-    background: #b8b8b8;
-    padding: 0.5rem;
-    border: 1px solid #b8b8b8;
-}
-tr, td, th {
-    vertical-align: middle;
-}
-td {
-    padding: 0.5rem;
-    border: 1px solid #b8b8b8;
-}
-tr, td, th {
-    vertical-align: middle;
-}
 
 /* Hides non-meaningful TOC items*/
 #TableOfContents ul li ul li ul li{
