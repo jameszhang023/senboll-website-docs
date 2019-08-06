@@ -9,7 +9,7 @@ keywords: [ssg,static,performance,security]
 menu:
   docs:
     parent: "安装和维护"
-    weight: 30
+    weight: 14
 weight: 40
 sections_weight: 30
 draft: false

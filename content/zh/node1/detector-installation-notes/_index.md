@@ -9,7 +9,7 @@ keywords: [ssg,static,performance,security]
 menu:
   docs:
     parent: "理论基础"
-    weight: 30
+    weight: 12
 weight: 20
 sections_weight: 30
 draft: false

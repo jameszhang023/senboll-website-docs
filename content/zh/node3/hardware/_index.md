@@ -9,7 +9,7 @@ keywords: [ssg,static,performance,security]
 menu:
   docs:
     parent: "常见问题"
-    weight: 30
+    weight: 11
 weight: 30
 sections_weight: 30
 draft: false
