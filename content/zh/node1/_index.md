@@ -1,6 +1,6 @@
 ---
 title : "理论基础"
-linktitle: 理论基础预览
+linktitle: 本节预览
 description: Hugo's features, roadmap, license, and motivation.
 date: 2017-02-01
 publishdate: 2017-02-01
