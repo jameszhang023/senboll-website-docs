@@ -1,5 +1,4 @@
 ---
-weight: 30
 title : "常见问题"
 linktitle: 常见问题预览
 description: Hugo's features, roadmap, license, and motivation.

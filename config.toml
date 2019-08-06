@@ -1,7 +1,6 @@
 baseurl = "http://support.senboll.com:8888/help"
 # baseurl = "https://jameszhangchina.github.io/"
 languageCode = "zh-CN"
-# languageCode = "en-US"
 defaultContentLanguage = "en"
 
 title = "枫叶帮助中心"
@@ -17,7 +16,6 @@ enableGitInfo = true
   description = ""
   author = "James"
   showVisitedLinks = true
-  ## Gh repo (include trailing slash)
 
 [[Languages.en.menu.shortcuts]] 
 name = "系统拓扑图"

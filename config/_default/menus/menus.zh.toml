@@ -4,28 +4,28 @@
 [[docs]]
   name = "理论基础"
   weight = 1
-  identifier = "basic-knowledge"
+  identifier = "理论基础"
   post = "break"
   url = "/node1/"
 
 [[docs]]
   name = "安装和维护"
   weight = 5
-  identifier = "maintenance"
+  identifier = "安装和维护"
   post = "break"
   url = "/node2/"
 
 [[docs]]
   name = "常见问题"
   weight = 15
-  identifier = "questions"
+  identifier = "常见问题"
   post = "break"
   url = "/node3/"
 
 [[docs]]
   name = "其他"
   weight = 20
-  identifier = "others"
+  identifier = "其他"
   post = "break"
   url = "/node9/"
 
