@@ -2,49 +2,70 @@
 
 title : "首页"
 date: 2017-03-02T12:00:00-05:00
-features:
-  - heading: Blistering Speed
-    image_path: /images/icon-fast.svg
-    tagline: What's modern about waiting for your site to build?
-    copy: Hugo is the fastest tool of its kind. At <1 ms per page, the average site builds in less than a second.
-
-  - heading: Robust Content Management
-    image_path: /images/icon-content-management.svg
-    tagline: Flexibility rules. Hugo is a content strategist's dream.
-    copy: Hugo supports unlimited content types, taxonomies, menus, dynamic API-driven content, and more, all without plugins.
-
-  - heading: Shortcodes
-    image_path: /images/icon-shortcodes.svg
-    tagline: Hugo's shortcodes are Markdown's hidden superpower.
-    copy: We love the beautiful simplicity of markdown’s syntax, but there are times when we want more flexibility. Hugo shortcodes allow for both beauty and flexibility.
-
-  - heading: Built-in Templates
-    image_path: /images/icon-built-in-templates.svg
-    tagline: Hugo has common patterns to get your work done quickly.
-    copy: Hugo ships with pre-made templates to make quick work of SEO, commenting, analytics and other functions. One line of code, and you're done.
-
-  - heading: Multilingual and i18n
-    image_path: /images/icon-multilingual2.svg
-    tagline: Polyglot baked in.
-    copy: Hugo provides full i18n support for multi-language sites with the same straightforward development experience Hugo users love in single-language sites.
-
-  - heading: Custom Outputs
-    image_path: /images/icon-custom-outputs.svg
-    tagline: HTML not enough?
-    copy: Hugo allows you to output your content in multiple formats, including JSON or AMP, and makes it easy to create your own.
 sections:
-  - heading: "300+ Themes"
-    cta: Check out the Hugo themes.
-    link: https://themes.gohugo.io/
-    color_classes: bg-accent-color white
-    image: /images/homepage-screenshot-hugo-themes.jpg
-    copy: "Hugo provides a robust theming system that is easy to implement but capable of producing even the most complicated websites."
-  - heading: "Capable Templating"
-    cta: Get Started.
-    link: templates/
+  - heading: "一站式安防解决方案"
+    cta: 
+    link: http://www.senboll.com
     color_classes: bg-primary-color-light black
-    image: /images/home-page-templating-example.png
-    copy: "Hugo's Go-based templating provides just the right amount of logic to build anything from the simple to complex. If you prefer Jade/Pug-like syntax, you can also use Amber, Ace, or any combination of the three."
+    image: images/one-solution.png
+    copy: "集成了报警，视频复核，门禁控制和自动化控制功能，是报警系统、监控系统、门禁系统和智能家居控制的“一站式”解决方案"
+
+  - heading: "个性化，模块化设计，方案灵活多变"
+    cta: 
+    link: 
+    color_classes: bg-accent-color-dark white
+    image: images/2019-home.png
+    copy: "枫叶提供的报警，门禁，视频和智能控制一体化解决方案，功能高度模块化，这样能对于配置方案更加灵活，系统更加稳定，成本也得到很好的控制"
+
+scenario:
+  - heading: 联网报警
+    cta: 
+    link: 
+    color_classes: bg-light-blue black
+    image: images/cms.jpg
+    copy: 联网报警运营服务，从前端到后端一整套解决方案
+
+  - heading: 银行，金库，厂矿，酒店等
+    cta: 
+    link: 
+    color_classes: bg-light-green black
+    image: images/bank.jpg
+    copy: 金融场所对安防系统有较高的要求，枫叶在金融领域的案例有很多，也积累了很多金融安防的经验。
+
+  - heading: 办公场所、居家住宅
+    cta: 
+    link: 
+    color_classes: bg-primary-color-light black
+    image: images/house.jpg
+    copy: 在欧美发达国家，民用安防系统基本上是标配，中国正处在快速的发展期，对于安防的需要日益增多，未来的前景会越来越好
+
+  - heading: 医院、学校、养老院
+    cta: 
+    link: 
+    color_classes: bg-accent-color-dark white
+    image: images/school.jpg
+    copy: 
+
+  - heading: 名胜景点、文物单位、博物馆
+    cta: 
+    link: 
+    color_classes: bg-gray white
+    image: images/history.jpg
+    copy: 文物
+
+  - heading: 部队，公安，拘留所或监狱
+    cta: 
+    link: 
+    color_classes: bg-blue black
+    image: images/police.jpg
+    copy: 
+
+features:
+  - heading: 联网报警
+    image_path: /images/icon-fast.svg
+    tagline: 联网报警运营服务，从前端到后端一整套解决方案
+    copy: 
+
 ---
 
 枫叶创立于1989年，安防系统国际一线品牌，业务遍及160多个国家和地区。拥有多项发明专利。连续多年荣获中国十大安防国际品牌等奖项。产品均取得公安部产品检测报告和3C证书。作为行业的领跑者，从1996年推出业界首款Digiplex混合型加密总线主机开始，到2001年推出业界首款All In One概念的一体化无线家庭用的双向系统，再到2007年，又是在业界首先采用跨平台的基于移动互联网的三网后备报警系统。再到警视一体化探测器，从设备最底层实现以红外驱动视频报警。枫叶APP已经实现了报警、门禁、视频、家电控制的一站式解决方案。全球有2个研发中心以及4个产品测试中心。重视研发，聚焦于新技术和新标准。产品以卓越的品质、功能灵活（模块化设计理念），个性化著称。

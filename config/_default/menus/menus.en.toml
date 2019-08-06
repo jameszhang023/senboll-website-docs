@@ -5,12 +5,6 @@
   url = "/about/"
 
 [[docs]]
-  name = "枫叶在线帮助中心"
-  weight = 4
-  identifier = "枫叶在线帮助中心"
-  url = "/help/"
-
-[[docs]]
   name = "Getting Started"
   weight = 5
   identifier = "getting-started"

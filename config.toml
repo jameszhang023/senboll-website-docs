@@ -4,7 +4,7 @@ languageCode = "zh-CN"
 # languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "枫叶在线帮助中心"
+title = "枫叶帮助中心"
 theme = "gohugoioTheme"
 themesdir = "themes/"
 metaDataFormat = "yaml"

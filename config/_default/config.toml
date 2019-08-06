@@ -7,7 +7,7 @@ enableEmoji = true
 footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
 metaDataFormat = "yaml"
-title = "Hugo"
+title = "盛波尔科技"
 theme = "gohugoioTheme"
 
 googleAnalytics = "UA-7131036-4"

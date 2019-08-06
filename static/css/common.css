@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family:segmdl2;
+    src: url('../fonts/segmdl2.woff');
+}
+
+ul, ol {
+    /* margin-top: 0.1rem; */
+    margin-left: -1.5rem;
+    /* margin-bottom: 0.1rem; */
+}
+.prose ul li, .prose ol li {
+    margin-bottom: 0em;
+}
+.prose ul, .prose ol {
+    margin-bottom: 0.2em;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+th {
+    background: #b8b8b8;
+    padding: 0.5rem;
+    border: 1px solid #b8b8b8;
+}
+tr, td, th {
+    vertical-align: middle;
+}
+td {
+    padding: 0.5rem;
+    border: 1px solid #b8b8b8;
+}
+tr, td, th {
+    vertical-align: middle;
+}
+
+/* Hides non-meaningful TOC items*/
+#TableOfContents ul li ul li ul li{
+    margin-left: 1.0rem;
+}
+
+
+
+ 
+
+/* 文章编号 */
+body{
+  counter-reset:section;
+  counter-reset: index0;  /* 创建一个计数器 */
+}
+h2 {
+    counter-reset: index1;
+}
+h3 {
+    counter-reset: index2;
+}
+h4 {
+    counter-reset: index3;
+}
+h5 {
+    counter-reset: index4;
+}
+
+h2:before {
+    counter-increment: index0; /* 自动将计数器加 1 */
+    content: counter(index0) " "; /* 获取计数器值，把它填写在 content 中 */
+}
+h3:before {
+    counter-increment: index1;
+    content: counter(index0) "." counter(index1) " ";
+}
+h4:before {
+    counter-increment: index2;
+    content: counter(index0) "." counter(index1) "." counter(index2) " ";
+}
+h5:before {
+    counter-increment: index3;
+    content: counter(index0) "." counter(index1) "." counter(index2) "." counter(index3) " ";
+}
+h6:before {
+    counter-increment: index4;
+    content: counter(index0) "." counter(index1) "." counter(index2) "." counter(index3) "." counter(index4) " ";
+}
+
+.querybtn:focus {
+    outline:0;
+} 

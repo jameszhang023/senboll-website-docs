@@ -14,7 +14,8 @@ weight: 50
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
 辐射是什么?
@@ -32,7 +33,7 @@ toc: false
 
 那么现在讨论的问题就来到了电磁波频率上了，我们来看看电磁波是怎样根据频率来分类的：
 
-![频率分布](/help/node1/rf-radiation/images/wave.jpg)
+![频率分布](images/wave.jpg)
 
 上面是频率，左到右越来越低单位是赫兹，下面是波长，左到右越来越长单位是米。我们从右到左来解释一下吧。
 

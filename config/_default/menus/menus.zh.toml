@@ -39,14 +39,14 @@
   url = "/paradox-frame/"
 
 [[global]]
-  name = "文档"
+  name = "文档中心"
   weight = 5
   identifier = "docs"
   url = "/documentation/"
 
 # Anything with a weight > 100 gets an external icon
 [[global]]
-  name = "枫叶资料服务器"
+  name = "资料服务器"
   weight = 150
   icon = true
   identifier = "community"

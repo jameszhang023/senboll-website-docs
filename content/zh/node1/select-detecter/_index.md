@@ -14,7 +14,8 @@ weight: 60
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
 枫叶红外防入侵探测器按照安装的位置，分为室内和室外型，其中室内主要有NV75M系列，525DM，DG75，DG467等，室外型有NV780M系列，NV790，NV35M系列，DG85（无线型号PMD85），NVX80系列等。其中室外型探测器均支持室内安装场景。

@@ -14,7 +14,8 @@ menu:
 weight: 10
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
 盛波尔科技将Insite Gold应用程序构建为免费应用程序。本服务由盛波尔科技免费提供，旨在按原样使用。如果有人决定使用我们的服务，此页面用于通知收集，使用和披露个人信息的政策。

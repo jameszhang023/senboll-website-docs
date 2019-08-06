@@ -14,35 +14,11 @@ weight: 40
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
-**目录：**
-
-- [简介](#j20)
-- [功能](#j30)
-- [版本更新日志](#j40)
-- [准备工作](#j50)
-  - [具备的软硬件](#j51)
-  - [步骤一：下载驱动和授权](#j52)
-  - [步骤二：安防系统的接线和设置PRT3](#j53)
-  - [步骤三：连接中控和安防系统](#j54)
-  - [步骤四：初始化驱动属性](#j55)
-  - [步骤五：分配防区](#j56)
-- [功能设置](#j70)
-  - [编辑分区和防区标签](#j71)
-  - [编程联动功能](#j73)
-  - [编程智能按钮](#j74)
-  - [编程一键紧急求助](#j75)
-  - [启用日志功能](#j76)
-- [常见问题](#j80)
-  - [键盘上显示分区锁定](#j81)
-  - [通过Control4无法布防](#j82)
-  - [通过Control4无法撤防](#j83)
-  - [疑难杂症](#j84)
-- [联系方式](#j90)
-
-<h2 id="j20">简介</h2>
+## 简介
 
 ---
 
@@ -50,7 +26,7 @@ toc: false
 
 为了满足智能家居的个性化需求，整合各系统的资源，更加灵活、智能和人性化。我们提供[Control4](http://www.control4.com)集成解决方案。现在功能已经成熟稳定，随着产品和方案的演化会持续升级更新。感谢各位合作伙伴关注和支持。
 
-<h2 id="j30">功能</h2>
+## 功能
 
 ---
 
@@ -67,7 +43,7 @@ toc: false
 - 通过驱动中的智能按钮联动安防主机的继电器，实现更加个性化的智能体验；
 - 支持状态信息、故障信息和报警信息日志。
 
-<h2 id="j40">版本更新日志</h2>
+## 版本更新日志
 
 ---
 
@@ -159,17 +135,17 @@ toc: false
   - 新增：定时全自动升级驱动。
   - 新增：手动一键升级驱动。
 
-<h2 id="j50">准备工作</h2>
+## 准备工作
 
 ---
 
-<h3 id="j51">具备的软硬件</h3>
+### 具备的软硬件
 
 - Control4：
   - Control4主机(带双向通信串口)；
   - 编程软件Composer；
 - 枫叶：
-  - 编程软件Babyware，关于软件的使用说明请访问[Babyware使用说明](/help/node2/babyware/)，如果是通过307USB编程安防主机请下载307USB驱动；
+  - 编程软件Babyware，关于软件的使用说明请访问[Babyware使用说明](../babyware/)，如果是通过307USB编程安防主机请下载307USB驱动；
   - 编程模块，串口307USB模块或网口IP150模块（选择一个即可）；
   - 安防主机(EVO192/EVOHD)；
   - 对接专用PRT3模块；
@@ -177,15 +153,15 @@ toc: false
   - 枫叶驱动；
   - 串口线，用来连接对接模块和中控主机，有些Control4中控主机带9针串口输出用RS232标准直连串口线连接即可，有些Control4主机串口是3.5mm输出，需要3.5转RS232，如果是自制的线，线序请参考；    
     **3.5mm转DB9：**
-    ![3.5mm转DB9](/help/node2/paradox-to-control4-driver/images/3.5-to-db9.jpg)
+    ![3.5mm转DB9](images/3.5-to-db9.jpg)
     **标准直连串口线：**
-    ![标准直连串口线](/help/node2/paradox-to-control4-driver/images/db9-to-db9.jpg)
+    ![标准直连串口线](images/db9-to-db9.jpg)
 
 注：枫叶软件下载，请访问 -> [资料服务器](http://support.senboll.com:8888)，登陆用户名和密码请[微信联系](../../contact.html)获取；
 
-<h3 id="j52">步骤一：下载驱动和授权</h3>
+### 步骤一：下载驱动和授权
 
- attachments title="驱动下载" pattern=".*(c4z)" / >}}
+{{< attachments title="驱动下载" pattern=".*(c4z)" / >}}
 {{< paradox-driver >}}
 
 **授权**
@@ -194,44 +170,47 @@ toc: false
 2. 驱动授权，请访问 -> [驱动授权](http://support.senboll.com:8888/codepay)，请按页面提示输入真实的信息，提交会生成微信支付二维码，支付成功后，服务器自动发送授权码将到提交的邮箱。
 
 驱动授权成功后：
-![驱动授权](/help/node2/paradox-to-control4-driver/images/diver_active.png)
+![驱动授权](images/diver_active.png)
 
-<h3 id="j53">步骤二：安防系统的接线和设置PRT3</h3>
+### 步骤二：安防系统的接线和设置PRT3
 
-**重要提示：PRT3模块和安防主机是采用枫叶总线方式通信，枫叶总线的通信距离可以延伸至900米，如果安防主机和中控主机距离比较远，请将PRT3模块置于中控主机处，千万不要延长串口线来解决，因为串口通信标准的理论最大距离是15米，通常不可超过9米，否则会不稳定，并且距离跟波特率有关系。**
+{{< warning >}}
+PRT3模块和安防主机是采用枫叶总线方式通信，枫叶总线的通信距离可以延伸至900米，如果安防主机和中控主机距离比较远，请将PRT3模块置于中控主机处，千万不要延长串口线来解决，因为串口通信标准的理论最大距离是15米，通常不可超过9米，否则会不稳定，并且距离跟波特率有关系。**
+{{< /warning >}}
 
 请完成安防系统的接线和上电，并且掌握基本操作和设置，具体请咨询设备提供商。
 
-设置PRT3可以通过枫叶操作键盘和Babyware软件，推荐用操作键盘，因为有时候Babyware设置会不起作用，这是小概率。
+{{< tip >}}
+设置PRT3可以通过枫叶操作键盘和Babyware软件，推荐用操作键盘，因为有时候Babyware设置会不起作用，这是小概率。{{< /tip >}}
 
 **注意：设置完毕后请重启枫叶主机和模块才能生效。**
 
 方法一：通过键盘设置，在触摸屏键盘上操作步骤：**菜单** → **高级设置** → **安装设置** → **系统编程** → 输入`000000` → 输入`4003` → 输入PRT3八位序列号 → 输入`016` → 将1,2,4选项打开，效果如图：
-![PRT3通过键盘设置](/help/node2/paradox-to-control4-driver/images/prt3-keypad-setting.png)
+![PRT3通过键盘设置](images/prt3-keypad-setting.png)
 
 方法二：通过软件Babyware设置，请参考下图所示的内容设置，其中图1是中文界面，图2是英文界面。
-  ![PRT3设置-中文](/help/node2/paradox-to-control4-driver/images/prt3_settings-chinese.png)
-  ![PRT3设置-英文](/help/node2/paradox-to-control4-driver/images/prt3_settings-english.png)
+  ![PRT3设置-中文](images/prt3_settings-chinese.png)
+  ![PRT3设置-英文](images/prt3_settings-english.png)
 
-<h3 id="j54">步骤三：连接中控和安防系统</h3>
+### 步骤三：连接中控和安防系统
 
 - 用串口线将PRT3和Control4主机连接起来；
 - 在Composer上做串口连接，注意硬件串口和Composer上的串口要对应，如果前面的步骤都没有问题，驱动会自动获取安防系统的状态；
 - 如果前面的步骤还未完成，请在一切准备好后，按照下面的方法尝试建立连接；
-  ![连接主机](/help/node2/paradox-to-control4-driver/images/read-panel.png)
+  ![连接主机](images/read-panel.png)
 
 **连接成功：**
 
 如果建立了连接，可以通过Conotrol4来控制安防系统，安防系统的状态也会实时反馈，连接成功后Conotrol4的界面应该是这样：
-![连接成功](/help/node2/paradox-to-control4-driver/images/connected.png)
+![连接成功](images/connected.png)
 
 同时也可以通过Composer来直接控制安防系统，演示如下：
-![Composer控制安防系统](/help/node2/paradox-to-control4-driver/images/composer-control-panel.gif)
+![Composer控制安防系统](images/composer-control-panel.gif)
 
 **未连接：**
 
 会出现这种情况：
-![无法通信](/help/node2/paradox-to-control4-driver/images/disconnect.png)
+![无法通信](images/disconnect.png)
 
 常见原因有3种：
 
@@ -239,59 +218,59 @@ toc: false
 2. 驱动的设置问题，加载好驱动后，在Composer上需要将驱动和串口建立连接，
 3. PRT3的参数没有设置成功，建议请用键盘设置。
 
-<h3 id="j55">步骤四：初始化驱动属性</h3>
+### 步骤四：初始化驱动属性
 
-关于用户、分区、防区、退出延时的定义和一些安防基础知识请访问[基础知识](/help/node1/important-knowledge/)，本站仅提供的一些参考，更详细的请咨询设备提供商，最好请设备提供商做个培训指导。
+关于用户、分区、防区、退出延时的定义和一些安防基础知识请访问[基础知识](../../node1/important-knowledge/)，本站仅提供的一些参考，更详细的请咨询设备提供商，最好请设备提供商做个培训指导。
 
 请先完成安防系统的设置，再根据安防系统的设置内容来设置驱动属性，驱动属性中有几个比较重要属性需要设置，下面是属性的说明：
 
 - **User Code** ，默认是`1234`，因Control4目前不支持多用户，所以此处填入安防系统里的某一个用户密码（有布撤防权限），通常填入管理员密码即可。Babyware中设置：
-![用户密码](/help/node2/paradox-to-control4-driver/images/user-code.png)
+![用户密码](images/user-code.png)
 
 - **Number of Partitions**，默认是`1`，分区数量就是开启了多少个分区。分区数量太多会让用户感觉繁琐复杂，管理起来容易混乱，通常我们建议最多开启2个分区，室外一个区，室内一个区是最典型的应用。Babyware中设置：
-![分区数量](/help/node2/paradox-to-control4-driver/images/partitions.png)
+![分区数量](images/partitions.png)
 
 Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Composer设置才能出现其他分区，Babyware中设置：
-![开启分区](/help/node2/paradox-to-control4-driver/images/partition-eable.gif)
+![开启分区](images/partition-eable.gif)
 
 - **Number of Zones**，默认是`1`，防区数量就是开启了多少个防区，Babyware中设置：
-![防区数量](/help/node2/paradox-to-control4-driver/images/zones.png)
+![防区数量](images/zones.png)
 
 - **Exit Delay**，默认是`60秒`，请将安防系统的每一个分区退出延时设置为相同的时间，因Control4目前不支持对某一分区单独设置退出延时时间，Babyware中设置：
-![退出延时](/help/node2/paradox-to-control4-driver/images/exit-delay.png)
+![退出延时](images/exit-delay.png)
 
 - **Keep Open When Zone Alarm**，表示当防区报警，状态是否需要保持直到系统撤防，根据实际需要设置。
 
-<h3 id="j56">步骤五：分配防区</h3>
+### 步骤五：分配防区
 
 在操作前，请确保枫叶和Control4连接成功。
 请用Babyware编程防区编程完防区，然后对防区的标签单独设置，规则是：需要在标签加前缀`PX`:，其中P是Partition分区的第一个字母，字母请大写，X表示分区号，如果是1分区就是`P1`，2分区是`P2`，前缀后面的内容可以自定义，只支持数字和字母。例如：
-![防区标签](/help/node2/paradox-to-control4-driver/images/zong_label_setting.png)
+![防区标签](images/zong_label_setting.png)
 然后在Composer中执行分配防区命令：
-![分配防区](/help/node2/paradox-to-control4-driver/images/zone-assign.png)
+![分配防区](images/zone-assign.png)
 
-<h2 id="j70">功能设置</h2>
+## 功能设置
 
 ---
 
-<h3 id="j71">编辑分区和防区标签</h3>
+### 编辑分区和防区标签
 
 **分区标签**
 整个过程和效果参考下图：
-![分区标签](/help/node2/paradox-to-control4-driver/images/label-partition.png)
-![分区标签](/help/node2/paradox-to-control4-driver/images/label-partitions.png)
+![分区标签](images/label-partition.png)
+![分区标签](images/label-partitions.png)
 
 **防区标签**
 整个过程和效果参考下图：
-![防区标签](/help/node2/paradox-to-control4-driver/images/label-zone.png)
-![防区标签](/help/node2/paradox-to-control4-driver/images/label-zone-p1.png)
-![防区标签](/help/node2/paradox-to-control4-driver/images/label-zone-p2.png)
+![防区标签](images/label-zone.png)
+![防区标签](images/label-zone-p1.png)
+![防区标签](images/label-zone-p2.png)
 
-<h3 id="j73">编程联动功能</h3>
+### 编程联动功能
 
 本驱动提供了安防系统的分区状态，防区状态，门禁，故障和智能按钮等事件的联动功能，通过这个功能，可以实现一些高级功能，实现场景的智能联动。
 
-**分区联动**
+#### 分区联动
 
 驱动支持8个分区，每一个分区提供了9个事件，都可用于联动，下面是事件的说明：
 
@@ -308,9 +287,9 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 |Arm Status|分区布防状态发生变化|
 
 编程界面如下：
-![建立防区连接1](/help/node2/paradox-to-control4-driver/images/events-partition.png)
+![建立防区连接1](images/events-partition.png)
 
-**防区联动**
+#### 防区联动
 
 下面以防区状态为例来演示具体的联动编程步骤，EVO主机，最多可以支持192个防区，所有防区信号都会通过驱动发送到中控。在驱动初始化完毕，默认的防区数量是1，根据主机实际的防区数量，修改驱动防区数量属性即可。要实现这个功能，需要2步：
 
@@ -320,9 +299,9 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 
 下面是一个例子，演示如何设置2个防区和一个继电器的联动，实现当防区1开路，继电器输出开路信号，当防区1闭合，继电器输出闭合信号；防区2开路，继电器切换输出状态。演示如下：
 
-![建立防区连接1](/help/node2/paradox-to-control4-driver/images/zone-linkage-setting.gif)
+![建立防区连接1](images/zone-linkage-setting.gif)
 
-**其他联动**
+#### 其他联动
 
 以下是门禁、故障和智能按钮事件描述，请参考：
 
@@ -369,65 +348,65 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 |Utility Key3 is pressed|智能按钮 3 被按下的时候|
 |Utility Key4 is pressed|智能按钮 4 被按下的时候|
 |Utility Key5 is pressed|智能按钮 5 被按下的时候|
-    
-编程界面如下：
-![事件](/help/node2/paradox-to-control4-driver/images/events-other.png)
 
-<h3 id="j74">编程智能按钮</h3>
+编程界面如下：
+![事件](images/events-other.png)
+
+### 编程智能按钮
 
 智能按钮是安防系统中的多功能键(Utility Key)，可以作为触发安防系统继电器(PGM)的条件，继电器可以实现控制的设备很多，意味着这个按钮可以控制安防系统继电器，一种常见的用法是控制门禁功能。
 
 在驱动初始化完毕，Composer上会出现5个智能按钮，默认情况下app界面不显示，需要在Room上打开导航栏，将其设置为可见，如图：
-![智能按钮显示方法](/help/node2/paradox-to-control4-driver/images/utility_display.gif)
+![智能按钮显示方法](images/utility_display.gif)
 
 在Babyware上继电器(PGM)编程界面上根据需要编程激活事件和恢复事件，编程方法如图：
-![智能按钮编程方法](/help/node2/paradox-to-control4-driver/images/uility_babyware_setting.png)
+![智能按钮编程方法](images/uility_babyware_setting.png)
 
-<h3 id="j75">编程一键紧急求助</h3>
+### 编程一键紧急求助
 
 枫叶驱动界面提供了3种紧急求助一键按钮，分别是火灾，救护，应急，分别对应国内的119，120，110。
-![紧急求助](/help/node2/paradox-to-control4-driver/images/emergency.png)
+![紧急求助](images/emergency.png)
 
 此功能需要在Babyware上设置才能生效，设置内容如图：
-![紧急求助](/help/node2/paradox-to-control4-driver/images/emergency-setting.png)
+![紧急求助](images/emergency-setting.png)
 
-<h3 id="j76">启用日志功能</h3>
+### 启用日志功能
 
 通过这个功能，可以记录3类日志，报警日志，故障，状态信息日志，启动方法和效果如下：
-![启用日志](/help/node2/paradox-to-control4-driver/images/history-eable.gif)
-![效果1](/help/node2/paradox-to-control4-driver/images/history-all.png)
-![效果2](/help/node2/paradox-to-control4-driver/images/history-alarm.png)
+![启用日志](images/history-eable.gif)
+![效果1](images/history-all.png)
+![效果2](images/history-alarm.png)
 
-<h2 id="j80">常见问题</h2>
+## 常见问题
 
 ---
 
-<h3 id="j81">键盘上显示分区锁定</h3>
+### 键盘上显示分区锁定
 
 一般是输入的密码错误次数太多导致，如果在5分钟之内输入密码错误5次会导致整个情况发生，每次锁定时间是15分钟。如果默认的布撤防密码被修改，请在驱动属性**User Code**上手动设置。
 
-<h3 id="j82">通过Control4无法布防</h3>
+### 通过Control4无法布防
 
 **Control4无任何提示**    
 请在枫叶操作键盘上尝试是否能成功布防，如果不行，问题在安防系统这边，请仔细检查接线和设置，一步步盘查问题。如果枫叶操作键盘可以布防，Control4不能布防，请首先检查接线和设置。
 
 **Control4提示失败**    
 可能是分区锁定（如果在5分钟之内输入密码错误5次会导致分区锁定），或者密码错误，属密码错误最常见。例如：
-![布防失败](/help/node2/paradox-to-control4-driver/images/arm-fail.png)
+![布防失败](images/arm-fail.png)
 
-如果偶尔不能布防，首先请确认**强制布防**模式会不会出现这种情况，如果不会，只有**常规布防**，**留守布防**，**立即布防**会有时候出现布防不了，这是由于有防区未准备好，除了**强制布防**会忽略防区状态是否准备好，其余的布防模式都要求防区准备好才能进行布防动作，关于布防方式的详细描述请看[这里](/help/node1/important-knowledge/#j2022)。
+如果偶尔不能布防，首先请确认**强制布防**模式会不会出现这种情况，如果不会，只有**常规布防**，**留守布防**，**立即布防**会有时候出现布防不了，这是由于有防区未准备好，除了**强制布防**会忽略防区状态是否准备好，其余的布防模式都要求防区准备好才能进行布防动作，关于布防方式的详细描述请看[这里](../../node1/important-knowledge/#布防模式)。
 
-<h3 id="j83">通过Control4无法撤防</h3>
+### 通过Control4无法撤防
 
 **Control4提示失败**
 可能是分区锁定（如果在5分钟之内输入密码错误5次会导致分区锁定），或者密码错误，属密码错误最常见。例如：
-![撤防失败](/help/node2/paradox-to-control4-driver/images/disarm-fail.png)
+![撤防失败](images/disarm-fail.png)
 
-<h3 id="j84">疑难杂症</h3>
+### 疑难杂症
 
-如果碰到了一些奇怪的问题，通过常见方法都解决不了，请尝试[疑难问题通用解决方法](/help/node3/hardware/#j90)
+如果碰到了一些奇怪的问题，通过常见方法都解决不了，请尝试[疑难问题通用解决方法](../../node3/hardware/#万能大法)
 
-<h2 id="j90">联系方式</h2>
+## 联系方式
 
 ---
 

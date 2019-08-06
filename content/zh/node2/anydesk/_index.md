@@ -14,7 +14,8 @@ weight: 90
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
 ## 简介
@@ -23,7 +24,7 @@ Teamviewer确实是当今最好用的远程工具，但免费版越来越多的�
 
 因此为大家推荐Anydesk。AnyDesk Software GmbH由前TeamViewer员工于2014年创立。它提供运行Windows，macOS，Linux，FreeBSD，Android，iOS的个人计算机之间的双向远程访问。
 
-## 功能：
+## 功能
 
 - 运行不同操作系统的计算机之间的双向远程控制。
 - 从移动Android和iOS单向访问[3]
@@ -41,10 +42,10 @@ Teamviewer确实是当今最好用的远程工具，但免费版越来越多的�
 [https://anydesk.com/platforms](https://anydesk.com/platforms)。
 
 途径二：本网站下载(仅Windows版):
-[Anydesk安装包](/help/node2/anydesk/anydesk.exe)。
+[Anydesk安装包](attachment/anydesk.exe)。
 
 ## 使用方法
 
 直接启动软件，提供启动界面给需要控制此电脑的一方即可。如图：
 
-![Anydesk启动](/help/node2/anydesk/images/anydesk-1.png)。
+![Anydesk启动](images/anydesk-1.png)。

@@ -1,10 +1,10 @@
 
-description = "一站式安防解决方案"
+description = "关于我们"
 ## Used for views in rendered HTML (i.e., rather than using the .Hugo variable)
 release = "0.52"
 ## Setting this to true will add a "noindex" to *EVERY* page on the site..
 removefromexternalsearch = false
-isDisableSearch = true
+isDisableSearch = false
 ## Gh repo for site footer (include trailing slash)
 ghrepo = "https://github.com/gohugoio/hugoDocs/"
 ## GH Repo for filing a new issue

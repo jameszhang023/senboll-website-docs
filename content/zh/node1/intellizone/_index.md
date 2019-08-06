@@ -14,7 +14,8 @@ weight: 60
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
 智能防区是枫叶的发明专利，独门秘笈，专门针对误报而设计，目的是为了大幅度降低误报，更加人性化、智能化，其实就是今天热炒的人工智能技术。
@@ -57,4 +58,4 @@ toc: false
 
 ### 通过Babyware设置
 
-![智能防区设置](/help/node1/intellizone/images/setting-method.png)
+![智能防区设置](images/setting-method.png)

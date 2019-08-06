@@ -1,24 +1,20 @@
 {{ define "header" }}
-  {{ partial "hero" . }}
+  {{ partial "header" . }}
   {{ partial "boxes-small-news" . }}
 {{ end }}
 
 {{ define "main" }}
-  <section class="w-100 ph4 ph5-ns pv4">
-    {{- partial "home-page-sections/features-icons" . -}}
-  </section>
-
-  {{ partial "home-page-sections/sponsors.html" (dict "cx" . "gtag" "home" ) }}
 
   {{- partial "home-page-sections/features-single" . -}}
 
-  {{- partial "home-page-sections/showcase.html" . -}} 
+  {{- partial "home-page-sections/features-single-custom" . -}}
 
-  <section class="w-100 ph4 ph5-ns pv4 pv6-ns mid-gray bg-white bb bt b--light-gray">
-    {{- partial "home-page-sections/installation" . -}}
-  </section>
+  {{ partial "home-page-sections/sponsors.html" (dict "cx" . "gtag" "home" ) }}
 
-  <section class="w-100 ph4 ph5-ns pt4 pb5 mid-gray bg-primary-color-light bb bt b--light-gray ">
-    {{- partial "home-page-sections/open-source-involvement" . -}}
-  </section>
+<!--   {{- partial "home-page-sections/showcase.html" . -}}  -->
+
+<!--   <section class="w-100 ph4 ph5-ns pv4 ">
+    {{- partial "home-page-sections/features-icons" . -}}
+  </section> -->
+
 {{ end }}

@@ -14,16 +14,9 @@ weight: 30
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
-
-**目录：**
-
-- [简介](#简介)
-- [版本日志](#版本日志)
-- [准备工作](#准备工作)
-- [首次使用](#首次使用)
-- [缴费](#缴费)
 
 ## 简介
 
@@ -33,24 +26,24 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
 
 ---
   
-- 更新日期：20190611，版本：2.5.2，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.2.apk)；
+- 更新日期：20190611，版本：2.5.2，安卓请点[下载](attachment/InsiteGold-V2.5.2.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
   - Fixed push notification language support (only on IP150 v4.40.011)
   - Bug and stability fixes.
   
-- 更新日期：20190530，版本：2.5.1，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.1.apk)；
+- 更新日期：20190530，版本：2.5.1，安卓请点[下载](attachment/InsiteGold-V2.5.1.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
   - Fixed push notification language support (only on IP150 v4.40.011)
   - Bug and stability fixes.
 
-- 更新日期：20190522，版本：2.5.0，安卓请点[下载](/help/node2/insite-gold/InsiteGold-V2.5.0.apk)；
+- 更新日期：20190522，版本：2.5.0，安卓请点[下载](attachment/InsiteGold-V2.5.0.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
   - Panel language support.
   - New info button with option to share site details.
   - Hostname support on fixed IP mode.
   - Bug and stability fixes.
   
-For more information see[http://aboutswan.paradox.com/version_insitegold](http://aboutswan.paradox.com/version_insitegold)
+For more information see [http://aboutswan.paradox.com/version_insitegold](http://aboutswan.paradox.com/version_insitegold)
 
 ## 准备工作
 
@@ -68,11 +61,11 @@ For more information see[http://aboutswan.paradox.com/version_insitegold](http:/
 
 1. 确保IP150的软件版本在V4.0以上，Internet灯长亮，如下图：
 
-    ![IP150](/help/node2/insite-gold/images/ip150.png)
+    ![IP150](images/ip150.png)
 
 2. 记录枫叶主机8位序列号。如下图：
 
-![SN](/help/node2/insite-gold/images/sn.png)
+![SN](images/sn.png)
 
 ### 步骤二：激活
 
@@ -88,14 +81,14 @@ For more information see[http://aboutswan.paradox.com/version_insitegold](http:/
 
 ***SWAN邮箱***处填入`paradox-support@qq.com`。
 
-![添加账户](/help/node2/insite-gold/images/add-account.png)
+![添加账户](images/add-account.png)
 
 如果没有HD77/HD78系列视频探测器，只有IP网络模块，只需要输入用户密码（默认用户密码是`1234`）即可登陆。
 
-![通过IP模块登录](/help/node2/insite-gold/images/login-ip-module.png)
+![通过IP模块登录](images/login-ip-module.png)
 
 如果含有HD77/HD78等系列视频探测器，需要填帐户名和用户密码，默认最高权限帐户名是`master`，默认用户密码是`1234`。
-![通过视频探测器登录](/help/node2/insite-gold/images/login-video-detector.png)
+![通过视频探测器登录](images/login-video-detector.png)
 
 ## 缴费
 

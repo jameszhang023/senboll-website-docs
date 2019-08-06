@@ -14,7 +14,8 @@ weight: 60
 sections_weight: 30
 draft: false
 aliases: []
-toc: false
+layout: single
+toc: true
 ---
 
 人体存在是智能家居行业比较火的一个概念，本文从原理上深入分析其实现的可能性有多大。
