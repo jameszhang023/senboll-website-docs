@@ -1,3 +1,5 @@
+
+Remove-Item public\* -Recurse
 git add .
 git commit -m "update"
 git push origin master
