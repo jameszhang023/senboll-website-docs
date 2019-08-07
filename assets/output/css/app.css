@@ -5125,7 +5125,7 @@ code, .code, pre code, .highlight pre  {
 .youtube:hover {
   fill: #bb0000;
 }
-@media (min-width: 75em) {
+@media (min-width: 60em) {
   
   [data-scrolldir="down"] .sticky {
     position: fixed;

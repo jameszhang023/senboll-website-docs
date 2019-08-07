@@ -35,17 +35,24 @@
 
 
 [[global]]
-  name = "系统框架"
+  name = "关于"
   weight = 1
-  identifier = "paradox-frame"
-  post = "external"
-  url = "/paradox-frame/"
+  identifier = "about"
+  post = "break"
+  url = "/about/"
 
 [[global]]
   name = "文档中心"
-  weight = 5
+  weight = 2
   identifier = "docs"
   url = "/documentation/"
+
+[[global]]
+  name = "系统框架"
+  weight = 3
+  identifier = "paradox-frame"
+  post = "external"
+  url = "/paradox-frame/"
 
 # Anything with a weight > 100 gets an external icon
 [[global]]
