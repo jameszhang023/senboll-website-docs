@@ -23,6 +23,7 @@ ul, ol {
 }
 
 
+/* Add index to table of contents */
 #TableOfContents ul li ul{
     counter-reset: id1;
 }
