@@ -4925,7 +4925,7 @@ pre {
   margin-bottom: .5em;
 }
 .prose li:hover {
-  background-color: #eee
+  /* background-color: #eee */
 }
 .prose ::selection {
   background: #0594CB; /* WebKit/Blink Browsers */
