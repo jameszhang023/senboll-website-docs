@@ -1,7 +1,7 @@
 ---
 title : "关于人体存在探测"
 linktitle: 关于人体存在探测
-description: 人体存在是智能家居行业比较火的一个概念，本文从原理上深入分析。
+description: 人体存在是智能家居行业比较火的一个概念，本文从原理上深入分析
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01

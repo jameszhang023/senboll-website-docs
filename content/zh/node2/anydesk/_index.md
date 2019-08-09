@@ -1,7 +1,7 @@
 ---
 title : "远程协助软件(Anydesk)说明书"
 linktitle: 远程协助软件(Anydesk)说明书
-description: AnyDesk，一个简单好用远程桌面协助工具，推荐给大家。
+description: AnyDesk，一个简单好用远程桌面协助工具，推荐给大家
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01

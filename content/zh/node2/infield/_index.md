@@ -1,7 +1,7 @@
 ---
 title : "刷固件工具(In-Field)说明书"
 linktitle: 刷固件工具(In-Field)说明书
-description: Infield软件是专门用来刷枫叶设备固件的工具软件，支持串口，网络，拨号等通讯方式。
+description: 本文针对安防调试人员如何刷固件
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01

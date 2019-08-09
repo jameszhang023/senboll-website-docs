@@ -1,7 +1,7 @@
 ---
 title : "手机APP(Insite Gold)说明书"
 linktitle: 手机APP(Insite Gold)说明书
-description: Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集成了报警，视频复核，门禁控制和自动化控制功能，是报警系统、监控系统、门禁系统和智能家居控制的“一站式”解决方案。
+description: 枫叶APP（Insite Gold）的安装调试和使用说明
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
@@ -24,8 +24,6 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
 
 ## 版本日志
 
----
-  
 - 更新日期：20190611，版本：2.5.2，安卓请点[下载](attachment/InsiteGold-V2.5.2.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
   - Fixed push notification language support (only on IP150 v4.40.011)
@@ -43,19 +41,15 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
   - Hostname support on fixed IP mode.
   - Bug and stability fixes.
   
-For more information see [http://aboutswan.paradox.com/version_insitegold](http://aboutswan.paradox.com/version_insitegold)
+关于功能的详细描述请访问：[了解更多](http://aboutswan.paradox.com/version_insitegold)
 
 ## 准备工作
-
----
 
 硬件：枫叶主机和网络模块IP150，并接入互联⽹（连接IP150的路由器需要开启DHCP）；
 
 软件：手机上安装Insite Gold软件，IOS用户到商店搜索Insite Gold，
 
 ## 首次使用
-
----
 
 ### 步骤一：确认主机状态，记录主机8位序列号
 
@@ -91,8 +85,6 @@ For more information see [http://aboutswan.paradox.com/version_insitegold](http:
 ![通过视频探测器登录](images/login-video-detector.png)
 
 ## 缴费
-
----
 
 两种方案：
 
