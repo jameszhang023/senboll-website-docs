@@ -1,5 +1,5 @@
 // mobile menu icon auto switch
-function mobilemenubutton() {
+function mobilemenubutton_onclick() {
   // Find any menu items that are open  
   var ariaExpanded = document.getElementById('mobile-menu-button').getAttribute("aria-expanded");
   if(ariaExpanded == "false") {
