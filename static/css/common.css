@@ -90,8 +90,8 @@ h6:before {
 } 
 
 
-#mobile-menu[aria-expanded='true'] {
-    display:inline;
+#mobile-menu[aria-expanded='false'] {
+    display: block;
 }
 #mobile-menu {
     display: none;
