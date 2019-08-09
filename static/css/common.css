@@ -88,3 +88,20 @@ h6:before {
 .querybtn:focus {
     outline:0;
 } 
+
+
+#mobilemenu[aria-expanded='true'] {
+    display:inline;
+}
+#mobilemenu {
+    display: none;
+}
+
+#mobilemenubutton[aria-expanded='true']::before {
+    font-family: "segmdl2";
+    content: "\E711";
+}
+#mobilemenubutton::before {
+    font-family: "segmdl2";
+    content: "\E700";
+}

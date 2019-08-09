@@ -1,10 +1,12 @@
 // mobile menu icon auto switch
-function mobilemenu() {
-  // Find any menu items that are open
-  var mobileCurrentlyOpen = document.querySelector('.mobilemenu:not(.dn)')
-  if (mobileCurrentlyOpen) {
-    document.getElementById('mobilemenu').innerHTML = "&#xE700";
-  }else{      
-    document.getElementById('mobilemenu').innerHTML = "&#xE711";
+function mobilemenubutton() {
+  // Find any menu items that are open  
+  var ariaExpanded = document.getElementById('mobilemenubutton').getAttribute("aria-expanded");
+  if(ariaExpanded == "false") {
+    document.getElementById('mobilemenubutton').setAttribute("aria-expanded", "true");
+    document.getElementById('mobilemenu').setAttribute("aria-expanded", "true");
+  }else{
+    document.getElementById('mobilemenubutton').setAttribute("aria-expanded", "false");
+    document.getElementById('mobilemenu').setAttribute("aria-expanded", "false");
   }
 }
