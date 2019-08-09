@@ -91,10 +91,10 @@ h6:before {
 
 
 #mobile-menu[aria-expanded='false'] {
-    display: block;
+    display: none;
 }
 #mobile-menu {
-    display: none;
+    display: block;
 }
 
 #mobile-menu-button[aria-expanded='true']::before {

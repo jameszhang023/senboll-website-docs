@@ -1,22 +1,22 @@
 {{ $currentPage := . }}
 {{ $menu := .Site.Menus.global }}
 {{ $menuDocs := .Site.Menus.docs.ByWeight }}
-<ul class="list hidden dib   scrolling-touch tc">
-  <li  class="tl dib  hover-bg-black w-100 bb b--mid-gray">
-      <a href="{{.Site.BaseURL}}" class="ttu f6 link primary-color-light overflow hover-white db brand-font  w-100 pv1 pl2">
+<ul class="list hidden dib scrolling-touch tc mb6 w-100 pa0 mh4 pr5">
+  <li class="tl dib hover-bg-black w-100 bb b--mid-gray ">
+      <a href="{{.Site.BaseURL}}" class="ttu f6 link primary-color-light overflow hover-white db brand-font w-100 pv1 pl2">
         主页
       </a>
   </li>
   {{ range $menu }}
     <li  class="tl dib hover-bg-black w-100 bb b--mid-gray">
-        <a href="{{.URL}}" class="f6 link primary-color-light overflow hover-white db brand-font  w-100 pv1 pl2{{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+        <a href="{{.URL}}" class="f6 link primary-color-light overflow hover-white db brand-font w-100 pv1 pl2 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
           {{ .Name }}
         </a>
         {{if eq .Name "文档中心"  }}
           <ul class="list dib scrolling-touch tc pl4">
             {{ range $menuDocs }}{{ $post := printf "%s" .Post }}
               <li  class="tl dib  hover-bg-black w-100">
-                  <a href="{{.URL}}" class="f6 link primary-color-light  hover-white db brand-font mt1  w-100 pv0 pl3{{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+                  <a href="{{.URL}}" class="f7 link primary-color-light  hover-white db brand-font mt1  w-100 pv0 pl3{{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
                     {{ .Name }}
                   </a>      
 
@@ -29,7 +29,7 @@
                       {{ else if eq .URL "/help/node9/" }}
                       {{ else }}
                         <li class="tl dib hover-bg-black w-100 pl3">
-                          <a href="{{ .URL }}" class="f7 link primary-color-light  hover-white db brand-font mb0  w-100 pv0 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+                          <a href="{{ .URL }}" class="f7 link primary-color-light  hover-white db brand-font mb0 w-100 pv0 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
                             {{ .Name }}
                           </a>
                         </li>
@@ -44,4 +44,4 @@
         {{end}}
     </li>
   {{end}}
-</ul>~
+</ul>
