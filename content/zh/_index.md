@@ -44,25 +44,25 @@ scenario:
     link: 
     color_classes: bg-accent-color-dark white
     image: images/school.jpg
-    copy: 
+    copy: 为医院、学校和养老院定制的一键求助紧急报警解决方案，目前在国内有大量的应用案例
 
   - heading: 名胜景点、文物单位、博物馆
     cta: 
     link: 
     color_classes: bg-gray white
     image: images/history.jpg
-    copy: 文物
+    copy: 文物对安防系统有较高的要求，我们为文博行业专门定制了全套解决方案，包括前端设备和软件平台
 
   - heading: 部队，公安，拘留所或监狱
     cta: 
     link: 
-    color_classes: bg-blue black
+    color_classes: bg-blue white
     image: images/police.jpg
-    copy: 
+    copy: 为防越狱，紧急求助报警，门禁控制视频监控提供一体化解决方案，提供高安全性和可靠性保障
 
 features:
-  - heading: 联网报警
+  - heading: 
     image_path: /images/icon-fast.svg
-    tagline: 联网报警运营服务，从前端到后端一整套解决方案
+    tagline: 
     copy: 
 ---
