@@ -3,12 +3,12 @@
   {{ $.Scratch.Add "i" 1 }}{{ $i := $.Scratch.Get "i" }}
 
     <section class="w-100  ph4 ph5-ns pv6 pv6-ns mid-gray {{ .color_classes }}">
-      <div class="flex-ns flex-wrap center mw8">
+      <div class="flex-ns flex-wrap center mw9">
 
         <div class="w-100">
           <div class="w-80-ns center tc">
-            <p class="f3 f1-l fw4 black ma0 pt4 lh-title pt0-l">{{ .heading }}</p>
-            <p class="f5 f4-l lh-copy">
+            <p class="f3 f1-l fw4 black ma0 pt4 lh-title pt0-l tc">{{ .heading }}</p>
+            <p class="f5 f4-l lh-copy tc">
               {{ .copy }}
             </p>
 <!--               <p class="f4 f4-l lh-copy nested-linksTK">
