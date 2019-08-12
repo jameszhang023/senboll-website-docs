@@ -12,17 +12,19 @@
 	{{ range (readDir (printf "./content/zh/%s%s" .Page.File.Dir ($.Scratch.Get "filesName")) ) }}
 		{{ $fileDir := replace $.Page.File.Dir "\\" "/" }}
 		{{if ($.Get "pattern")}}
-			{{if (findRE ($.Get "pattern") .Name)}}文件：
+			{{if (findRE ($.Get "pattern") .Name)}}附件：
 				<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
 					{{.Name}}
 				</a>
 				(文件大小：{{div .Size 1024 }} KB)
+				</br>
 			{{end}}
 		{{else}}
 			<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
 				{{.Name}}
 			</a>
 			(文件大小：{{div .Size 1024 }} KB)
+			</br>
 		{{end}}
 	{{end}}
 	<div>
