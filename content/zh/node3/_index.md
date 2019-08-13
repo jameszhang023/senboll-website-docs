@@ -11,7 +11,7 @@ menu:
   docs:
     parent: "常见问题"
     weight: 1
-weight: 2
+weight: 3
 draft: false
 aliases: [/node3/,/docs/]
 toc: false

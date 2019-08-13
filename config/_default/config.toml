@@ -30,7 +30,7 @@ pygmentsUseClassic = false
 pygmentsStyle = "trac"
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
+home = [ "HTML", "RSS", "REDIR", "HEADERS" , "Algolia"]
 section = [ "HTML", "RSS"]
 
 [mediaTypes]
@@ -104,3 +104,14 @@ anchor = "smart"
 
 [taxonomies]
 category = "categories"
+
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags","series"]

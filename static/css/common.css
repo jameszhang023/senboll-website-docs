@@ -106,7 +106,7 @@ h6:before {
     content: "\E700";
 }
 
-p {
+p{
     text-align: justify;
     text-justify: inter-character
 }

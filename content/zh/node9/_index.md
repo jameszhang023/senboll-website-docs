@@ -1,5 +1,4 @@
 ---
-weight: 40
 title : "其他"
 linktitle: 其他预览
 description: Hugo's features, roadmap, license, and motivation.
@@ -11,8 +10,8 @@ keywords: []
 menu:
   docs:
     parent: "其他"
-    weight: 1
-weight: 2
+    weight: 4
+weight: 4
 draft: false
 aliases: [/node9/,/docs/]
 toc: false
