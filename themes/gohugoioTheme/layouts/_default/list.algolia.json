@@ -11,11 +11,11 @@
     "hierarchy": { 
       "lvl0": "{{ htmlEscape $page.Title}}",
       "lvl1": "null",
-      "lvl2": "null",
-      "lvl3": "null",
-      "lvl4": "null",
-      "lvl5": "null",
-      "lvl6": "null"
+      "lvl2": "",
+      "lvl3": "",
+      "lvl4": "",
+      "lvl5": "",
+      "lvl6": ""
     }
   }
   {{- end -}}
