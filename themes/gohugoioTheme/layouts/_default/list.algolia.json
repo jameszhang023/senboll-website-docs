@@ -1,9 +1,24 @@
 
-{{- $.Scratch.Add "index" slice -}}
-{{- $section := $.Site.GetPage "section" .Section }}
-{{- range .Site.AllPages -}}
-  {{- if or (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
-    {{- $.Scratch.Add "index" (dict "objectID" .UniqueID "date" .Date.UTC.Unix "description" .Description "dir" .Dir "expirydate" .ExpiryDate.UTC.Unix "fuzzywordcount" .FuzzyWordCount "keywords" .Keywords "kind" .Kind "lang" .Lang "lastmod" .Lastmod.UTC.Unix "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .URL "weight" .Weight "wordcount" .WordCount "section" .Section "tags" .Params.Tags "categories" .Params.Categories "authors" .Params.Authors)}}
+[{{ range $index, $page := .Site.Pages }}
+  {{- if ne $page.Type "json" -}}
+    {{- if and $index (gt $index 0) -}},
+    {{- end }}
+  {
+    "objectID": "{{ .UniqueID }}",
+    "url": "{{ $page.Permalink }}",
+    "title": "{{ htmlEscape $page.Title}}",
+    "description": "{{ htmlEscape .Description}}",
+    "content": {{ $page.Plain | jsonify }},
+    "hierarchy": { 
+      "lvl0": "{{ htmlEscape $page.Title}}",
+      "lvl1": "null",
+      "lvl2": "null",
+      "lvl3": "null",
+      "lvl4": "null",
+      "lvl5": "null",
+      "lvl6": "null"
+    }
+  }
   {{- end -}}
-{{- end -}}
-{{- $.Scratch.Get "index" | jsonify -}}
+{{- end -}}]
+

@@ -1,0 +1,70 @@
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1"></sc
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/m
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/
+    <div id="search-box"><!-- SearchBox widget will appear here --></div>
+    <!-- include algolia logo -->
+    <img src="https://www.algolia.com/static_assets/images/pricing/pricing
+    <div id="hits" >
+        <!-- Hits widget will appear here -->
+</div>
+<div id="pagination">
+<!-- Pagination widget will appear here -->
+</div>
+<script>
+// initialize instantsearch
+const search = instantsearch({
+appId: 'YOUR_APP_ID',
+apiKey: 'YOUR_SEARCH_ONLY_KEY',
+indexName: 'YOUR_INDEX_NAME',
+urlSync: true
+});
+const hitTemplate = function(hit) {
+/* if (hit === null){
+* return;
+}
+*/
+let date = '';
+if (hit.date) {
+date = moment.unix(hit.date).format('MMM D, YYYY');
+}
+let url = `${hit.url}`;
+const title = hit._highlightResult.title.value;
+let breadcrumbs = '';
+if (hit._highlightResult.headings) {
+breadcrumbs = hit._highlightResult.headings.map(match => {
+return `<span class="post-breadcrumb">${match.value}</span>`
+}).join(' > ')
+}
+let content = "" ;
+if (hit._highlightResult.content){
+content = hit._highlightResult.content.value;
+}
+else{
+content = hit.summary;
+}
+return `
+<div class="post-item">
+<span class="post-meta">${date}</span>
+<h2><a class="post-link" href="${url}">${title}</a></h2>
+<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
+<div class="post-snippet">${content}</div>
+</div>
+`;
+}
+search.addWidget(
+instantsearch.widgets.searchBox({
+container: '#search-box',
+placeholder: 'Search'
+})
+);
+search.addWidget(
+instantsearch.widgets.hits({
+container: '#hits',
+templates: {
+item: hitTemplate
+}
+})
+);
+search.start();
+</script>
