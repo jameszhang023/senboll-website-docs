@@ -15,6 +15,19 @@ function mobileMenuButtonOnclick() {
   }
 }
 
+// mobile submenu icon auto switch
+function mobileSubMenuButtonDocsOnclick() {
+  // Find any menu items that are open  
+  var ariaExpanded = document.getElementById('mobile-submenu-button-docs').getAttribute("aria-expanded");
+  if(ariaExpanded == "false") {
+    document.getElementById('mobile-submenu-button-docs').setAttribute("aria-expanded", "true");
+    document.getElementById('mobile-submenu-docs').setAttribute("aria-expanded", "true");
+  }else{
+    document.getElementById('mobile-submenu-button-docs').setAttribute("aria-expanded", "false");
+    document.getElementById('mobile-submenu-docs').setAttribute("aria-expanded", "false");
+  }
+}
+
 // mobile search icon auto switch
 function mobileSearchButtonOnclick() {  
   var ariaExpanded = document.getElementById('mobile-search-button').getAttribute("aria-expanded");
