@@ -2493,8 +2493,8 @@ img { max-width: 100%; }
 .hover-white-10:focus { color: rgba(255, 255, 255, .1); }
 .hover-inherit:hover,
 .hover-inherit:focus { color: inherit; }
-.hover-bg-black:hover, 
-.hover-bg-black:focus { background-color: #000; }
+/* .hover-bg-black:hover, 
+.hover-bg-black:focus { background-color: #000; } */
 .hover-bg-near-black:hover, 
 .hover-bg-near-black:focus { background-color: #111; }
 .hover-bg-dark-gray:hover, 
