@@ -164,13 +164,10 @@ h6:before {
     display: none;
 }
 
-#menu-search-input {
-    
-}
 #menu-search-input[aria-expanded='true'] {
     width: 100%;
     padding-right: 0rem;
-    padding-left: 2rem;
+    padding-left: 0rem;
 }
 
 
