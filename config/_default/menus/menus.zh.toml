@@ -23,8 +23,15 @@
   url = "/node3/"
 
 [[docs]]
-  name = "其他"
+  name = "枫叶系统框架"
   weight = 20
+  identifier = "paradox-frame"
+  post = "break"
+  url = "/paradox-frame/"
+
+[[docs]]
+  name = "其他"
+  weight = 25
   identifier = "其他"
   post = "break"
   url = "/node9/"
@@ -46,13 +53,6 @@
   weight = 2
   identifier = "docs"
   url = "/documentation/"
-
-[[global]]
-  name = "系统框架"
-  weight = 3
-  identifier = "paradox-frame"
-  post = "external"
-  url = "/paradox-frame/"
 
 # Anything with a weight > 100 gets an external icon
 [[global]]
