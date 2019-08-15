@@ -42,15 +42,22 @@
 
 
 [[global]]
-  name = "关于"
+  name = "首页"
   weight = 1
+  identifier = "home"
+  post = "break"
+  url = "/"
+
+[[global]]
+  name = "关于"
+  weight = 2
   identifier = "about"
   post = "break"
   url = "/about/"
 
 [[global]]
   name = "文档中心"
-  weight = 2
+  weight = 3
   identifier = "docs"
   url = "/documentation/"
 
