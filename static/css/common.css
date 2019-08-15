@@ -97,6 +97,14 @@ h6:before {
     display: block;
 }
 
+#nav-mobile[aria-expanded='true'] {
+    width: fit-content;
+}
+#nav-mobile[aria-expanded='false'] {
+    width: 100%;
+}
+
+
 #mobile-menu-button[aria-expanded='true']::before {
     font-family: "segmdl2";
     content: "\E711";
@@ -106,11 +114,66 @@ h6:before {
     content: "\E700";
 }
 
+#mobile-search-button[aria-expanded='true']::before {
+    font-family: "segmdl2";
+    content: "\E711";
+}
+#mobile-search-button::before {
+    font-family: "segmdl2";
+    content: "\E721";
+}
+#mobile-search-button[aria-hidden='true'] {
+    display: none;
+}
+#mobile-search-button {
+    display: block;    
+}
+
+#mobile-menu-logo[aria-hidden='true'] {
+    display: none;
+}
+#mobile-menu-logo {
+    display: block;    
+}
+#mobile-menu-button[aria-hidden='true'] {
+    display: none;
+}
+#mobile-menu-button {
+    display: block;
+}
+
+#menu-search-input {
+    display: block;
+}
+#menu-search-input[aria-hidden='true'] {
+    display: none;
+}
+
+#menu-search-input {
+    
+}
+#menu-search-input[aria-expanded='true'] {
+    width: 100%;
+    padding-right: 0rem;
+    padding-left: 2rem;
+}
+
+
 p {
     text-align: justify;
     text-justify: inter-character
 }
 
+
 em {
     color: red;
+}
+
+.algolia-autocomplete{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 60em) {
+    .dn-lx {              display: none; }
 }

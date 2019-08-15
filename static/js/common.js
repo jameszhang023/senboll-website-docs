@@ -5,8 +5,58 @@ function mobileMenuButtonOnclick() {
   if(ariaExpanded == "false") {
     document.getElementById('mobile-menu-button').setAttribute("aria-expanded", "true");
     document.getElementById('mobile-menu').setAttribute("aria-expanded", "true");
+    document.getElementById('mobile-search-button').setAttribute("aria-hidden", "true");
+    document.getElementById('mobile-menu-logo').setAttribute("aria-hidden", "true");
   }else{
     document.getElementById('mobile-menu-button').setAttribute("aria-expanded", "false");
     document.getElementById('mobile-menu').setAttribute("aria-expanded", "false");
+    document.getElementById('mobile-search-button').setAttribute("aria-hidden", "false");
+    document.getElementById('mobile-menu-logo').setAttribute("aria-hidden", "false");
   }
 }
+
+// mobile search icon auto switch
+function mobileSearchButtonOnclick() {  
+  var ariaExpanded = document.getElementById('mobile-search-button').getAttribute("aria-expanded");
+  if(ariaExpanded == "false") {
+    document.getElementById('mobile-search-button').setAttribute("aria-expanded", "true");
+    document.getElementById('mobile-menu-button').setAttribute("aria-hidden", "true");
+    document.getElementById('mobile-menu-logo').setAttribute("aria-hidden", "true");
+    document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
+    document.getElementById('menu-search-input').setAttribute("aria-expanded", "true");
+    document.getElementById('nav-mobile').setAttribute("aria-expanded", "true");
+  }else{
+    document.getElementById('mobile-search-button').setAttribute("aria-expanded", "false");
+    document.getElementById('mobile-menu-button').setAttribute("aria-hidden", "false");
+    document.getElementById('mobile-menu-logo').setAttribute("aria-hidden", "false");
+    document.getElementById('menu-search-input').setAttribute("aria-hidden", "true");
+    document.getElementById('menu-search-input').setAttribute("aria-expanded", "false");
+    document.getElementById('nav-mobile').setAttribute("aria-expanded", "false");
+  }
+}
+
+window.onresize = function(){
+  //获取网页可见区域宽度
+  var docWidth = document.body.clientWidth;
+  if(docWidth > 960){
+    document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
+  }else{
+    var ariaExpanded = document.getElementById('mobile-search-button').getAttribute("aria-expanded");
+    if(ariaExpanded == "true") {
+      document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
+    }else{
+      document.getElementById('menu-search-input').setAttribute("aria-hidden", "true");
+    }
+  }
+};
+
+window.onload = function(){
+  //获取网页可见区域宽度
+  var docWidth = document.body.clientWidth;
+  if(docWidth > 960){
+    document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
+  }else{
+    document.getElementById('menu-search-input').setAttribute("aria-hidden", "true");
+  }
+};
+

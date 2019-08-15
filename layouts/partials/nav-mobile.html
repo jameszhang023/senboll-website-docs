@@ -1,9 +1,19 @@
 
-<div class="dn-l justify-between bg-primary-color-dark w-100 h-auto">
-  <button id="mobile-menu-button" onclick="mobileMenuButtonOnclick()" aria-expanded="false" class="querybtn v-mid link flex-auto dib dn-l f3 tl db ph3 white bg-transparent bn w-10"></button>
-  <div class="link flex-auto dib db dn-l tc v-mid w-80">
+<div class="dn-l flex justify-between bg-primary-color-dark w-100 h-auto">
+  <button id="mobile-menu-button" onclick="mobileMenuButtonOnclick()" aria-expanded="false" aria-hidden="false" 
+    class="querybtn v-mid link dib dn-l f3 tl db ph3 white bg-transparent bn"></button>
+  <div id="mobile-menu-logo" aria-hidden="false" class="link dib db dn-l tc v-mid w-80">
         {{ partial "svg/senboll-logo.svg" (dict "size" "32px" "class" "v-mid pt1 pb1") }}
   </div>
+<!-- 
+  <div id="mobile-search-input" aria-hidden="true" class="db dib-ns pl3 w-90 pv2">
+    {{if not .Site.Params.isDisableSearch}}
+      {{- partial "site-search.html" . -}}
+    {{end}}
+  </div> -->
+
+  <button id="mobile-search-button" onclick="mobileSearchButtonOnclick()" aria-expanded="false" 
+    class="querybtn v-mid link dib dn-l f3 tr db ph3 white bg-transparent bn"></button>
   <!-- <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">文档目录</button> -->
 </div>
 
