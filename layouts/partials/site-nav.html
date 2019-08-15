@@ -2,19 +2,19 @@
 
 
 
-<nav class="flex center w-100 bg-primary-color-dark" role="navigation">
+<nav class="flex center w-100 bg-primary-color-dark bb b--dark-gray" role="navigation">
 
   <div class="pv4 center items-center justify-center w-auto dn-lx dib-l">
-      <div class="center items-center justify-center w-auto"> 
+      <div class="center items-center justify-center "> 
           <div class="flex">
               <h1 class="dim f4 lh-solid ml0-ns mr0 mr3-l mv0 pr4 pl4-ns">
                 <a href="{{ .Site.BaseURL }}" class="link white">
-                  {{ partial "svg/senboll-logo.svg" (dict "size" "48px" ) }}
+                  {{ partial "svg/senboll-logo.svg" (dict "size" "64px" ) }}
                 </a>
               </h1>
-              <ul class="list ma0 pa0 mv2">
+              <ul class="list mb0">
                 {{ range .Site.Menus.global }}
-                  <li class="f4 dib mr4 ml4" role="menuitem">
+                  <li class="f4 dib mr3-l ml3-l mh2" role="menuitem">
                       {{/* TODO: Create an "Global" active class to show which site one is currently at */}}
                     <a href="{{ .URL }}" class="dim link{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
                       {{ .Name }}

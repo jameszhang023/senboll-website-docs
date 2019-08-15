@@ -177,3 +177,8 @@ em {
 @media screen and (max-width: 60em) {
     .dn-lx {              display: none; }
 }
+
+#menu-search-input[aria-expanded='true'] span{
+    max-width: 100%;
+    min-width: 100%;
+}
