@@ -69,11 +69,11 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
 
 激活成功后，打开APP，点击APP的`+`加号按钮，添加账户。
 
-***地点名称***是可选项，可以不填；
+**地点名称**是可选项，可以不填；
 
-***地点编号***处填入8位主机序列号；
+**地点编号**处填入8位主机序列号；
 
-***SWAN邮箱***处填入`paradox-support@qq.com`。
+**SWAN邮箱**处填入`paradox-support@qq.com`。
 
 ![添加账户](images/add-account.png)
 

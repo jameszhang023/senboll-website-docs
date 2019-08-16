@@ -90,6 +90,14 @@ toc: true
 
 ![初始化](images/babyware-programing-remote.gif)
 
+### 编程密码和权限
+
+主机支持多用户，每个用户拥有单独的密码和权限，编程用户密码请参考：
+![初始化](images/babyware-programing-user.gif)
+
+编程用户权限请参考：
+![初始化](images/babyware-programing-user-authority.png)
+
 ### 编程警号
 
 下面是无线警号编程方法演示：
