@@ -31,13 +31,13 @@
   {{- partialCached "social-follow.html" . -}}
   </span> -->
 
-  <div id="menu-search-input" aria-hidden="true" aria-expanded="false" class="dn-m dn-ns w-30">
+  <div id="menu-search-input" aria-hidden="true" aria-expanded="false" class="dn-m dn-ns w-30-l">
     {{if not .Site.Params.isDisableSearch}}
       {{- partial "site-search.html" . -}}
     {{end}}
   </div>  
 
-  <div id="nav-mobile" aria-expanded="false" class=" dn-l w-100">
+  <div id="nav-mobile" aria-expanded="false" class="dn-l w-100-l">
     {{- partial "nav-mobile.html" . -}}
   </div>
 
