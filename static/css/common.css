@@ -165,7 +165,6 @@ h6:before {
 }
 
 #menu-search-input[aria-expanded='true'] {
-    width: 100%;
     padding-right: 0rem;
     padding-left: 0rem;
 }

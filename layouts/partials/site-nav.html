@@ -31,7 +31,7 @@
   {{- partialCached "social-follow.html" . -}}
   </span> -->
 
-  <div id="menu-search-input" aria-hidden="true" aria-expanded="false" class="dn-m dn-ns w-30-l">
+  <div id="menu-search-input" aria-hidden="true" aria-expanded="false" class="dn-m dn-ns w-100 w-30-l">
     {{if not .Site.Params.isDisableSearch}}
       {{- partial "site-search.html" . -}}
     {{end}}

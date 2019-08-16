@@ -50,12 +50,16 @@ function mobileSearchButtonOnclick() {
 
 window.onresize = function(){
   //获取网页可见区域宽度
+  var ariaExpanded = document.getElementById('mobile-search-button').getAttribute("aria-expanded");
   var docWidth = document.body.clientWidth;
-  if(docWidth > 960){
-    document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
+  if(ariaExpanded == "true") {
+    if(docWidth > 960){
+      //document.getElementById('menu-search-input').setAttribute("aria-hidden", "true");
+    }else{
+      document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
+    }
   }else{
-    var ariaExpanded = document.getElementById('mobile-search-button').getAttribute("aria-expanded");
-    if(ariaExpanded == "true") {
+    if(docWidth > 960){
       document.getElementById('menu-search-input').setAttribute("aria-hidden", "false");
     }else{
       document.getElementById('menu-search-input').setAttribute("aria-hidden", "true");
