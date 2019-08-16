@@ -115,11 +115,11 @@ h6:before {
 }
 #mobile-submenu-button-docs[aria-expanded='true']::before {
     font-family: "segmdl2";
-    content: "\E70D";
+    content: "\E70E";
 }
 #mobile-submenu-button-docs[aria-expanded='false']::before {
     font-family: "segmdl2";
-    content: "\E70E";
+    content: "\E70D";
 }
 #mobile-submenu-docs[aria-expanded='false'] {
     display: none;
