@@ -27,6 +27,18 @@ function mobileSubMenuButtonDocsOnclick() {
     document.getElementById('mobile-submenu-docs').setAttribute("aria-expanded", "false");
   }
 }
+// mobile submenu icon auto switch
+function mobileSubMenuButtonDocsPageOnclick() {
+  // Find any menu items that are open  
+  var ariaExpanded = document.getElementById('mobile-submenu-button-docs-page').getAttribute("aria-expanded");
+  if(ariaExpanded == "false") {
+    document.getElementById('mobile-submenu-button-docs-page').setAttribute("aria-expanded", "true");
+    document.getElementById('mobile-submenu-docs-page').setAttribute("aria-expanded", "true");
+  }else{
+    document.getElementById('mobile-submenu-button-docs-page').setAttribute("aria-expanded", "false");
+    document.getElementById('mobile-submenu-docs-page').setAttribute("aria-expanded", "false");
+  }
+}
 
 // mobile search icon auto switch
 function mobileSearchButtonOnclick() {  

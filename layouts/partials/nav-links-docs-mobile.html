@@ -1,11 +1,44 @@
 {{ $currentPage := . }}
-{{ $menu := .Site.Menus.docs.ByWeight }}
-<ul class="list dib ph0 ma0 scrolling-touch tc">
-  {{ range $menu }}{{ $post := printf "%s" .Post }}
-    <li  class="tl dib ma0 hover-bg-black w-100{{ if eq $post "break" }} mb2 bb b--mid-gray{{ end }}">
-        <a href="{{.URL}}" class="ttu f6 link primary-color-light  hover-white db brand-font mb1  ma0 w-100 pv2 ph4{{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
-          {{ .Name }}
-        </a>
+{{ $menu := .Site.Menus.global }}
+{{ $menuDocs := .Site.Menus.docs.ByWeight }}
+<ul class="list hidden dib scrolling-touch tc mb1 w-100">
+  {{ range $menu }}
+  {{if eq .Name "文档中心"  }}
+    <li  class="tl dib hover-bg-black w-100 pv1 bb b--moon-gray">
+        <div class="flex">
+          <a href="{{.URL}}" class="f6 link overflow hover-white db brand-font w-100 pv1 pl2 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+            {{ .Name }}
+          </a>
+          <button id="mobile-submenu-button-docs-page" onclick="mobileSubMenuButtonDocsPageOnclick()" aria-expanded="false" 
+            class="querybtn v-mid link dib dn-l f6 tr db ph3 bg-transparent bn"></button> 
+        </div>
+        <ul id="mobile-submenu-docs-page" aria-expanded="false" class="list dib scrolling-touch tc pl4">
+          {{ range $menuDocs }}{{ $post := printf "%s" .Post }}
+            <li  class="tl dib  hover-bg-black w-100">
+                <a href="{{.URL}}" class="f7 link hover-white db brand-font mt1 w-100 pv0 pl3{{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+                  {{ .Name }}
+                </a>
+                {{- if .HasChildren }}
+                <ul class="list dib scrolling-touch tc">
+                  {{- range .Children }}
+                    {{ if eq .URL "/help/node1/" }}
+                    {{ else if eq .URL "/help/node2/" }}
+                    {{ else if eq .URL "/help/node3/" }}
+                    {{ else if eq .URL "/help/node9/" }}
+                    {{ else }}
+                      <li class="tl dib hover-bg-black w-100 pl3">
+                        <a href="{{ .URL }}" class="f7 hover-white db brand-font mb0 w-100 pv0 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+                          {{ .Name }}
+                        </a>
+                      </li>
+                    {{ end }}
+                  {{- end}}
+                </ul>        
+                {{- end}}                   
+            </li>
+          {{end}}
+        </ul>
     </li>
+  {{end}}
   {{end}}
 </ul>

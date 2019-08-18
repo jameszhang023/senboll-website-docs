@@ -127,6 +127,20 @@ h6:before {
 #mobile-submenu-docs {
     display: block;    
 }
+#mobile-submenu-button-docs-page[aria-expanded='true']::before {
+    font-family: "segmdl2";
+    content: "\E70E";
+}
+#mobile-submenu-button-docs-page[aria-expanded='false']::before {
+    font-family: "segmdl2";
+    content: "\E70D";
+}
+#mobile-submenu-docs-page[aria-expanded='false'] {
+    display: none;
+}
+#mobile-submenu-docs-page {
+    display: block;    
+}
 
 
 #mobile-search-button[aria-expanded='true']::before {
