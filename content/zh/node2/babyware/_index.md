@@ -50,19 +50,27 @@ toc: true
 
 ![IP150](images/ip150.png)
 
-## 首次使用
+## 初始化
 
 步骤一：启动Babyware，默认用户名是`Admin`,密码是`1234`。
 
-步骤二：创建账户，选择主机型号，汉化软件，设置连接参数，请参考下面演示动画：
+步骤二：创建账户，选择主机型号，汉化软件，设置连接参数。
 
+{{< warning >}}
+在创建账户后，请选择相应的主机型号，再连接或打开账户。
+{{< /warning >}}
+
+请参考下面演示动画：
 ![初始化](images/babyware-initialize.gif)
 
 设置连接方式，选择合适的方式建立连接。
 
-- 串口方式，需要307USB通讯模块。
-- IP/Panel S/N方式，需要网络模块，通过天鹅云方式连接，Panel S/N 填主机8位序列号，IP模块访问密码默认是`paradox`。
-- IP/Static静态地址，通过IP地址连接，填入IP地址和IP Port（IP Port默认是10001），IP Module Password默认是`paradox`。
+- 串口方式，需要307USB通讯模块。如图：
+![初始化](images/connect-setting2.png)
+- IP/Panel S/N方式，需要网络模块，通过天鹅云方式连接，Panel S/N 填主机8位序列号，IP模块访问密码默认是`paradox`。如图：
+![初始化](images/connect-setting1.png)
+- IP/Static静态地址，通过IP地址连接，填入IP地址和IP Port（IP Port默认是10001），IP Module Password默认是`paradox`。如图：
+![初始化](images/connect-setting0.png)
 
 ## 软件操作说明
 

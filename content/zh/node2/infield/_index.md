@@ -24,14 +24,14 @@ Infield软件是专门用来刷枫叶设备固件的工具软件，支持串口�
 
 ## 准备工作
 
-由于Infield被集成到Babyware中，所以请先下载安装Babyware，具体步骤请访问[Babyware使用说明](../babyware/#安装软件)。
+由于Infield被集成到Babyware中，所以请先下载安装Babyware，具体步骤请访问[Babyware使用说明-安装软件](../babyware/#安装软件)。
 
 ## 操作说明
 
 步骤一：启动Babyware，Infield启动入口如图：
 ![启动软件](images/infield-start.png)
 
-步骤二：设置连接方式，选择合适的方式建立连接。
+步骤二：设置连接方式，选择合适的方式建立连接。请参考[Babyware使用说明-初始化](../babyware/#初始化)。
 
 - Serial是串口方式，需要307USB通讯模块。
 - Internet网络方式，需要网络模块，通过天鹅云方式连接，Panel S/N填入主机8位序列号，IP password默认是`paradox`。

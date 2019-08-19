@@ -89,11 +89,6 @@ h6:before {
     outline:0;
 } 
 
-.about {
-    line-height:2.25rem;
-} 
-
-
 #mobile-menu[aria-expanded='false'] {
     display: none;
 }
@@ -211,4 +206,9 @@ em {
 #menu-search-input[aria-expanded='true'] span{
     max-width: 100%;
     min-width: 100%;
+}
+
+img{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }

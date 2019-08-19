@@ -38,14 +38,11 @@ Teamviewer确实是当今最好用的远程工具，但免费版越来越多的�
 
 ## 下载
 
-途径一：官网下载：
-[https://anydesk.com/platforms](https://anydesk.com/platforms)。
+途径一：官网下载：[https://anydesk.com/platforms](https://anydesk.com/platforms)。
 
-途径二：本网站下载(仅Windows版):
-[Anydesk安装包](attachment/anydesk.exe)。
+途径二：本网站下载(仅Windows版):[Anydesk安装包](attachment/anydesk.exe)。
 
 ## 使用方法
 
 直接启动软件，提供启动界面给需要控制此电脑的一方即可。如图：
-
-![Anydesk启动](images/anydesk-1.png)。
+![Anydesk启动](images/anydesk-1.png)

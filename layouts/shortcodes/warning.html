@@ -1,8 +1,8 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <aside class="flex mt2 pt2 pb2 pl2 pr2 w-100 bg-washed-red">
-	<p class="pr2">		
+	<div class="pr2">		
 		{{ partial "svg/warning2.svg" (dict "size" "30px") }}
-	</p>
+	</div>
 	 <!-- <h2 id="{{if .Get 0}}{{.Get 0 | urlize}}{{else}}warning{{end}}">{{if .Get 0}}{{.Get 0 | markdownify}}{{else}}Warning{{end}}</h2> 
 	 <h3>Warning</h3>  -->
 	<div class="pr2">{{- .Inner | markdownify -}}</div>
