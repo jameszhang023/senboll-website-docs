@@ -114,7 +114,7 @@ qq邮箱有独立手机app，也可以通过qq或者微信添加推送服务来�
 输入用户密码将会进入网页设置界面，如图：
 ![通过视频探测器登录](images/ip-moudle-set2.png)
 
-步骤二：切换的email设置界面，Username填入您QQ邮箱，Password填入授权码（参见：设置邮箱步骤三），下面的 Email Account 可以填入10要推送的邮箱，您如果只有一个邮箱的话，也可以填入上面busername填入的邮箱，如图所示：
+步骤二：切换的email设置界面，Username填入您QQ邮箱，Password填入授权码（参见：设置邮箱步骤三），下面的 Email Account 可以填入10要推送的邮箱，您如果只有一个邮箱的话，也可以填入上面Username填入的邮箱，如图所示：
 ![通过视频探测器登录](images/ip-moudle-set3.png)
 
 ### qq邮箱app方式推送

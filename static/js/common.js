@@ -89,3 +89,7 @@ window.onload = function(){
   }
 };
 
+
+$(function(){
+  $('img').zoomify();
+});
