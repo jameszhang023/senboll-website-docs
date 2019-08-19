@@ -89,12 +89,17 @@ h6:before {
     outline:0;
 } 
 
+.about {
+    line-height:2.25rem;
+} 
+
 
 #mobile-menu[aria-expanded='false'] {
     display: none;
 }
 #mobile-menu {
     display: block;
+    min-height: calc(100vh - 38px);
 }
 
 #nav-mobile[aria-expanded='true'] {

@@ -1,7 +1,7 @@
 {{ $currentPage := . }}
 {{ $menu := .Site.Menus.global }}
 {{ $menuDocs := .Site.Menus.docs.ByWeight }}
-<ul class="list hidden dib scrolling-touch tc mb1 w-100">
+<ul class="list dib scrolling-touch tc mb1 w-100 ph3 mv2 pa0 ma0">
   {{ range $menu }}
   {{if eq .Name "文档中心"  }}
     <li  class="tl dib hover-bg-black w-100 pv1 bb b--moon-gray">
