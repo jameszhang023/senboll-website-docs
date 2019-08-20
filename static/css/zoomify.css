@@ -25,7 +25,8 @@
     display: block; 
     z-index: 1500; 
     background: rgba(0, 0, 0); 
-    opacity: 0; 
+    opacity: 1; 
+    overflow: hidden;
 }
 .zoomify-shadow.zoomed { 
     opacity: 1; 
