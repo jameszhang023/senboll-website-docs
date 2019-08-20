@@ -615,11 +615,11 @@
         var scale = imgStatus.scale*imgStatus.scalem;
         var offsetX = imgStatus.x+imgStatus.m;
         var offsetY = imgStatus.y+imgStatus.my;
-        var tran_3d='scale3d('+scale+','+scale+',1) '+' translate3d(' + offsetX + 'px,' + offsetY + 'px,0px)';
-        // var tran_2d='scale('+scale+','+scale+') '+' translate(' + offsetX + 'px,' + offsetY +'px)';
+        //var tran_3d='scale3d('+scale+','+scale+',3) '+' translate3d(' + offsetX + 'px,' + offsetY + 'px,0px)';
+         var tran_2d='scale('+scale+','+scale+') '+' translate(' + offsetX + 'px,' + offsetY +'px)';
         var transition = 'transform '+duration+'s ease-out';
         this.addCssPrefix($elem,'transition',transition);
-        this.addCssPrefix($elem,'transform',tran_3d);
+        this.addCssPrefix($elem,'transform',tran_2d);
     }
 
     _previewImage.prototype.getJqElem = function(index){
