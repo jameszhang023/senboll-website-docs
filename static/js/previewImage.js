@@ -80,8 +80,8 @@
         this.version = '1.0.3'; //版本号
         this.imgLoadCache = new Object();  //图片加载状态储存 key=md5(img.src),value={isload:true,elem:img};
         this.scale = 1;     //默认图片放大倍数
-        this.maxScale = 1;  //图片默认最大放大倍数
-        this.maxOverScale = 1;  //图片放大倍数最大可达到
+        this.maxScale = 4;  //图片默认最大放大倍数
+        this.maxOverScale = 6;  //图片放大倍数最大可达到
         // this.minScale = 0.5; //图片最小可放大倍数
         this.openTime = 0.2;    //打开图片浏览动画时间
         this.slipTime = 0.5;    //图片切换时间
