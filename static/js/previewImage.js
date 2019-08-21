@@ -83,8 +83,8 @@
         this.maxScale = 4;  //图片默认最大放大倍数
         this.maxOverScale = 6;  //图片放大倍数最大可达到
         // this.minScale = 0.5; //图片最小可放大倍数
-        this.openTime = 0.4;    //打开图片浏览动画时间
-        this.slipTime = 0.3;    //图片切换时间
+        this.openTime = 0.3;    //打开图片浏览动画时间
+        this.slipTime = 0.2;    //图片切换时间
         this.maxOverWidthPercent = 0.5; //边界图片最大可拉取宽度，屏幕宽度的百分比
         this.$box = false;  //图片容器加载状态
         this.isPreview = false; //是否正在预览图片
@@ -251,7 +251,6 @@
         this.imgStatusRewrite();
         this.translateScale(this.index,this.slipTime);
         setTimeout(function(){
-            _this.$container.style.display = "none";
             _this.$container.style.transform = "scale(0, 0)";
         },this.slipTime*1000);
         _this.isPreview = false;

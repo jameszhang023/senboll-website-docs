@@ -205,10 +205,10 @@ em {
 
 #menu-search-input[aria-expanded='true'] span{
     max-width: 100%;
-    min-width: 100%;
 }
 
 img{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    max-height: 100%;
 }
