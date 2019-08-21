@@ -16,7 +16,7 @@
 // Pass this if window is not defined yet
 }(typeof window !== "undefined" ? window : this, function(window){
     var $ = {};
-    var style = "#__previewImage-container{-ms-touch-action:none;touch-action:none;-webkit-touch-action:none;line-height:100vh;background-color:#000;width:100vw;height:100vh;position:fixed;overflow:hidden;top:0;left:0;z-index: 2147483647;transition:transform .3s;-ms-transition:transform .3s;-moz-transition:transform .3s;-webkit-transition:transform .3s;-o-transition:transform .3s;transform:translate3d(100%,0,0);-webkit-transform:translate3d(100%,0,0);-ms-transform:translate3d(100%,0,0);-o-transform:translate3d(100%,0,0);-moz-transform:translate3d(100%,0,0)}#__previewImage-container .previewImage-text{position:absolute;top:.6em;text-align:center;font-size:18px;line-height:25px;color:#fff;z-index:10;padding: 0.2em 0.4em;background-color: letter-spacing: 0;right:.8em}#__previewImage-container .previewImage-text .previewImage-text-index{font-size: 18px;}#__previewImage-container .previewImage-box{width:999999rem;height:100vh}#__previewImage-container .previewImage-box .previewImage-item{width:100vw;height:100vh;margin-right:15px;float:left;text-align:center;background:url(http://static.luyanghui.com/svg/oval.svg) no-repeat center/auto}#__previewImage-container .previewImage-box .previewImage-item.previewImage-nobackground{background:none}#__previewImage-container .previewImage-box .previewImage-item .previewImage-image{vertical-align:middle;}";
+    var style = "#__previewImage-container{display: none;-ms-touch-action:none;touch-action:none;-webkit-touch-action:none;line-height:100vh;background-color:#000;width:100vw;height:100vh;position:fixed;overflow:hidden;top:0;left:0;z-index: 2147483647;transition:transform .3s;-ms-transition:transform .3s;-moz-transition:transform .3s;-webkit-transition:transform .3s;-o-transition:transform .3s;transform: translate(0,0,0);-webkit-transform: translate(0,0,0);-ms-transform: translate(0,0,0);-o-transform: translate(0,0,0);-moz-transform: translate(0,0,0)}#__previewImage-container .previewImage-text{position:absolute;top:.6em;text-align:center;font-size:18px;line-height:25px;color:#fff;z-index:10;padding: 0.2em 0.4em;background-color: letter-spacing: 0;right:.8em}#__previewImage-container .previewImage-text .previewImage-text-index{font-size: 18px;}#__previewImage-container .previewImage-box{width:999999rem;height:100vh}#__previewImage-container .previewImage-box .previewImage-item{width:100vw;height:100vh;margin-right:15px;float:left;text-align:center;background:url(http://static.luyanghui.com/svg/oval.svg) no-repeat center/auto}#__previewImage-container .previewImage-box .previewImage-item.previewImage-nobackground{background:none}#__previewImage-container .previewImage-box .previewImage-item .previewImage-image{vertical-align:middle;}";
     $.isArray = function(value) {
       return Object.prototype.toString.call(value) == '[object Array]';
     }
@@ -83,8 +83,8 @@
         this.maxScale = 4;  //图片默认最大放大倍数
         this.maxOverScale = 6;  //图片放大倍数最大可达到
         // this.minScale = 0.5; //图片最小可放大倍数
-        this.openTime = 0.2;    //打开图片浏览动画时间
-        this.slipTime = 0.5;    //图片切换时间
+        this.openTime = 0.4;    //打开图片浏览动画时间
+        this.slipTime = 0.3;    //图片切换时间
         this.maxOverWidthPercent = 0.5; //边界图片最大可拉取宽度，屏幕宽度的百分比
         this.$box = false;  //图片容器加载状态
         this.isPreview = false; //是否正在预览图片
@@ -95,6 +95,7 @@
         this.$container.id = '__previewImage-container';    //容器加上id
         this.$container.style.width = this.winw+'px';   //加上宽度
         this.$container.style.height = this.winh+'px';  //加上高度
+        this.$container.style.transform = "scale(0, 0)";
         document.body.appendChild(this.$container);     //插入容器到body
         document.head.appendChild($style);              //插入样式到head
         this.bind();    //绑定事件
@@ -175,7 +176,7 @@
         var offsetX = -this.imageChageMoveX*this.index;  //计算显示当前图片，容器所需偏移量
         this.box.x = offsetX;   //将图片容器所需偏移量，存入状态缓存器
         this.container.x = 0;   //显示预览模块
-        this.$container.style.display = "block";
+        this.$container.style.display = "block";//显示预览模块
         setTimeout(function(){
             _this.translateScale(_this.bIndex,0);
             _this.translateScale(_this.cIndex,_this.openTime);
@@ -247,11 +248,11 @@
     _previewImage.prototype.closePreview = function(){
         var _this = this;
         this.imgStatusCache[this.cIndex].x = this.winw;
-        this.translateScale(this.cIndex,this.openTime);
         this.imgStatusRewrite();
         this.translateScale(this.index,this.slipTime);
         setTimeout(function(){
             _this.$container.style.display = "none";
+            _this.$container.style.transform = "scale(0, 0)";
         },this.slipTime*1000);
         _this.isPreview = false;
     }
@@ -616,7 +617,7 @@
         var offsetX = imgStatus.x+imgStatus.m;
         var offsetY = imgStatus.y+imgStatus.my;
         //var tran_3d='scale3d('+scale+','+scale+',3) '+' translate3d(' + offsetX + 'px,' + offsetY + 'px,0px)';
-         var tran_2d='scale('+scale+','+scale+') '+' translate(' + offsetX + 'px,' + offsetY +'px)';
+        var tran_2d='scale('+scale+','+scale+') '+' translate(' + offsetX + 'px,' + offsetY +'px)';
         var transition = 'transform '+duration+'s ease-out';
         this.addCssPrefix($elem,'transition',transition);
         this.addCssPrefix($elem,'transform',tran_2d);
