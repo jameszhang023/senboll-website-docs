@@ -1,9 +1,12 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<aside class="admonition note">
-<!-- 	<p class="note-icon">
-		{{partial "svg/exclamation.svg" (dict "size" "30px" ) }}
-	</p> -->
-	<!-- <h2 id="{{if .Get 0}}{{.Get 0 | urlize}}{{else}}note{{end}}">{{if .Get 0}}{{.Get 0 | markdownify}}{{else}}Note{{end}}</h2> -->
-	<!-- <h3>Note</h3> -->
-	<div class="admonition-content">{{- .Inner | markdownify -}}</div>
+
+<aside class="mt2 pv2 ph3 w-auto bg-lightest-blue br3">
+	<div class="flex f4 pt2 dark-blue">
+		<div class="font-segmdl2">&#xE946</div>&nbsp
+		<div class="fw6"></span>注意</div>
+	</div>
+	<p >{{- .Inner | markdownify -}}</p>
 </aside>
+		
+	
+	
