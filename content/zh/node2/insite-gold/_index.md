@@ -37,6 +37,13 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
 
 ## 版本日志
 
+- 更新日期：20190821，版本：2.6.0，安卓请点[下载](attachment/InsiteGold-V2.6.0.apk)；
+  - Stay/Sleep All areas buttons..
+  - Master panel users management- master can delete, edit user VOD permissions and select notifications sent per user.
+  - Zones sorting by Name/Number/State/Bypass.
+  - Panel type and firmware version in Site Details..
+  - Bug fixes.
+
 - 更新日期：20190611，版本：2.5.2，安卓请点[下载](attachment/InsiteGold-V2.5.2.apk)；
   - Migration of “Paradox my home” sites to new SWAN.
   - Fixed push notification language support (only on IP150 v4.40.011)
@@ -53,8 +60,8 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用app，集
   - New info button with option to share site details.
   - Hostname support on fixed IP mode.
   - Bug and stability fixes.
+  - 关于功能的详细描述请访问：[了解更多](http://aboutswan.paradox.com/version_insitegold)
   
-关于功能的详细描述请访问：[了解更多](http://aboutswan.paradox.com/version_insitegold)
 
 ## 准备工作
 
