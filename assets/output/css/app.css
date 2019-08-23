@@ -4956,17 +4956,13 @@ small, .font_small {font-size: 0.8em;}
 }
 
 .prose table th {
-  background-color: rgb(230, 230, 230);
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-width: 2px;
-  border-bottom-width: 2px;
-  border-right-style: none;
-  border-left-style: none;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
   border-top-color: rgb(230, 230, 230);
   border-bottom-color: rgb(230, 230, 230);
   background-color: transparent;
-  color: rgb(61, 61, 61);
   font-weight: 600;
   text-align: left;
   padding: .25em .5em;
@@ -4978,8 +4974,6 @@ small, .font_small {font-size: 0.8em;}
   border-bottom-style: solid;
   border-top-width: 1px;
   border-bottom-width: 1px;
-  border-right-style: none;
-  border-left-style: none;
   border-top-color: rgb(230, 230, 230);
   border-bottom-color: rgb(230, 230, 230);
   background-color: transparent;
