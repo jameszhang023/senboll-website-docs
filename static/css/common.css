@@ -208,7 +208,7 @@ em {
 }
 
 #menu-search-input[aria-expanded='true'] span{
-    max-width: 100%;
+    min-width: 100%;
 }
 
 img{
