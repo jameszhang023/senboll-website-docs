@@ -131,11 +131,11 @@ h6:before {
 #mobile-submenu-docs {
     display: block;    
 }
-#mobile-submenu-button-docs-page[aria-expanded='true']::before {
+#mobile-submenu-button-docs-page[aria-expanded='true']::after {
     font-family: "segmdl2";
     content: "\E70E";
 }
-#mobile-submenu-button-docs-page[aria-expanded='false']::before {
+#mobile-submenu-button-docs-page[aria-expanded='false']::after {
     font-family: "segmdl2";
     content: "\E70D";
 }
