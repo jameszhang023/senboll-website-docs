@@ -1,7 +1,7 @@
 ---
 title : "驱动(对接Control4)说明书"
 linktitle: 驱动(对接Control4)说明书
-description: 本文针对枫叶和Control4对接的全方位指导说明，包括驱动下载授权，安装，调试等
+description: 针对枫叶和Control4对接进行全方位指导说明，包括驱动下载授权，安装，调试等
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01

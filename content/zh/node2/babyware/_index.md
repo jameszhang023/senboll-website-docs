@@ -27,27 +27,22 @@ toc: true
 ### 安装软件
 
 下载软件，下载Babyware请访问[资料服务器](http://support.senboll.com:8888/)。
-
 ![Babyware下载](images/babyware-download.png)
 
 ### 安装驱动
 
 如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问[资料服务器](http://support.senboll.com:8888/)。请根据Windows系统版本下载并安装驱动，如下图：
-
 ![307USB驱动下载](images/307usb-driver-download.png)
 
 如果安装驱动遇到困难，请参考下面的步骤。
-
 ![307USB驱动安装](images/307usb-driver-install.gif)
 
 ### 必备硬件
 
 串口直连方式需要准备307USB模块：
-
 ![307USB](images/307usb.png)
 
 以太网方式需要准备网络模块：
-
 ![IP150](images/ip150.png)
 
 ## 初始化
@@ -81,21 +76,17 @@ toc: true
 **提示：防区类型的概念参考请点[防区类型说明](../../node1/important-knowledge/#防区（Zone）)。**
 
 板载防区编程方法：
-
 ![板载防区编程](images/babyware-programing-wire-zone-1.gif)
 
 扩展防区编程方法：
-
 ![板载防区编程](images/babyware-programing-wire-zone-2.gif)
 
 无线防区编程方法：
-
 ![板载防区编程](images/babyware-programing-wireless-zone.gif)
 
 ### 编程遥控器
 
 请参考：
-
 ![初始化](images/babyware-programing-remote.gif)
 
 ### 编程密码和权限
@@ -109,23 +100,19 @@ toc: true
 ### 编程警号
 
 下面是无线警号编程方法演示：
-
 ![初始化](images/babyware-programing-wireless-siren.gif)
 
 警号鸣笛时间设置请看下面演示：
-
 ![初始化](images/babyware-programing-bell-cut-off-timer.gif)
 
 ### 编程退出延时
 
 **提示：退出延时的概念参考请点[退出延时概念](../../node1/important-knowledge/#退出延时)。**
-
 ![初始化](images/babyware-programing-exit-delay.gif)
 
 ### 短信通知设置方法
 
 需要设置3个参数，分别是手机号，分配所属分区和通知事件类型。也可以通过触摸屏键盘进入菜单 → 高级设置 → SMS短信设置。Babyware软件方式设置请参考动画：
-
 ![初始化](images/babyware-sms-setting.gif)
 
 通过Babyware设置中文短信，如果失效的话，请用键盘进入高级编程设置，具体的方法如下：
@@ -136,7 +123,6 @@ toc: true
 ### 电话语音通知设置方法
 
 请参考动画：
-
 ![初始化](images/babyware-tel-setting.gif)
 
 ## 其他操作
