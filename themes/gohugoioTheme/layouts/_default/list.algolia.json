@@ -12,7 +12,7 @@
         "hierarchy": 
         { 
           "lvl0": "{{ htmlEscape $page.Title}}",
-          "lvl1": "{{ . }}",
+          "lvl1": "",
           "lvl2": "",
           "lvl3": "",
           "lvl4": "",
