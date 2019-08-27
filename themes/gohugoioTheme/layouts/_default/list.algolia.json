@@ -9,11 +9,11 @@
         "objectID": "{{ .UniqueID }}",
         "url": "{{ $page.Permalink }}",
         "title": "{{ htmlEscape $page.Title}}",    
-        "content": {{ $page.Content | jsonify }},
+        "content": {{ . | jsonify }},
         "hierarchy": 
         { 
           "lvl0": "{{ htmlEscape $page.Title}}",
-          "lvl1": "{{ . }}",
+          "lvl1": "",
           "lvl2": "",
           "lvl3": "",
           "lvl4": "",
