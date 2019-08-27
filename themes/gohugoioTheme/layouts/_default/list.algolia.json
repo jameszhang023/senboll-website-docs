@@ -1,12 +1,11 @@
 
 [{{ range $index, $page := .Site.Pages }}
   {{ $html_h_list := findRE "</h2>(.|\n)*?<h2" $page.Content }},
-  {{ $html_h2_list_format := split $html_h_list }},
   {
     "objectID": "{{ .UniqueID }}",
     "url": "{{ $page.Permalink }}",
     "title": "{{ htmlEscape $page.Title}}",
-    "content": {{ $html_h2_list | jsonify }},
+    "content": {{ $html_h_list | jsonify }},
     "hierarchy": { 
       "lvl0": "{{ htmlEscape $page.Title}}",
       "lvl1": "",
