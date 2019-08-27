@@ -8,7 +8,7 @@
 	{{else}}
 		{{$.Scratch.Add "filesName" (printf "%s.files" .Page.File.BaseFileName)}}
 	{{end}}
-	<div class="attachments-files">
+	<div class="attachments-files nowrap">
 	{{ range (readDir (printf "./content/zh/%s%s" .Page.File.Dir ($.Scratch.Get "filesName")) ) }}
 		{{ $fileDir := replace $.Page.File.Dir "\\" "/" }}
 		{{if ($.Get "pattern")}}
@@ -18,7 +18,7 @@
 				</a>
 				(文件大小：{{div .Size 1024 }} KB)
 				</br>
-			{{end}}
+			{{end}} 
 		{{else}}
 			<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
 				{{.Name}}
