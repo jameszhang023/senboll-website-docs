@@ -1,6 +1,7 @@
 
 [{{ range $index, $page := .Site.Pages }}
   {{ $html_h2_list := findRE "</h2>(.|\n)*?<h2" $page.Content }},
+  {{ $html_h2_list_format := htmlEscape $html_h2_list }},
   {{- if ne $page.Type "json" -}}
     {{- if and $index (gt $index 0) -}},
     {{- end }}
@@ -8,7 +9,7 @@
         "objectID": "{{ .UniqueID }}",
         "url": "{{ $page.Permalink }}",
         "title": "{{ htmlEscape $page.Title}}",    
-        "content": {{ $html_h2_list | jsonify }},
+        "content": {{ $html_h2_list_format | jsonify }},
         "hierarchy": 
         { 
           "lvl0": "{{ htmlEscape $page.Title}}",
