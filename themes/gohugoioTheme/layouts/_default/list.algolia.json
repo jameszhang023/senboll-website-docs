@@ -8,7 +8,7 @@
         "objectID": "{{ .UniqueID }}",
         "url": "{{ $page.Permalink }}",
         "title": "{{ htmlEscape $page.Title}}",    
-        "content": {{ $htmlEscape | jsonify }},
+        "content": {{ $html_h2_list | jsonify }},
         "hierarchy": 
         { 
           "lvl0": "{{ htmlEscape $page.Title}}",
