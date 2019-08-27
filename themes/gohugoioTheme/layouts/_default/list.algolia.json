@@ -4,12 +4,11 @@
   {{- if ne $page.Type "json" -}}
     {{- if and $index (gt $index 0) -}},
     {{- end }}
-    //{{ range  $html_h2_list }}
       {
         "objectID": "{{ .UniqueID }}",
         "url": "{{ $page.Permalink }}",
         "title": "{{ htmlEscape $page.Title}}",    
-        "content": {{ $html_h2_list | jsonify }},
+        "content": {{ $htmlEscape | jsonify }},
         "hierarchy": 
         { 
           "lvl0": "{{ htmlEscape $page.Title}}",
@@ -21,7 +20,6 @@
           "lvl6": ""
         }
       }    
-    //{{- end -}}
   {{- end -}}
 {{- end -}}]
 
