@@ -1,9 +1,7 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
-    {{ if and $index (gt $index 0) }}
-      {{- range $index, $html :=  findRE "<ul(.|\n)*?</ul>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<ul(.|\n)*?</ul>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -21,8 +19,7 @@
             }
           },   
       {{- end -}}
-      {{- range $index, $html :=  findRE "<table(.|\n)*?</table>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<table(.|\n)*?</table>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -40,8 +37,7 @@
             }
           },  
       {{- end -}}
-      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -59,8 +55,7 @@
             }
           },  
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -78,8 +73,7 @@
             }
           },    
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h3(.|\n)*?</h3>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<h3(.|\n)*?</h3>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -97,8 +91,7 @@
             }
           },    
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h4(.|\n)*?</h4>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<h4(.|\n)*?</h4>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -116,8 +109,7 @@
             }
           },    
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h5(.|\n)*?</h5>" $page.Content -}}
-        
+      {{- range $index, $html :=  findRE "<h5(.|\n)*?</h5>" $page.Content -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -134,7 +126,6 @@
               "lvl6": ""
             }
           },   
-      {{- end -}}
     {{- end -}}    
   {{- end -}}
 {{- end -}}
