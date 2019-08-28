@@ -11,7 +11,7 @@
           "content": "{{ . | plainify }}",
           "hierarchy": { 
             "lvl0": "{{ htmlEscape $page.Title}}",
-            "lvl1": "{{ . | plainify }}",
+            "lvl1": "",
             "lvl2": "",
             "lvl3": "",
             "lvl4": "",
