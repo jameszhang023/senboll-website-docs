@@ -1,7 +1,7 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
-      {{- range $index, $html :=  findRE "<ul(.|\n)*?</ul>" $page.Content -}}        
+      {{- range $index, $html :=  findRE "<ul(.|\n)*?</ul>" $page.Content -}}  
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -55,11 +55,12 @@
             }
           },  
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}        
+      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}} 
+        {{- $html_id :=  findRE "herf=(.|\n)*?>" $html -}}              
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
-            "url": "{{ $page.Permalink }}",
+            "url": "{{ $html_id }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
