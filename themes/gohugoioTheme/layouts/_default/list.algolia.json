@@ -2,8 +2,8 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
     {{ if and $index (gt $index 0) }}
-      {{- range $index1, $html_h2 :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
-        {{ if and $index1 (gt $index1 0) }}
+      {{- range $index, $html_h2 :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
+        {{ if and $index (gt $index 0) }}
         {      
           "objectID": "{{ md5 . }}",
           "url": "{{ $page.Permalink }}",
@@ -19,7 +19,7 @@
             "lvl6": ""
           }
         },
-        {{ end }}      
+        {{- end -}}      
       {{- end -}}
     {{ end }}    
   {{- end -}}
