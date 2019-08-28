@@ -2,14 +2,114 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
     {{ if and $index (gt $index 0) }}
-      {{- range $index, $html_p :=  findRE "<p (.|\n)*?</p>" $page.Content -}}
+      {{- range $index, $html :=  findRE "<p (.|\n)*?</p>" $page.Content -}}
         {{- if and $index (gt $index 0) -}}
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
             "url": "{{ $page.Permalink }}",
             "title": "{{ htmlEscape $page.Title}}",
-            "content":" {{ $content }}",
+            "content": {{ $content | jsonify }},
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {{ $content := . | plainify }}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": {{ $content | jsonify }},
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html :=  findRE "<h3 (.|\n)*?</h3>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {{ $content := . | plainify }}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": {{ $content | jsonify }},
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html :=  findRE "<h4 (.|\n)*?</h4>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {{ $content := . | plainify }}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": {{ $content | jsonify }},
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html :=  findRE "<h5 (.|\n)*?</h5>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {{ $content := . | plainify }}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": {{ $content | jsonify }},
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html :=  findRE "<h6 (.|\n)*?</h6>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {{ $content := . | plainify }}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": {{ $content | jsonify }},
             "hierarchy": { 
               "lvl0": "{{ htmlEscape $page.Title}}",
               "lvl1": "",
