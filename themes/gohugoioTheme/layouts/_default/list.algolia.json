@@ -2,9 +2,9 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h := findRE "</h2>(.|\n)*?<h2" $page.Content }}
   {{ if eq $html_h "null"}}
-    {{- $html_h_f := $html_h -}}
+    {{- $html_h := $html_h -}}
   {{ else }}
-    {{- $html_h_f := $html_h | plainify -}}
+    {{- $html_h := $html_h | plainify -}}
   {{- end -}}
   {{- if ne $page.Type "json" -}}
     {{- if and $index (gt $index 0) -}},
@@ -13,7 +13,7 @@
       "objectID": "{{ .UniqueID }}",
       "url": "{{ $page.Permalink }}",
       "title": "{{ htmlEscape $page.Title}}",
-      "content": {{ $html_h_f | jsonify }},
+      "content": {{ $html_h | jsonify }},
       "hierarchy": { 
         "lvl0": "{{ htmlEscape $page.Title}}",
         "lvl1": "",
