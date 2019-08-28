@@ -5,7 +5,7 @@
     "objectID": "{{ .UniqueID }}",
     "url": "{{ $page.Permalink }}",
     "title": "{{ htmlEscape $page.Title}}",
-    "content": {{ $page.Summary | jsonify }},
+    "content": {{ $page.Content | jsonify }},
     "hierarchy": { 
       "lvl0": "{{ htmlEscape $page.Title}}",
       "lvl1": "",
