@@ -1,8 +1,9 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h2 := findRE "<h2 (.|\n)*?</h2>" $page.Content }}
-  {{- range $html_h2 -}}
-    {{- . | plainly -}}
+  {{- range $html_h2
+     -}}
+    {{- . | plainify -}}
   {{- end -}}
   {{- if ne $page.Type "json" -}}
     {{- if and $index (gt $index 0) -}},
