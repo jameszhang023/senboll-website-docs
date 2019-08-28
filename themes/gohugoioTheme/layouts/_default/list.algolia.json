@@ -1,12 +1,8 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h := findRE "</h2>(.|\n)*?<h2" $page.Content }}
-  {{ with $html_h }}
-  {{- $html_h := $html_h | plainify -}}
-  {{- end -}}
-  {{- if ne $page.Type "json" -}}
-    {{- if and $index (gt $index 0) -}},
-    {{- end -}}
+  {{ range with $html_h -}}
+    {{- $html_h := . | plainify -}}
     {
       "objectID": "{{ .UniqueID }}",
       "url": "{{ $page.Permalink }}",
@@ -22,6 +18,10 @@
         "lvl6": ""
       }
     }
+  {{- end -}}
+  {{- if ne $page.Type "json" -}}
+    {{- if and $index (gt $index 0) -}},
+    {{- end -}}
   {{- end -}}
 {{- end -}}]
 
