@@ -2,8 +2,103 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
     {{ if and $index (gt $index 0) }}
+    {{- range $index, $html_p :=  findRE "<p (.|\n)*?</p>" $page.Content -}}
+      {{- if and $index (gt $index 0) -}}
+        {      
+          "objectID": "{{ md5 . }}",
+          "url": "{{ $page.Permalink }}",
+          "title": "{{ htmlEscape $page.Title}}",
+          "content": "{{ . | plainify }}",
+          "hierarchy": { 
+            "lvl0": "{{ htmlEscape $page.Title}}",
+            "lvl1": "{{ . | plainify }}",
+            "lvl2": "",
+            "lvl3": "",
+            "lvl4": "",
+            "lvl5": "",
+            "lvl6": ""
+          }
+        },
+      {{- end -}}      
+    {{- end -}}
       {{- range $index, $html_h2 :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
-        {{ if and $index (gt $index 0) }}
+        {{- if and $index (gt $index 0) -}}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": "{{ . | plainify }}",
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "{{ . | plainify }}",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html_h3 :=  findRE "<h3 (.|\n)*?</h3>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": "{{ . | plainify }}",
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "{{ . | plainify }}",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html_h4 :=  findRE "<h4 (.|\n)*?</h4>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": "{{ . | plainify }}",
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "{{ . | plainify }}",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html_h5 :=  findRE "<h5 (.|\n)*?</h5>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
+          {      
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}",
+            "title": "{{ htmlEscape $page.Title}}",
+            "content": "{{ . | plainify }}",
+            "hierarchy": { 
+              "lvl0": "{{ htmlEscape $page.Title}}",
+              "lvl1": "{{ . | plainify }}",
+              "lvl2": "",
+              "lvl3": "",
+              "lvl4": "",
+              "lvl5": "",
+              "lvl6": ""
+            }
+          },
+        {{- end -}}      
+      {{- end -}}
+      {{- range $index, $html_h6 :=  findRE "<h6 (.|\n)*?</h6>" $page.Content -}}
+        {{- if and $index (gt $index 0) -}}
           {      
             "objectID": "{{ md5 . }}",
             "url": "{{ $page.Permalink }}",
@@ -27,10 +122,10 @@
   {
     "objectID": "{{ md5 "null" }}",
     "url": "",
-    "title": "",
-    "content": "",
+    "title": "null",
+    "content": "null",
     "hierarchy": { 
-      "lvl0": "",
+      "lvl0": "null",
       "lvl1": "",
       "lvl2": "",
       "lvl3": "",
