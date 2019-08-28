@@ -56,7 +56,8 @@
           },  
       {{- end -}}
       {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}} 
-        {{- $html_id :=  findRE "herf=(.|\n)*?>" $html -}}              
+          {{- $html_id :=  findRE "herf=(.|\n)*?>" . -}}           
+          {{ $html_id := $html_id  | plainify }}              
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
