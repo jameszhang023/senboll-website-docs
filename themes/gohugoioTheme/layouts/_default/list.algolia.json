@@ -4,11 +4,12 @@
     {{ if and $index (gt $index 0) }}
       {{- range $index, $html_p :=  findRE "<p (.|\n)*?</p>" $page.Content -}}
         {{- if and $index (gt $index 0) -}}
+          {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
             "url": "{{ $page.Permalink }}",
             "title": "{{ htmlEscape $page.Title}}",
-            "content": {{ . | jsonify | plainify }},
+            "content": {{ $content | jsonify }},
             "hierarchy": { 
               "lvl0": "{{ htmlEscape $page.Title}}",
               "lvl1": "",
