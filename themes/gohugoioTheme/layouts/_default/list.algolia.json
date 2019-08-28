@@ -60,7 +60,7 @@
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
-            "url": "{{ $html_id }}",
+            "url": "{{ $html_id | jsonify }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
