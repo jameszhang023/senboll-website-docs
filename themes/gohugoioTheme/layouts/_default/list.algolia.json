@@ -2,8 +2,13 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h := findRE "</h2>(.|\n)*?<h2" $page.Content }}
   {{- range $html_h -}}
-    {{- $html_h := . | plainify -}}
-    {{{
+    {{- . | plainify -}}
+
+  {{- end -}}
+  {{- if ne $page.Type "json" -}}
+    {{- if and $index (gt $index 0) -}},
+    {{- end -}}
+    {
       "objectID": "{{ .UniqueID }}",
       "url": "{{ $page.Permalink }}",
       "title": "{{ htmlEscape $page.Title}}",
@@ -17,14 +22,8 @@
         "lvl5": "",
         "lvl6": ""
       }
-    }}}
-  {{- end -}}
-  {{- if ne $page.Type "json" -}}
-    {{- if and $index (gt $index 0) -}},
-    {{- end -}}
-    
+    }
   {{- end -}}
 {{- end -}}]
-
 
 
