@@ -1,7 +1,7 @@
 
 [{{- range $index, $page := .Site.Pages -}}
-  {{ $html_h2 := findRE "<h2 (.|\n)*?</h2>" $page.Content }}
-  {{ if isset  $html_h2  }}
+  {{ $html_h2 := or("nil" findRE "<h2 (.|\n)*?</h2>" $page.Content)  }}
+  {{ if ne $html_h2 "nil"}}
     {{- range $html_h2 -}}
       {      
         "objectID": "{{ md5 . }}",
