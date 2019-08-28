@@ -162,23 +162,23 @@
           }
         },   
     {{- end -}} 
-    {{- end -}}
   {{- end -}}
-    {
-      "objectID": "{{ md5 "null" }}",
-      "url": "",
-      "title": "null",
-      "content": "null",
-      "hierarchy": { 
-        "lvl0": "null",
-        "lvl1": "",
-        "lvl2": "",
-        "lvl3": "",
-        "lvl4": "",
-        "lvl5": "",
-        "lvl6": ""
-      }
+{{- end -}}
+  {
+    "objectID": "{{ md5 "null" }}",
+    "url": "",
+    "title": "null",
+    "content": "null",
+    "hierarchy": { 
+      "lvl0": "null",
+      "lvl1": "",
+      "lvl2": "",
+      "lvl3": "",
+      "lvl4": "",
+      "lvl5": "",
+      "lvl6": ""
     }
-  ]
+  }
+]
 
 
