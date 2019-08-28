@@ -1,8 +1,10 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h2 := findRE "<h2 (.|\n)*?</h2>" $page.Content }}
+  {{ $objectID := .UniqueID }}
   {{- range $html_h2 -}}
     {
+      "objectID": "{{ $objectID }}",
       "url": "{{ $page.Permalink }}",
       "title": "{{ htmlEscape $page.Title}}",
       "content": {{ .  | plainify | jsonify  }},
