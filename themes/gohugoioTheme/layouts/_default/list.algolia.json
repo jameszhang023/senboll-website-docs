@@ -1,13 +1,8 @@
 
 [{{- range $index, $page := .Site.Pages -}}
-  {{ $html_p := findRE "<p (.|\n)*?</p>" $page.Content }}
   {{ $html_h2 := findRE "<h2 (.|\n)*?</h2>" $page.Content }}
-  {{ $html_h3 := findRE "<h3 (.|\n)*?</h3>" $page.Content }}
-  {{ $html_h4 := findRE "<h4 (.|\n)*?</h4>" $page.Content }}
-  {{ $html_h5 := findRE "<h5 (.|\n)*?</h5>" $page.Content }}
-  {{ $html_h6 := findRE "<h6 (.|\n)*?</h6>" $page.Content }}
-  {{ with $html_p}}
-    {{- range $html_p -}}
+  {{ with $html_h2}}
+    {{- range $html_h2 -}}
       {      
         "objectID": "{{ md5 . }}",
         "url": "{{ $page.Permalink }}",
@@ -15,7 +10,7 @@
         "content": {{ .  | plainify | jsonify  }},
         "hierarchy": { 
           "lvl0": "{{ htmlEscape $page.Title}}",
-          "lvl1": "",
+          "lvl1": "{{ . | plainify }}",
           "lvl2": "",
           "lvl3": "",
           "lvl4": "",
@@ -23,7 +18,7 @@
           "lvl6": ""
         }
       },
-    {{- end -}}    
+    {{- end -}}
   {{ end }}
   {{- if ne $page.Type "json" -}}
     {{- if and $index (gt $index 0) -}},
