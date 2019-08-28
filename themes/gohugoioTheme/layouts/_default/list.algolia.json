@@ -7,7 +7,7 @@
       {{ $html_id_f := $html_idf 4 -2 }}
         {{ $content := . | plainify }}
         {      
-          "objectID": "{{ $html_id_f   }}",
+          "objectID": "{{ $html_id_f  | plainify  }}",
           "url": "{{ $page.Permalink }}#{{ $content }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
