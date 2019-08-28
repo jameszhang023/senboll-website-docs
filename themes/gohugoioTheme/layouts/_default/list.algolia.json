@@ -3,6 +3,7 @@
   {{- if ne $page.Type "json" -}}
       {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}  
       {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+      {{ $html_id := $html_id 4 -2 }}
       {{ $html_id_f := delimit $html_id "" ""}}
         {{ $content := . | plainify }}
         {      
