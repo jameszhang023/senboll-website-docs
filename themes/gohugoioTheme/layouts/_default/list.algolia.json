@@ -42,7 +42,7 @@
           },
         {{- end -}}      
       {{- end -}}
-      {{- range $index, $html :=  findRE "<p (.|\n)*?</p>" $page.Content -}}
+      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" $page.Content -}}
         {{- if and $index (gt $index 0) -}}
           {{ $content := . | plainify }}
           {      
@@ -62,7 +62,7 @@
           },
         {{- end -}}      
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
+      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}
         {{- if and $index (gt $index 0) -}}
           {{ $content := . | plainify }}
           {      
@@ -82,7 +82,7 @@
           },
         {{- end -}}      
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h3 (.|\n)*?</h3>" $page.Content -}}
+      {{- range $index, $html :=  findRE "<h3(.|\n)*?</h3>" $page.Content -}}
         {{- if and $index (gt $index 0) -}}
           {{ $content := . | plainify }}
           {      
