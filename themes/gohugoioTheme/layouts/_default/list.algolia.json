@@ -1,6 +1,5 @@
 
 [{{ range $index, $page := .Site.Pages }}
-  {{ $html_h := findRE "</h2>(.|\n)*?<h2" $page.Content}},
   {
     "objectID": "{{ .UniqueID }}",
     "url": "{{ $page.Permalink }}",
