@@ -1,5 +1,8 @@
 
 [{{ range $index, $page := .Site.Pages }}
+  {{- if ne $page.Type "json" -}}
+    {{- if and $index (gt $index 0) -}},
+    {{- end -}}
     {
       "objectID": "{{ .UniqueID }}",
       "url": "{{ $page.Permalink }}",
@@ -15,5 +18,6 @@
         "lvl6": ""
       }
     }
+  {{- end -}}
 {{- end -}}]
 
