@@ -25,6 +25,7 @@
       },
     {{- end -}}    
   {{ end }}
+  {{ with $html_h2}}
   {{- range $html_h2 -}}
     {      
       "objectID": "{{ md5 . }}",
@@ -42,6 +43,8 @@
       }
     },
   {{- end -}}
+  {{ end }}
+  {{ with $html_h3}}
   {{- range $html_h3 -}}
     {      
       "objectID": "{{ md5 . }}",
@@ -59,6 +62,8 @@
       }
     },
   {{- end -}}
+  {{ end }}
+  {{ with $html_h4}}
   {{- range $html_h4 -}}
     {      
       "objectID": "{{ md5 . }}",
@@ -76,6 +81,8 @@
       }
     },
   {{- end -}}
+  {{ end }}
+  {{ with $html_h5}}
   {{- range $html_h5 -}}
     {      
       "objectID": "{{ md5 . }}",
@@ -93,6 +100,8 @@
       }
     },
   {{- end -}}
+  {{ end }}
+  {{ with $html_h6}}
   {{- range $html_h6 -}}
     {      
       "objectID": "{{ md5 . }}",
@@ -110,6 +119,7 @@
       }
     },
   {{- end -}}
+  {{ end }}
   {{- if ne $page.Type "json" -}}
     {{- if and $index (gt $index 0) -}},
     {{- end -}}
