@@ -4,7 +4,7 @@
   {{ $objectID := .UniqueID }}
   {{- range $html_h2 -}}
     {
-      "objectID": "{{ $objectID }}",
+      "objectID": "{{ $objectID add 1 }}",
       "url": "{{ $page.Permalink }}",
       "title": "{{ htmlEscape $page.Title}}",
       "content": {{ .  | plainify | jsonify  }},
