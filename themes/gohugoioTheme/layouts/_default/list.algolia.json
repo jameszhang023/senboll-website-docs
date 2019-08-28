@@ -58,11 +58,13 @@
           },  
         {{- end -}}
         {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}  
+          {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+          {{ $html_id_f := delimit $html_id "" ""}}
           {{ $html_id_f := substr . 4 -2 }}
           {{ $content := . | plainify }}
           {      
-            "objectID": "{{ $html_id_f }}",
-            "url": "{{ $page.Permalink }}#{{ $content }}",
+            "objectID": "{{ md5 . }}",
+            "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
@@ -76,11 +78,14 @@
             }
           },    
         {{- end -}}
-        {{- range $index, $html :=  findRE "<h3(.|\n)*?</h3>" $page.Content -}}        
+        {{- range $index, $html :=  findRE "<h3(.|\n)*?</h3>" $page.Content -}} 
+          {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+          {{ $html_id_f := delimit $html_id "" ""}}
+          {{ $html_id_f := substr . 4 -2 }}    
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
-            "url": "{{ $page.Permalink }}#{{ $content }}",
+            "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
@@ -94,11 +99,14 @@
             }
           },    
         {{- end -}}
-        {{- range $index, $html :=  findRE "<h4(.|\n)*?</h4>" $page.Content -}}        
+        {{- range $index, $html :=  findRE "<h4(.|\n)*?</h4>" $page.Content -}}   
+          {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+          {{ $html_id_f := delimit $html_id "" ""}}
+          {{ $html_id_f := substr . 4 -2 }}         
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
-            "url": "{{ $page.Permalink }}#{{ $content }}",
+            "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
@@ -112,11 +120,14 @@
             }
           },    
         {{- end -}}
-        {{- range $index, $html :=  findRE "<h5(.|\n)*?</h5>" $page.Content -}}        
+        {{- range $index, $html :=  findRE "<h5(.|\n)*?</h5>" $page.Content -}}     
+          {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+          {{ $html_id_f := delimit $html_id "" ""}}
+          {{ $html_id_f := substr . 4 -2 }}       
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
-            "url": "{{ $page.Permalink }}#{{ $content }}",
+            "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
@@ -130,11 +141,14 @@
             }
           },   
       {{- end -}}    
-      {{- range $index, $html :=  findRE "<h6(.|\n)*?</h6>" $page.Content -}}        
+      {{- range $index, $html :=  findRE "<h6(.|\n)*?</h6>" $page.Content -}}   
+        {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+        {{ $html_id_f := delimit $html_id "" ""}}
+        {{ $html_id_f := substr . 4 -2 }}         
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $content }}",
+          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
