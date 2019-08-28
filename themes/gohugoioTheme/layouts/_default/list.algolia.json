@@ -2,7 +2,7 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h := findRE "</h2>(.|\n)*?<h2" $page.Content }}
   {{- range $html_h -}}
-    {{- . -}}
+    
     {{- . | plainify -}}
   {{- end -}}
   {{- if ne $page.Type "json" -}}
