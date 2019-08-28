@@ -23,6 +23,21 @@
       {{- end -}}
     {{- end -}}    
   {{- end -}}
-{{- end -}}{}]
+{{- end -}}
+{
+  "objectID": "{{ .UnicodeID }}",
+  "url": "",
+  "title": "",
+  "content": "",
+  "hierarchy": { 
+    "lvl0": "",
+    "lvl1": "",
+    "lvl2": "",
+    "lvl3": "",
+    "lvl4": "",
+    "lvl5": "",
+    "lvl6": ""
+  }}
+]
 
 
