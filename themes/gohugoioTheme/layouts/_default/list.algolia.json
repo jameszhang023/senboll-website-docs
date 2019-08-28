@@ -2,10 +2,10 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
       {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}  
-      {{- $html_id := findRE "id=(.|\n)*?/::" . -}} 
+      {{- $html_id := findRE "id=(.|\n)*?::" . -}} 
         {{ $content := . | plainify }}
         {      
-          "objectID": "{{ $html_id  | plainify  }}",
+          "objectID": "{{ $html_id | plainify  }}",
           "url": "{{ $page.Permalink }}#{{ $content }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
