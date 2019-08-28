@@ -3,7 +3,7 @@
   {{- if ne $page.Type "json" -}}
     
       {{- range $index, $html :=  findRE "<table>(.|\n)*?</table>" $page.Content -}}
-        {{- if and $index (gt $index 0) -}}
+       
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -20,7 +20,7 @@
               "lvl6": ""
             }
           },
-        {{- end -}}      
+             
      
     {{- end -}}    
   {{- end -}}
