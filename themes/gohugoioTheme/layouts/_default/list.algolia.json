@@ -9,7 +9,7 @@
             "objectID": "{{ md5 . }}",
             "url": "{{ $page.Permalink }}",
             "title": "{{ htmlEscape $page.Title}}",
-            "content": {{ $content | jsonify }},
+            "content":" {{ $content }}",
             "hierarchy": { 
               "lvl0": "{{ htmlEscape $page.Title}}",
               "lvl1": "",
