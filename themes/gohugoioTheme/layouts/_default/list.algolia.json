@@ -55,13 +55,11 @@
             }
           },  
       {{- end -}}
-      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}} 
-          {{- $html_id :=  findRE "herf=(.|\n)*?>" . -}}           
-          {{ $html_id := $html_id  | plainify }}              
+      {{- range $index, $html :=  findRE "<h2(.|\n)*?</h2>" $page.Content -}}  
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
-            "url": "{{ $html_id | jsonify }}",
+            "url": "{{ $page.Permalink  }}{{"/#" }}{{ $content | jsonify  }}",
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
