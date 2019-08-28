@@ -5,7 +5,7 @@
       {{- $html_id := findRE "id=(.|\n)*?/::" . -}} 
         {{ $content := . | plainify }}
         {      
-          "objectID": "{{ $html_id  }}",
+          "objectID": "{{ $html_id  | plainify  }}",
           "url": "{{ $page.Permalink }}#{{ $content }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
