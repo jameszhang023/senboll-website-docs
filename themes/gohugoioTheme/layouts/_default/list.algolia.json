@@ -3,8 +3,7 @@
   {{- if ne $page.Type "json" -}}
     {{ if and $index (gt $index 0) }}
     {{ end }}    
-    {{- $html_h2 :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
-    {{- range $index1, $html_h2 -}}
+    {{- range $index1, $html_h2 :=  findRE "<h2 (.|\n)*?</h2>" $page.Content -}}
       {{ if and $index1 (gt $index1 0) }}
       {      
         "objectID": "{{ md5 . }}",
