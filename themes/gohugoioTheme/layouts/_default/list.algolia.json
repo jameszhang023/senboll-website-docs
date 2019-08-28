@@ -1,7 +1,7 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{ $html_h := findRE "</h2>(.|\n)*?<h2" $page.Content }}
-  {{ if eq $html_h "null"}}
+  {{ if eq $html_h "nil"}}
     {{- $html_h := $html_h -}}
   {{ else }}
     {{- $html_h := $html_h | plainify -}}
