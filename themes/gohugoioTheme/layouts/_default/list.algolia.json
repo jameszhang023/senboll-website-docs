@@ -11,7 +11,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ .Parent }}",
+              "lvl0": "{{ $page.Parent }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "",
               "lvl3": "",
