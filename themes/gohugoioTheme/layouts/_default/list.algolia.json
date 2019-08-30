@@ -7,7 +7,7 @@
       {{ $html_id := findRE "id=\"(.|\n)*?\"" . }} 
       {{ $html_id_f := delimit $html_id "" ""}}
       {{ $html_id_f }}
-      {{ $html_id_f := substr $html_id_f 4 3}}
+      {{ $html_id_f := substr $html_id_f 0 3}}
       {{ $html_id_f  }}
     {{- end -}}
   {{- end -}}
