@@ -5,11 +5,12 @@
     {{$page_content := replaceRE "(<h)(.|\n)*?</h" "<end>$1" $page_content}}
     {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}  
       {{- $html_id := findRE "<h2.+id=(.|\n)*?>" . -}} 
-      {{ delimit $html_id "" ""}}
+      {{ $html_id_f := delimit $html_id "" ""}}
+      {{ $html_id_f }}
       {{ $content := . | plainify }}
       {      
         "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}#{{  }}",
+        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
         "title": "{{ htmlEscape $page.Title}}",
         "content": {{ $content | jsonify }},
         "hierarchy": { 
