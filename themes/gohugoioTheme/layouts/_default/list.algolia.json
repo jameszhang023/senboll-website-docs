@@ -3,14 +3,17 @@
   {{- if ne $page.Type "json" -}}
     {{ $page_content := $page.Content }} 
     {{$page_content := replaceRE "(<h)(.|\n)*?</h" "<end>$1" $page_content}}
-    {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}  
-      {{- $html_id := findRE "<h2.+id=(.|\n)*?>" . -}} 
-      {{ $html_id_f := delimit $html_id "" ""}}
-      {{ $html_id_f }}
+    {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}   
+      {{-  range $index, $html_id := findRE "<h2.+id=(.|\n)*?>" . -}} 
+        {{ $html_id := delimit $html_id "" ""}}
+        {{ $html_id := substr $html_id 4 -2 }}
+        {{ $html_id }}
+      {{- end -}}
+      
       {{ $content := . | plainify }}
       {      
         "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+        "url": "{{ $page.Permalink }}#{{ }}",
         "title": "{{ htmlEscape $page.Title}}",
         "content": {{ $content | jsonify }},
         "hierarchy": { 
