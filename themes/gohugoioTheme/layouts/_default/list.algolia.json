@@ -1,28 +1,29 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
-    {{- $page.Content | replaceRE "(<h)(.|\n)*?</h" "<end>$1" -}}
-      {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page.Content -}}  
-        {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
-        {{ $html_id_f := delimit $html_id "" ""}}
-        {{ $html_id_f := substr $html_id_f 4 -2 }}
-        {{ $content := . | plainify }}
-        {      
-          "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
-          "title": "{{ htmlEscape $page.Title}}",
-          "content": {{ $content | jsonify }},
-          "hierarchy": { 
-            "lvl0": "{{ htmlEscape $page.Parent.Title }}",
-            "lvl1": "{{ htmlEscape $page.Title}}",
-            "lvl2": {{ $content | jsonify }},
-            "lvl3": "",
-            "lvl4": "",
-            "lvl5": "",
-            "lvl6": ""
-          }
-        },    
-      {{- end -}}
+    {{- range $index, $html $page.Content | replaceRE "(<h)(.|\n)*?</h" "<end>$1" -}}
+    {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page.Content -}}  
+      {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+      {{ $html_id_f := delimit $html_id "" ""}}
+      {{ $html_id_f := substr $html_id_f 4 -2 }}
+      {{ $content := . | plainify }}
+      {      
+        "objectID": "{{ md5 . }}",
+        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+        "title": "{{ htmlEscape $page.Title}}",
+        "content": {{ $content | jsonify }},
+        "hierarchy": { 
+          "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+          "lvl1": "{{ htmlEscape $page.Title}}",
+          "lvl2": {{ $content | jsonify }},
+          "lvl3": "",
+          "lvl4": "",
+          "lvl5": "",
+          "lvl6": ""
+        }
+      },    
+    {{- end -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
   {
