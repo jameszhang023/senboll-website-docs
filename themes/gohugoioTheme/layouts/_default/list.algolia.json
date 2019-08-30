@@ -1,7 +1,7 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
-    {{-  $page.Content := replaceRE "(<h)(.|\n)*?</h" "<end>$1" $page.Content -}}
+    {{-  $page_content := replaceRE "(<h)(.|\n)*?</h" "<end>$1" $page.Content -}}
     {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page.Content -}}  
       {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
       {{ $html_id_f := delimit $html_id "" ""}}
