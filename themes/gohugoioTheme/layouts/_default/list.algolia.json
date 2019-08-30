@@ -4,8 +4,10 @@
     {{ $page_content := $page.Content }} 
     {{$page_content := replaceRE "(<h)(.|\n)*?" "<end>$1" $page_content}}
     {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}  
-      {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
-      {{ $html_id }} 
+      {{ $html_id := findRE "id=(.|\n)*?>" . }} 
+      {{ $html_id_f := delimit $html_id "" ""}}
+      {{ $html_id_f := substr $html_id_f 4 -2 }}
+      {{ $html_id_f }}
       {{  .  }}  
     {{- end -}}
   {{- end -}}
