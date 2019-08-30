@@ -5,6 +5,7 @@
     {{$page_content := replaceRE "(<h)(.|\n)*?" "<end>$1" $page_content}}
     {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}  
       {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
+      {{- $html_id  -}} 
       {{  .  }}  
     {{- end -}}
   {{- end -}}
