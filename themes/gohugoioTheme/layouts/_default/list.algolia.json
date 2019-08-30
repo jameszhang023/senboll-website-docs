@@ -2,7 +2,7 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
     {{ $page_content := $page.Content }}
-    {{range $index, $html := replaceRE "(<h)(.|\n)*?</h" "<end>$1" $page_content}}
+    {{$page_content := replaceRE "(<h)(.|\n)*?</h" "<end>$1" $page_content}}
     {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" . -}}  
       {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
       {{ $html_id_f := delimit $html_id "" ""}}
@@ -23,7 +23,6 @@
           "lvl6": ""
         }
       },    
-    {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
