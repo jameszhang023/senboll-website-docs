@@ -10,6 +10,7 @@
       {{ $html_id_f := delimit $html_id "" ""}}
       {{ $html_id_f := replace $html_id_f "id=\"" ""}}
       {{ $html_id_f := replace $html_id_f "\">" ""}}
+      {{ $id := "" }}
       {{ if eq $html_id_f "" }}
         {{ $id := "" }}
       {{else}}
