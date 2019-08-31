@@ -2,7 +2,7 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{ if ne $page.Type "json" }}
     {{$page_content := replaceRE "(<h)(.|\n)*?" "<end>$1" $page.Content}}
-    {{$page_content := replaceRE "(^.*?)" "<h id=\"null\">$1" $page_content}}
+    {{$page_content := replaceRE "(^.*?)" "<h id=\"n\">$1" $page_content}}
     {{$page_content := replaceRE "(.*?)($)" "$2<end>" $page_content}}
 
       {{$page_content }}
@@ -15,7 +15,7 @@
       {{- $html_id_f -}}
       {{ $html_id_f1  := substr $html_id_f 0 5 }}
       {{- $html_id_f -}}
-      {{ if eq $html_id_f1 "#null" }}
+      {{ if eq $html_id_f1 "#n" }}
         {{ $html_id_f := replace $html_id_f "#null" ""}}        
       {{ end }}
 
