@@ -17,13 +17,11 @@
       {{ $html_id_f1  := substr $html_id_f 0 2 }}
       {{- $html_id_f1 -}}
       {{ if eq $html_id_f1 "#n" }} true
-        {{ $html_id_f := replace $html_id_f "#n" ""}}        
+        {{ $html_id_f := replace $html_id_f "#n" ""}}    
+        {{ $html_id_f }}     
       {{ end }}
 
-      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}   
-      {{ if eq $html_id_f1 "#n" }} true
-        {{ $html_id_f := replace $html_id_f "#n" ""}}        
-      {{ end }}     
+      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
