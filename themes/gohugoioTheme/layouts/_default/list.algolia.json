@@ -10,12 +10,17 @@
       {{ $html_id_f := delimit $html_id "" ""}}
       {{ $html_id_f := replace $html_id_f "id=\"" ""}}
       {{ $html_id_f := replace $html_id_f "\">" ""}}
+      {{ $id := ""}}
+      {{ if ne $html_id_f ""}}
+        {{ $id := "#" }}
+      {{- end -}}
+
 
       {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "url": "{{ $page.Permalink }}{{$id}}{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
@@ -34,7 +39,7 @@
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "url": "{{ $page.Permalink }}{{$id}}{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
@@ -53,7 +58,7 @@
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "url": "{{ $page.Permalink }}{{$id}}{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
@@ -71,7 +76,7 @@
       {{ $content := . | plainify }}
       {      
         "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+        "url": "{{ $page.Permalink }}{{$id}}{{ $html_id_f }}",
         "title": "{{ htmlEscape $page.Title}}",
         "content": {{ $content | jsonify }},
         "hierarchy": { 
