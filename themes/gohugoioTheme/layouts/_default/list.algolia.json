@@ -84,6 +84,25 @@
     {{- end -}}
   {{else}}
 
+    {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" $page_content -}}        
+      {{ $content := . | plainify }}
+      {      
+        "objectID": "{{ md5 . }}",
+        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+        "title": "{{ htmlEscape $page.Title}}",
+        "content": {{ $content | jsonify }},
+        "hierarchy": { 
+          "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+          "lvl1": "{{ htmlEscape $page.Title}}",
+          "lvl2": "{{ $html_id_f }}",
+          "lvl3": "",
+          "lvl4": "",
+          "lvl5": "",
+          "lvl6": ""
+        }
+      },  
+    {{- end -}}
+
   {{- end -}}
 {{- end -}}
   {
