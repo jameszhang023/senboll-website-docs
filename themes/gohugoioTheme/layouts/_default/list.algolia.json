@@ -16,7 +16,7 @@
       {{ $html_id_f1  := substr $html_id_f 0 5 }}
       {{- $html_id_f -}}
       {{ if eq $html_id_f1 "#n" }}
-        {{ $html_id_f := replace $html_id_f "#null" ""}}        
+        {{ $html_id_f := replace $html_id_f "#n" ""}}        
       {{ end }}
 
       {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
