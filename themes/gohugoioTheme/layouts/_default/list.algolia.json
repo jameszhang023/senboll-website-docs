@@ -1,6 +1,7 @@
 
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
+  {{$page_content := replaceRE "(.)(<h)(.|\n)*?" "<content-start>$1" $page.Content}}
     {{$page_content := replaceRE "(.)(<h)(.|\n)*?" "<heading-end>$2" $page.Content}}
     {{ $page.Content}}
 
@@ -11,6 +12,7 @@
       {{ $html_id_f := replace $html_id_f "\">" ""}}
 
 
+    {{- end -}}
   {{- end -}}
 {{- end -}}
   {
