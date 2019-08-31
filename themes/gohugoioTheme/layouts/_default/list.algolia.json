@@ -88,7 +88,7 @@
       {{ $content := . | plainify }}
       {      
         "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+        "url": "{{ $page.Permalink }}",
         "title": "{{ htmlEscape $page.Title}}",
         "content": {{ $content | jsonify }},
         "hierarchy": { 
