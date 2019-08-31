@@ -10,16 +10,6 @@
       {{ $html_id_f := delimit $html_id "" ""}}
       {{ $html_id_f := replace $html_id_f "id=\"" ""}}
       {{ $html_id_f := replace $html_id_f "\">" ""}}
-      {{ $id := "#" }}
-      {{ $htmlidf := "" }}
-      {{ if eq $html_id_f "null" }}
-        {{ $htmlidf := "" }}
-        {{ $html_id_f := $htmlidf }}
-        {{ $id := "" }}
-      {{ else }}
-        {{ $id := "#" }}
-      {{ end }}
-
 
 
       {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
