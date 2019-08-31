@@ -13,7 +13,8 @@
       {{ $html_id_f := replace $html_id_f "id=\"" "#"}}
       {{ $html_id_f := replace $html_id_f "\">" ""}}
       {{- $html_id_f -}}
-      {{ $html_id_f1  := substr $html_id_f 0 5 }}
+      
+      {{ $html_id_f1  := substr $html_id_f 0 2 }}
       {{- $html_id_f1 -}}
       {{ if eq $html_id_f1 "#n" }}
         {{ $html_id_f := replace $html_id_f "#n" ""}}        
