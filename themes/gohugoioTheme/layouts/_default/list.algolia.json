@@ -4,19 +4,26 @@
     {{$page_content := replaceRE "(<h)(.|\n)*?" "<end>$1" $page.Content}}
     {{$page_content := replaceRE "(^.*?)" "<h id=\"null\">$1" $page_content}}
     {{$page_content := replaceRE "(.*?)($)" "$2<end>" $page_content}}
+
       {{$page_content }}
 
     {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}  
       {{ $html_id := findRE "id=(.|\n)*?>" . }} 
       {{ $html_id_f := delimit $html_id "" ""}}
-      {{ $html_id_f := replace $html_id_f "id=\"" ""}}
+      {{ $html_id_f }}
+      {{ $html_id_f := replace $html_id_f "id=\"" "#"}}
       {{ $html_id_f := replace $html_id_f "\">" ""}}
+      {{ if ne $html_id_f "null" }}
+        
+      {{ else }}
+        
+      {{ end }}
 
       {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "url": "{{ $page.Permalink }}{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
@@ -35,7 +42,7 @@
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "url": "{{ $page.Permalink }}{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
@@ -54,7 +61,7 @@
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
-          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "url": "{{ $page.Permalink }}{{ $html_id_f }}",
           "title": "{{ htmlEscape $page.Title}}",
           "content": {{ $content | jsonify }},
           "hierarchy": { 
@@ -72,7 +79,7 @@
       {{ $content := . | plainify }}
       {      
         "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+        "url": "{{ $page.Permalink }}{{ $html_id_f }}",
         "title": "{{ htmlEscape $page.Title}}",
         "content": {{ $content | jsonify }},
         "hierarchy": { 
