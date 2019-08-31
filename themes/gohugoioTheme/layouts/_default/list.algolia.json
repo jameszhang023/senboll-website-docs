@@ -12,10 +12,10 @@
       {{ $html_id_f := replace $html_id_f "\">" ""}}
       {{ $id := "" }}
       {{ if eq $html_id_f "null" }}
-        {{ $html_id_f := "" }}
+        {{ $html_id_f := nil }}
         {{ $id := "" }}
       {{else}}
-        {{ $id := "#"}}
+        {{ $id := "#" }}
       {{ end }}
 
 
