@@ -27,7 +27,7 @@
         },  
       {{- end -}}
 
-      {{- range $index, $html :=  findRE "<ul(.|\n)*?</ul>" . -}}     
+      {{- range $index, $html :=  findRE "<li(.|\n)*?</li>" . -}}     
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
@@ -102,7 +102,7 @@
       },    
     {{- end -}}
   {{else}}
-  
+
   {{- end -}}
 {{- end -}}
   {
