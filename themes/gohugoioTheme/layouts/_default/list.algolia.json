@@ -20,7 +20,10 @@
         {{ $html_id_f := replace $html_id_f "#n" ""}}        
       {{ end }}
 
-      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
+      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}   
+      {{ if eq $html_id_f1 "#n" }} true
+        {{ $html_id_f := replace $html_id_f "#n" ""}}        
+      {{ end }}     
         {{ $content := . | plainify }}
         {      
           "objectID": "{{ md5 . }}",
