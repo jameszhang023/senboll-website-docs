@@ -131,7 +131,7 @@
       },    
     {{- end -}}
     
-    {{- range $index, $html :=  findRE "</h(.|\n)*?<content-end>" $page_content3 -}}  
+    {{- range $index, $html :=  findRE "<heading-end>(.|\n)*?<content-end>" $page_content3 -}}  
 
       {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
         {{ $content := . | plainify }}
