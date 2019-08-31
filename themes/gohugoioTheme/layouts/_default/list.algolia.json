@@ -2,6 +2,7 @@
 [{{- range $index, $page := .Site.Pages -}}
   {{- if ne $page.Type "json" -}}
     {{$page_content := replaceRE "(<h)(.|\n)*?" "<heading-end>$1" $page.Content}}
+
     {{- range $index, $html :=  findRE "<h(.|\n)*?<heading-end>" $page_content -}}  
       {{- $html_id := findRE "id=(.|\n)*?>" . -}} 
       {{ $html_id_f := delimit $html_id "" ""}}
@@ -66,43 +67,84 @@
       {{- end -}}
 
       {{ $content := . | plainify }}
-      {      
-        "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
-        "title": "{{ htmlEscape $page.Title}}",
-        "content": {{ $content | jsonify }},
-        "hierarchy": { 
-          "lvl0": "{{ htmlEscape $page.Parent.Title }}",
-          "lvl1": "{{ htmlEscape $page.Title}}",
-          "lvl2": "{{ $html_id_f }}",
-          "lvl3": "",
-          "lvl4": "",
-          "lvl5": "",
-          "lvl6": ""
-        }
-      },    
-    {{- end -}}
-  {{else}}
-
-    {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" $page_content -}}        
-      {{ $content := . | plainify }}
-      {      
-        "objectID": "{{ md5 . }}",
-        "url": "{{ $page.Permalink }}",
-        "title": "{{ htmlEscape $page.Title}}",
-        "content": {{ $content | jsonify }},
-        "hierarchy": { 
-          "lvl0": "{{ htmlEscape $page.Parent.Title }}",
-          "lvl1": "{{ htmlEscape $page.Title}}",
-          "lvl2": "",
-          "lvl3": "",
-          "lvl4": "",
-          "lvl5": "",
-          "lvl6": ""
-        }
-      },  
+        {      
+          "objectID": "{{ md5 . }}",
+          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "title": "{{ htmlEscape $page.Title}}",
+          "content": {{ $content | jsonify }},
+          "hierarchy": { 
+            "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+            "lvl1": "{{ htmlEscape $page.Title}}",
+            "lvl2": "{{ $html_id_f }}",
+            "lvl3": "",
+            "lvl4": "",
+            "lvl5": "",
+            "lvl6": ""
+          }
+        },    
+      {{- end -}}
     {{- end -}}
 
+
+
+      {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" $page_content -}}        
+        {{ $content := . | plainify }}
+        {      
+          "objectID": "{{ md5 . }}",
+          "url": "{{ $page.Permalink }}",
+          "title": "{{ htmlEscape $page.Title}}",
+          "content": {{ $content | jsonify }},
+          "hierarchy": { 
+            "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+            "lvl1": "{{ htmlEscape $page.Title}}",
+            "lvl2": "",
+            "lvl3": "",
+            "lvl4": "",
+            "lvl5": "",
+            "lvl6": ""
+          }
+        },  
+      {{- end -}}
+
+      {{- range $index, $html :=  findRE "<li(.|\n)*?</li>" . -}}     
+        {{ $content := . | plainify }}
+        {      
+          "objectID": "{{ md5 . }}",
+          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "title": "{{ htmlEscape $page.Title}}",
+          "content": {{ $content | jsonify }},
+          "hierarchy": { 
+            "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+            "lvl1": "{{ htmlEscape $page.Title}}",
+            "lvl2": "{{ $html_id_f }}",
+            "lvl3": "",
+            "lvl4": "",
+            "lvl5": "",
+            "lvl6": ""
+          }
+        },  
+      {{- end -}}
+
+      {{- range $index, $html :=  findRE "<table(.|\n)*?</table>" . -}}     
+        {{ $content := . | plainify }}
+        {      
+          "objectID": "{{ md5 . }}",
+          "url": "{{ $page.Permalink }}#{{ $html_id_f }}",
+          "title": "{{ htmlEscape $page.Title}}",
+          "content": {{ $content | jsonify }},
+          "hierarchy": { 
+            "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+            "lvl1": "{{ htmlEscape $page.Title}}",
+            "lvl2": "{{ $html_id_f }}",
+            "lvl3": "",
+            "lvl4": "",
+            "lvl5": "",
+            "lvl6": ""
+          }
+        },  
+      {{- end -}}
+
+      
   {{- end -}}
 {{- end -}}
   {
