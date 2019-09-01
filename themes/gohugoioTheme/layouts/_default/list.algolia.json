@@ -141,7 +141,23 @@
             }
           },         
         {{ end }}    
-      {{ end }}    
+      {{ end }}   
+      {{ $content := $page.Description | plainify }}
+      {      
+        "objectID": "{{ md5 $content }}",
+        "url": "{{ $page.Permalink }}",
+        "title": "{{ htmlEscape $page.Title}}",
+        "content": {{ $content | jsonify }},
+        "hierarchy": { 
+          "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+          "lvl1": "{{ htmlEscape $page.Title}}",
+          "lvl2": "",
+          "lvl3": "",
+          "lvl4": "",
+          "lvl5": "",
+          "lvl6": ""
+        }
+      },  
     {{- end -}}
   {{- end -}}
 {{- end -}}
