@@ -16,7 +16,7 @@
 				<a href="{{ (printf "%s%s/%s" $fileDir ($.Scratch.Get "filesName") .Name) | relURL }}" >
 					{{.Name}}
 				</a>
-				(文件大小：{{div .Size 1024 }} KB)
+				({{div .Size 1024 }} KB)
 				</br>
 			{{end}} 
 		{{else}}
