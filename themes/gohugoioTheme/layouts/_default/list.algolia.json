@@ -141,7 +141,9 @@
             }
           },         
         {{ end }}    
-      {{ end }}   
+      {{ end }}    
+    {{- end -}}
+    {{ with $page }}
       {{ $content := $page.Description | plainify }}
       {      
         "objectID": "{{ md5 $content }}",
@@ -157,8 +159,8 @@
           "lvl5": "",
           "lvl6": ""
         }
-      },  
-    {{- end -}}
+      },       
+    {{ end }}
   {{- end -}}
 {{- end -}}
   {
