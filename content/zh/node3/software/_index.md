@@ -1,7 +1,7 @@
 ---
 title : "软件问题"
 linktitle: 软件问题
-description: 包括枫叶app，调试工具软件Babyware，接警中心平台PA2000，NE2008系列软件等，如果发现新的问题请及时联系我们。
+description: 包括枫叶APP，调试工具软件Babyware，接警中心平台PA2000，NE2008系列软件等，如果发现新的问题请及时联系我们。
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
