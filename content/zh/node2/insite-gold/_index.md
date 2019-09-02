@@ -37,7 +37,10 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用APP，集
 
 ## 版本日志
 
-- 更新日期：20190821，版本：2.6.0，安卓请点[下载](attachment/InsiteGold-V2.6.0.apk)；
+- 更新日期：20190901，版本：2.6.1，安卓请点[下载](attachment/InsiteGold-V2.6.1.apk)；
+  - Android 5 and 6 support.
+  - Bug fixes.
+- 更新日期：20190821，版本：2.6.0；
   - Stay/Sleep All areas buttons..
   - Master panel users management- master can delete, edit user VOD permissions and select notifications sent per user.
   - Zones sorting by Name/Number/State/Bypass.
