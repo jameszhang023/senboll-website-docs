@@ -60,12 +60,17 @@ toc: true
 
 设置连接方式，选择合适的方式建立连接。
 
-- 串口方式，需要307USB通讯模块。如图：
+- 串口方式，需要307USB通讯模块。307USB的USB端连接电脑，另一端连枫叶主机Serial端口，如图：
 ![初始化](images/connect-setting2.png)
-- IP/Panel S/N方式，需要网络模块，通过天鹅云方式连接，Panel S/N 填主机8位序列号，IP模块访问密码默认是`paradox`。如图：
-![初始化](images/connect-setting1.png)
-- IP/Static静态地址，通过IP地址连接，填入IP地址和IP Port（IP Port默认是10001），IP Module Password默认是`paradox`。如图：
-![初始化](images/connect-setting0.png)
+- IP方式，需要网络模块，将网络模块的Panel端和枫叶主机的Serial端口连接，插上网线。
+  - IP/Panel S/N方式，需要网络模块，通过天鹅云方式连接，Panel S/N 填主机8位序列号，IP模块访问密码默认是`paradox`。如图：
+  ![初始化](images/connect-setting0.png)
+  - IP/Static静态地址，通过IP地址连接，填入IP地址和IP Port（IP Port默认是10001），IP Module Password默认是`paradox`。如图：
+  ![初始化](images/connect-setting1.png)
+
+{{< tip >}}
+网络模块联网成功后，Internet指示灯是绿灯常亮状态，如果不亮或闪烁说明网络不通，请检查网络或相关设置。
+{{< /tip >}}
 
 ## 软件操作说明
 
