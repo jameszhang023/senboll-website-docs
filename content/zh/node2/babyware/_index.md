@@ -31,6 +31,10 @@ toc: true
 
 ### 安装驱动
 
+{{< tip >}}
+安装驱动之前，请插好设备再操作，否则无法安装。
+{{< /tip >}}
+
 如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问[资料服务器](http://support.senboll.com:8888/)。请根据Windows系统版本下载并安装驱动，如下图：
 ![307USB驱动下载](images/307usb-driver-download.png)
 
