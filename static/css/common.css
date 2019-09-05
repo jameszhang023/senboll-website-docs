@@ -216,3 +216,7 @@ img{
     padding-bottom: 0.5rem;
     max-height: 100%;
 }
+
+.previewImage-image{
+    cursor: move;
+}

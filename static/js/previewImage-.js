@@ -166,7 +166,7 @@
             }
             _this.imgStatusCache[i] = {hash:hash,x:0,m:0,y:0,my:0,scale:_this.scale,scalem:1};  //修改缓存状态
             // img.setAttribute("data-index",i);  //未使用
-            div.className+=' previewImage-item ';
+            div.className+=' previewImage-item';
             div.appendChild(img);
             _this.$box.appendChild(div); //将图片div加入 图片容器
         })
@@ -198,19 +198,6 @@
         }
         var touchEndFun = function(){
             _this.touchEndFun.call(_this);
-        }
-
-        var mouseStartFun = function(){
-            _this.mouseStartFun.call(_this);
-        }
-        var mouseMoveFun = function(){
-            _this.mouseMoveFun.call(_this);
-        }
-        var mouseEndFun = function(){
-            _this.mouseEndFun.call(_this);
-        }
-        var draggableFun = function(){
-            _this.draggableFun.call(_this);
         }
 
         // var orientationChangeFun = function(){
@@ -251,21 +238,11 @@
 
         // window.addEventListener("orientationchange",orientationChangeFun,false);
         window.addEventListener("resize",reSizeFun,false);
-        //$.delegate($container,'click','.previewImage-item',closePreview);
+        $.delegate($container,'click','.previewImage-item',closePreview);
         $.delegate($container,'touchstart','.previewImage-item',touchStartFun);
         $.delegate($container,'touchmove','.previewImage-item',touchMoveFun);
         $.delegate($container,'touchend','.previewImage-item',touchEndFun);
         $.delegate($container,'touchcancel','.previewImage-item',touchEndFun);
-
-        $.delegate($container,'mousedown','.previewImage-item',mouseStartFun);
-        $.delegate($container,'mousemove','.previewImage-item',mouseMoveFun);
-        $.delegate($container,'mouseup','.previewImage-item',mouseEndFun);     
-        $.delegate($container,'mouseleave','.previewImage-item',draggableFun);
-        $.delegate($container,'mouseover','.previewImage-item',draggableFun);
-        $.delegate($container,'mouseout','.previewImage-item',draggableFun);
-        $.delegate($container,'dragstart','.previewImage-item',draggableFun);
-        $.delegate($container,'dragover','.previewImage-item',draggableFun);
-        $.delegate($container,'drop','.previewImage-item',draggableFun);
     }
 
     _previewImage.prototype.closePreview = function(){
@@ -297,34 +274,6 @@
         var $container = this.$container;
         this.te = this.getTouches();
         this.endAction(this.ts,this.te);
-    }
-
-    //鼠标拖动图片
-
-    _previewImage.prototype.mouseStartFun = function(imgitem){
-        this.ts = this.getMouseMove();
-        this.allowMove = true;  //行为标记
-        this.statusX = 0; //标记X轴位移状态
-        this.statusY = 0; //标记Y轴位移状态
-    }
-
-    _previewImage.prototype.mouseMoveFun = function(imgitem){
-        this.tm = this.getMouseMove();
-        var tm = this.tm;
-        var ts = this.ts;
-        this.moveAction(ts,tm);
-    }
-
-    _previewImage.prototype.mouseEndFun = function(imgitem){
-        var $container = this.$container;
-        this.te = this.getMouseMove();
-        this.endMouseAction(this.ts,this.te);
-    }
-
-    _previewImage.prototype.draggableFun = function(imgitem){
-        event.stopPropagation();
-        event.preventDefault();
-        this.allowMove = false; //结束所有行为
     }
 
     _previewImage.prototype.moveAction = function(ts,tm){
@@ -571,85 +520,6 @@
         }
     };
 
-    _previewImage.prototype.endMouseAction = function(ts,te){
-        var imgStatus = this.getIndexImage();
-        var x0_offset = te.x0 - ts.x0;
-        var y0_offset = te.y0 - ts.y0;
-        var time = te.time - ts.time;
-        var slipTime = 0;
-        this.allowMove = false; //结束所有行为
-        if(ts.length==1){      //单手指(图片位移)
-            if(Math.abs(x0_offset)>10){ //防止误触关闭看图
-                event.preventDefault();
-            }else{
-                this.closePreview();
-            }
-            switch(this.statusY){
-                case 1:
-                    imgStatus.y = this.allowY;
-                    imgStatus.my = 0;
-                    slipTime = this.slipTime;
-                break
-                case 2:
-                    imgStatus.y = imgStatus.y+imgStatus.my;
-                    imgStatus.my = 0;
-                break
-            }
-
-            switch(this.statusX){
-                case 1: //左滑->初始状态到达或超过右边界->图片平滑移动到达条件-切换下一图
-                    if(this.index!=this.maxLen&&(x0_offset<=-this.imageChageNeedX||(x0_offset<-30))){    //下一图
-                        this.changeIndex(1);
-                    }else{
-                        this.changeIndex(0);
-                        if(slipTime!=0){
-                            this.translateScale(this.index,slipTime);
-                        }
-                    }
-                break
-                case 2: //右滑->初始状态到达或超过左边界->图片平滑移动到达条件-切换上一图
-                    if(this.index!=0&&(x0_offset>=this.imageChageNeedX||(x0_offset>30))){ //上一图
-                        this.changeIndex(-1);
-                    }else{
-                        this.changeIndex(0);
-                        if(slipTime!=0){
-                            this.translateScale(this.index,slipTime);
-                        }
-                    }
-                break
-                case 3: //scale>1,初始状态未到边界->图片平滑移动未到边界
-                    imgStatus.x = imgStatus.x+imgStatus.m;
-                    imgStatus.m = 0;
-                    this.translateScale(this.index,slipTime);
-                break
-                case 4: //scale>1,初始状态未到边界->图片平滑移动到边界->阻尼移动
-                    imgStatus.x = this.allowX;
-                    imgStatus.m = 0;
-                    slipTime = this.slipTime;
-                    this.translateScale(this.index,slipTime);
-                break
-                case 5: //scale=1,box位移，图片切换
-                    if(x0_offset>=this.imageChageNeedX||(x0_offset>30)){    //上一图
-                        this.changeIndex(-1);
-                    }else if(x0_offset<=-this.imageChageNeedX||(x0_offset<-30)){ //下一图
-                        this.changeIndex(1);
-                    }else{
-                        this.changeIndex(0);
-                    }
-                break
-                case 6: //scale=1,长图片
-                    imgStatus.y = imgStatus.y+imgStatus.my;
-                    imgStatus.my = 0;
-                break
-                case 7: //scale=1,长图片 到边界
-                    imgStatus.y = this.allowY;
-                    imgStatus.my = 0;
-                    this.translateScale(this.index,this.slipTime);
-                break
-            }
-        }
-    };
-
     _previewImage.prototype.getAllow = function(index){
         var $img = this.getJqElem(index);
         var imgStatus = this.getIndexImage(index);
@@ -789,7 +659,7 @@
     }
 
     _previewImage.prototype.getTouches = function(e){
-        var touches = event.touches.length > 0 ? event.touches : event.changedTouches;
+        var touches = event.touches.length>0?event.touches:event.changedTouches;
         var obj = {touches:touches,length:touches.length};
             obj.x0 = touches[0].pageX
             obj.y0 = touches[0].pageY;
@@ -800,16 +670,6 @@
         }
         return obj;
     }
-
-    _previewImage.prototype.getMouseMove = function(e){
-        var touches;
-        var obj = {touches:touches,length:1};
-            obj.x0 = event.pageX
-            obj.y0 = event.pageY;
-            obj.time = new Date().getTime();
-        return obj;
-    }
-
     window.previewImage = new _previewImage();
     // AMD loader
     if ( typeof define === "function" && define.amd ) {
