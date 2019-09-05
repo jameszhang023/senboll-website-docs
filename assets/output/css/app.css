@@ -4960,8 +4960,8 @@ small, .font_small {font-size: 0.8em;}
   border-bottom-style: solid;
   border-top-width: 1px;
   border-bottom-width: 1px;
-  border-top-color: rgb(230, 230, 230);
-  border-bottom-color: rgb(230, 230, 230);
+  border-top-color: rgb(200, 200, 200);
+  border-bottom-color: rgb(200, 200, 200);
   background-color: transparent;
   font-weight: 700;
   text-align: left;
@@ -4974,12 +4974,12 @@ small, .font_small {font-size: 0.8em;}
   border-bottom-style: solid;
   border-top-width: 1px;
   border-bottom-width: 1px;
-  border-top-color: rgb(230, 230, 230);
-  border-bottom-color: rgb(230, 230, 230);
+  border-top-color: rgb(200, 200, 200);
+  border-bottom-color: rgb(200, 200, 200);
   background-color: transparent;
 }
 .prose table tr:nth-child(even) {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
 }
 dl dt {
   font-weight: bold;

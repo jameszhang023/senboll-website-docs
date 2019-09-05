@@ -1,0 +1,10 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+
+<aside class="mt2 pv2 ph3 w-auto bg-washed-green br3">
+	<div class="flex f4 pt2 dark-green">
+		<div class="font-segmdl2">&#xE82F</div>&nbsp
+		<div class="fw6"></span>特别提醒</div>
+	</div>
+	<p >{{- .Inner | markdownify -}}</p>
+</aside>
+
