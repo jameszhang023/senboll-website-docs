@@ -69,9 +69,9 @@ toc: true
 ![初始化](images/connect-setting2.png)
 - IP方式，需要网络模块，将网络模块的Panel端和枫叶主机的Serial端口连接，插上网线。
   - IP/Panel S/N方式，需要网络模块，通过天鹅云方式连接，Panel S/N 填主机8位序列号，IP模块访问密码默认是`paradox`。如图：
-  ![初始化](images/connect-setting0.png)
+![初始化](images/connect-setting0.png)
   - IP/Static静态地址，通过IP地址连接，填入IP地址和IP Port（IP Port默认是10001），IP Module Password默认是`paradox`。如图：
-  ![初始化](images/connect-setting1.png)
+![初始化](images/connect-setting1.png)
 
 {{< tip >}}
 网络模块联网成功后，Internet指示灯是绿灯常亮状态，如果不亮或闪烁说明网络不通，请检查网络或相关设置。
@@ -117,7 +117,11 @@ toc: true
 
 ### 编程退出延时
 
-**提示：退出延时的概念参考请点[退出延时概念](../../node1/important-knowledge/#退出延时)。**
+{{< tip >}}
+退出延时的概念请访问 → [退出延时概念](../../node1/important-knowledge/#退出延时)。
+{{< /tip >}}
+
+编程方法请参考下图：
 ![初始化](images/babyware-programing-exit-delay.gif)
 
 ### 短信通知设置方法
