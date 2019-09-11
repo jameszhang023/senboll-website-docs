@@ -4,14 +4,14 @@
     {{ partial "nav-links-docs-mobile.html" .context }}
 </div>
 
-<div class="w-100 ph4 pb5 pb6-ns pt1 mt0 pt3-ns">
+<div class="w-90-l center ph4 pb5 pb6-ns pt1 mt0 pt3-ns">
   <div class="flex-l mt4">
     <div class="order-1 w-100 w-80-l ph0 ph4-l">
       <article class="w-100 nested-copy-line-height nested-links nested-img">
         <h1 class="primary-color-dark f2">
           {{ with $.context.Data.Singular }}{{ . | humanize }}: {{ end }}{{ .context.Title }}
         </h1>
-        <div class="{{ .Site.Params.copyClass }} mid-gray f5 f4-l">
+        <div class="{{ .Site.Params.copyClass }} mid-gray f5">
           {{ .context.Content }}
         </div>
       </article>

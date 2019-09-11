@@ -13,7 +13,7 @@ sections:
   - heading: "个性化，模块化设计，方案灵活多变"
     cta: 
     link: 
-    color_classes: bg-accent-color-dark white
+    color_classes: bg-accent-color-dark light-gray
     image: images/2019-home.png
     copy: "枫叶提供的报警，门禁，视频和智能控制一体化解决方案，功能高度模块化，这样能对于配置方案更加灵活，系统更加稳定，成本也得到很好的控制"
 
@@ -42,21 +42,21 @@ scenario:
   - heading: 医院、学校、养老院
     cta: 
     link: 
-    color_classes: bg-accent-color-dark white
+    color_classes: bg-accent-color-dark light-gray
     image: images/school.jpg
     copy: 为医院、学校和养老院定制的一键求助紧急报警解决方案，目前在国内有大量的应用案例
 
   - heading: 名胜景点、文物单位、博物馆
     cta: 
     link: 
-    color_classes: bg-gray white
+    color_classes: bg-gray moon-gray
     image: images/history.jpg
     copy: 文物对安防系统有较高的要求，我们为文博行业专门定制了全套解决方案，包括前端设备和软件平台
 
   - heading: 部队，公安，拘留所或监狱
     cta: 
     link: 
-    color_classes: bg-blue white
+    color_classes: bg-blue moon-gray
     image: images/police.jpg
     copy: 为防越狱，紧急求助报警，门禁控制视频监控提供一体化解决方案，提供高安全性和可靠性保障
 
