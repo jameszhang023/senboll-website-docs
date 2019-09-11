@@ -48,7 +48,7 @@
   <body class="min-vh-100 flex flex-column ma0 sans-serif {{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "nav" . }}{{ partial "site-nav.html" . }}{{ end }}
     {{ block "header" . }}{{ end }}
-    <main role="main" class="content-with-sidebar pb0-ns db w-100 flex-auto bg-white ">
+    <main role="main" class="content-with-sidebar pb0-ns db w-100 flex-auto bg-white">
       {{ block "main" . }}{{ end }}
     </main>
 

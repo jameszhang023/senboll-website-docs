@@ -204,7 +204,7 @@ em {
 
 
 @media screen and (max-width: 60em) {
-    .dn-lx {              display: none; }
+    .dn-lx { display: none; }
 }
 
 #menu-search-input[aria-expanded='true'] span{
@@ -223,4 +223,9 @@ img{
 
 .about{    
   line-height: 1.75;
+  background-image: url('../images/world-map.svg');
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  min-height: calc(100vh - 167px );
 }

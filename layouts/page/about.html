@@ -1,13 +1,8 @@
 
 {{ define "main" }}
-  <section class="center pb0-l ph0-l black-70">
-    <div class="f5 f4-l w-100-ns w-100 w-100-l center fw2 tl tl-ns mw9 justify">
-      {{ with .Site.Params.description }}
-      <p class="f3 f1-l fw4 m0 2h-title pt3 pb3 pv0-ns tc lh-copy">
-        <!-- {{ . }} -->
-      </p>
-      {{ end }}
-      <div class="about">
+  <section class="center pt5 pb0-l ph0-l black-70 about bg-light-gray">
+    <div class="f5 f4-l w-100-ns w-100 w-100-l center fw2 tl tl-ns justify">
+      <div >
           {{- partial "home-page-sections/about" . -}}
       </div>
     </div>
