@@ -1,0 +1,38 @@
+{{ if .Params.sections }}
+  {{ range .Params.sections }}
+  {{ $.Scratch.Add "i" 1 }}{{ $i := $.Scratch.Get "i" }}
+
+    <section class="w-100mid-gray {{ .color_classes }}">
+      <div class="w-100 center">
+
+        <div class="w-100 ph4 ph5-ns pt4 pt2-l ">
+          <div class="w-80-l center tl">
+            <p class="f3 f2-l fw4 ma0 pt4 lh-title pt0-l ">{{ .heading }}</p>
+            <p class="f5 f4-l lh-copy ">
+              {{ .copy1 }}
+            </p>
+            <p class="f5 f4-l lh-copy ">
+              {{ .copy1 }}
+            </p>
+<!--               <p class="f4 f4-l lh-copy nested-linksTK">
+                <a href="{{ .link | absURL }}" class="link black dim">
+                  {{ .cta }} {{ partial "svg/link-ext.svg" (dict "fill" "#333" "size" "14") }}
+                </a>
+              </p> -->
+          </div>
+        </div>
+
+        <div class="w-100 ph4 ph5-ns">
+          <div class="w-80-l center">
+            <img src="../images/about.jpeg" alt="image depicting an example of {{ .heading }}" class="img shadow-0 w-100">
+          </div>
+          <div class="w-80-l center">
+            <img src="../images/about1.jpg" alt="image depicting an example of {{ .heading }}" class="img shadow-0 w-100">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  {{ end }}
+{{ end }}
