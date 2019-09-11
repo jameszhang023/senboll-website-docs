@@ -222,10 +222,9 @@ img{
 }
 
 .about{    
-  line-height: 1.75;
+  line-height: 1.875;
   background-image: url('../images/world-map.svg');
   background-repeat: no-repeat; 
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
-  min-height: calc(100vh - 167px );
 }

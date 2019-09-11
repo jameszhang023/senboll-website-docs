@@ -2,10 +2,10 @@
   {{ range .Params.sections }}
   {{ $.Scratch.Add "i" 1 }}{{ $i := $.Scratch.Get "i" }}
 
-    <section class="w-100mid-gray {{ .color_classes }}">
+    <section class="min-vh-100 w-100 mid-gray {{ .color_classes }}">
       <div class="w-100 center">
 
-        <div class="w-100 ph4 ph5-ns pt0 pt0-l ">
+        <div class="w-100 ph4 ph5-ns pv5-l pv4">
           <div class="w-80-l center tl">
             <p class="f3 f2-l fw4 ma0 pt0 lh-title pt0-l ">{{ .heading }}</p>
             <p class="f5 f4-l lh-copy ">
