@@ -24,6 +24,8 @@ toc: true
 
 ## 操作步骤
 
+{{% video "../../video/label-tool.mp4" %}}
+
 - 步骤一：安装软件
 
 工具软件下载请访问 → [标签工具](attachment/touchscreen-lable.exe)，下载后直接采用默认提示安装即可。

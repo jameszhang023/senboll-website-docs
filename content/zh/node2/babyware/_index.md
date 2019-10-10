@@ -24,6 +24,8 @@ toc: true
 
 ## 准备工作
 
+{{% video "../../video/babyware.mp4" %}}
+
 ### 安装软件
 
 下载软件，下载Babyware请访问[资料服务器](http://support.senboll.com:8888/)。

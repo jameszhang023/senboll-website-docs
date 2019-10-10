@@ -25,6 +25,6 @@ toc: false
 layout: about
 ---
 
+生产过程：
 
-
-
+{{% video "../video/paradox-manufacture.mp4" %}}
