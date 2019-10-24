@@ -25,6 +25,6 @@ toc: false
 layout: about
 ---
 
-生产过程：
+Paradox Production: The Art of Technology
 
 {{% video "../video/paradox-manufacture.mp4" %}}
