@@ -239,3 +239,6 @@ img{
   .video-js:focus {
     outline: none;
   }
+
+  .r-5{ right: 5%; }
+  .vh-80{ height: 80vh; }
