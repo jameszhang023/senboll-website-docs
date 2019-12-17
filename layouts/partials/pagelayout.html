@@ -4,9 +4,9 @@
     {{ partial "nav-links-docs-mobile.html" .context }}
 </div>
 
-<div class="w-90-l center ph4 pb5 pb6-ns pt1 mt0 pt3-ns">
+<div class="min-vh-100 w-100-l center">
   <div class="flex-l mt4">
-    <div class="order-1 w-100 w-80-l ph0 ph4-l">
+    <div class="ph4 pb5 pb6-ns pt1 mt0 pt3-ns order-1 w-100 w-80-l ph0 ph4-l mr0 ml-auto">
       <article class="w-100 nested-copy-line-height nested-links nested-img">
         <h1 class="primary-color-dark f2">
           {{ with $.context.Data.Singular }}{{ . | humanize }}: {{ end }}{{ .context.Title }}
@@ -28,7 +28,7 @@
       </div>
 
     </div>
-    <div class="order-0 db-l dn w-20-l">
+    <div class=" ph4 pb5 pb6-ns pt1 mt0 pt5-ns order-0 db-l dn w-20-l fixed-l bg-near-white h-100 top-0">
         {{ partial "nav-links-docs.html" .context }}
     </div>
   </div>
