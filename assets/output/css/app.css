@@ -5102,8 +5102,8 @@ code, .code, pre code, .highlight pre  {
 
 }
 #TableOfContents ul li a:hover {
-  background-color: #999;
-  color: white;
+  /* background-color: #999;
+  color: white; */
 
 }
 .no-js .needs-js {

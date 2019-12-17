@@ -8,149 +8,6 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/jquery.orgchart.min.css">
     <link rel="stylesheet" href="css/style.css">  
-    <style type="text/css">
-      /*.orgchart { background: rgb(0, 0, 0); }*/
-      .orgchart td.left, .orgchart td.right, .orgchart td.top { border-color: #aaa; }
-      .orgchart td>.down { background-color: #aaa; }
-      .orgchart .necessary .title { background-color: #006699; }
-      .orgchart .necessary .content { border-color: #006699; }
-      .orgchart .detector-wireless .title { background-color: #009933; }
-      .orgchart .detector-wireless .content { border-color: #009933; }
-      .orgchart .detector-wire .title { background-color: #686868; }
-      .orgchart .detector-wire .content { border-color: #686868; }
-      .orgchart .interface .title { background-color: #337499; }
-      .orgchart .interface .content { border-color: #337499; }
-      .orgchart .access .title { background-color: #996633; }
-      .orgchart .access .content { border-color: #996633; }
-      .orgchart .integration .title { background-color: #e27a50; }
-      .orgchart .integration .content { border-color: #e27a50; }
-      .orgchart .relay .title { background-color: #5603b4; }
-      .orgchart .relay .content { border-color: #5603b4; }
-    </style>
-        
-    <style type="text/css">
-      .footerinfo
-      {
-          font-size:1.5em;
-          bottom:0px;
-          width:100%; 
-          background: rgb(39, 39, 39); 
-      }
-      .footerinfo a
-      {
-          white-space:nowrap;
-          color:#00bdf3;
-      }
-      .footerinfo p
-      {
-          bottom:10px;
-          padding:0;
-          color:rgb(255, 255, 255);
-          width:100%; 
-      }
-      #container{
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-      }
-      #section{
-          position: relative;
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        overflow: visible;
-      }
-      .main1 {
-        border:0px solid red;
-        min-height:100%;
-        height:100%;
-      width : 100% ;
-      }  
-  </style>
-  
-  <style>
-    @media screen and (orientation: portrait) {
-      #container{
-      position : absolute ;
-      width : 100% ;
-      height : 100% ;
-      top : 0 ; 
-      left : 0 ;
-      }
-    } 
-    @media screen and (orientation: landscape) {
-      #container{
-      position : absolute ;
-      top : 0 ; 
-      left : 0 ;
-      width : 100% ;
-      height : 100% ;
-      }
-    }
-    </style>
-  </head>
-
-  <body >
-    <div id="container" >
-      <table class="main1" border="0" cellpadding="0" cellspacing="0">
-        <tr class="htmleaf-header">
-          <td align="center" >
-            <h1>枫叶安防系统框架</h1>
-          </td>
-        </tr>
-        <tr>
-          <td id="chart-container-core"></td>
-        </tr>
-        <tr>
-          <td align="center">
-            <section id="section">
-              <div class="footerinfo">
-                <br/>
-                <p align="center">
-                  <a href="http://www.paradox.com">英文官网</a> | 
-                  <a href="http://www.senboll.com">中文官网</a> | 
-                  <a href="http://support.senboll.com:8888/help">帮助中心</a> | 
-                  <a href="http://support.senboll.com:8888">资料服务器</a> | 
-                  <a href="http://support.senboll.com:8888/usage">案例相册</a> | 
-                  <a href="http://support.senboll.com:8888/swan">APP缴费</a>
-                  <br/>
-                  <br/>
-                  全国服务热线：400-002-5577 | 
-                  <a href="http://support.senboll.com:8888/help/contact.html">网站支持：James Zhang</a>
-                  <br/>
-                  <br/>
-                  ©<span id="year"></span>年著作权，盛波尔科技所有权。
-                </p>
-                <br/>
-              </div>
-            </section>
-          </td>
-        </tr>
-      </table>
-
-      
-
-    </div>
-    
-    
-    
-    <script>
-      function auto_copyright($year) {
-        var $currentdate = new Date();
-        var $currentyear = $currentdate.getFullYear();
-        var $cty = $currentyear.toString();
-        var $sty = $year.toString();
-        if ($currentyear > $year) {
-          document.getElementById("year").innerHTML=$sty + ' - ' + $cty;
-          console.log($cty);
-        } else {
-          document.getElementById("year").innerHTML = $cty;
-        }
-      }
-      auto_copyright(1999);
-    </script>
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/js/jquery.orgchart.js"></script>
@@ -252,6 +109,153 @@
 
         $('.orgchart').addClass(''); // deactivate noncollapsable
       });
+    </script>
+    <style type="text/css">
+      /*.orgchart { background: rgb(0, 0, 0); }*/
+      .orgchart td.left, .orgchart td.right, .orgchart td.top { border-color: #aaa; }
+      .orgchart td>.down { background-color: #aaa; }
+      .orgchart .necessary .title { background-color: #006699; }
+      .orgchart .necessary .content { border-color: #006699; }
+      .orgchart .detector-wireless .title { background-color: #009933; }
+      .orgchart .detector-wireless .content { border-color: #009933; }
+      .orgchart .detector-wire .title { background-color: #686868; }
+      .orgchart .detector-wire .content { border-color: #686868; }
+      .orgchart .interface .title { background-color: #337499; }
+      .orgchart .interface .content { border-color: #337499; }
+      .orgchart .access .title { background-color: #996633; }
+      .orgchart .access .content { border-color: #996633; }
+      .orgchart .integration .title { background-color: #e27a50; }
+      .orgchart .integration .content { border-color: #e27a50; }
+      .orgchart .relay .title { background-color: #5603b4; }
+      .orgchart .relay .content { border-color: #5603b4; }
+    </style>
+        
+    <style type="text/css">
+      .footerinfo
+      {
+          font-size:1.5em;
+          bottom:0px;
+          width:100%; 
+          background:#0a1922; 
+          position: ;
+      }
+      .footerinfo a
+      {
+          white-space:nowrap;
+          color:#00bdf3;
+      }
+      .footerinfo p
+      {
+          bottom:10px;
+          padding:0;
+          color:rgb(255, 255, 255);
+          width:100%; 
+      }
+      #container{
+          width: 100%;
+          /*height: 100%;*/
+          margin: 0;
+          padding: 0;
+      }
+      .chart-container-core{
+          min-height: 100vh;
+      }
+      #section{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        overflow: visible;
+      }
+      .main1 {
+        border:0px solid red;
+        min-height:100%;
+        height:100%;
+      width : 100% ;
+      }  
+  </style>
+  
+  <style>
+    @media screen and (orientation: portrait) {
+      #container{
+      position : absolute ;
+      width : 100% ;
+      height : 100% ;
+      top : 0 ; 
+      left : 0 ;
+      }
+    } 
+    @media screen and (orientation: landscape) {
+      #container{
+      position : absolute ;
+      top : 0 ; 
+      left : 0 ;
+      width : 100% ;
+      height : 100% ;
+      }
+    }
+    </style>
+  </head>
+
+  <body >
+    <div id="container" >
+      <table class="main1" border="0" cellpadding="0" cellspacing="0">
+        <tr class="htmleaf-header">
+          <td align="center" >
+            <h1>枫叶安防系统框架</h1>
+          </td>
+        </tr>
+        <tr>
+          <td id="chart-container-core" class="chart-container-core"></td>
+        </tr>
+        <tr>
+          <td align="center">
+            <section id="section">
+              <div class="footerinfo">
+                <br/>
+                <p align="center">
+                  <a href="http://www.paradox.com">英文官网</a> | 
+                  <a href="http://www.senboll.com">中文官网</a> | 
+                  <a href="http://support.senboll.com:8888/help">帮助中心</a> | 
+                  <a href="http://support.senboll.com:8888">资料服务器</a> | 
+                  <a href="http://support.senboll.com:8888/usage">案例相册</a> | 
+                  <a href="http://support.senboll.com:8888/swan">APP缴费</a>
+                  <br/>
+                  <br/>
+                  全国服务热线：400-002-5577 
+                  <!-- <a href="http://support.senboll.com:8888/help/contact.html">网站支持：James Zhang</a> -->
+                  <br/>
+                  <br/>
+                  ©<span id="year"></span>年著作权，盛波尔科技所有权。
+                </p>
+                <br/>
+              </div>
+            </section>
+          </td>
+        </tr>
+      </table>
+
+      
+
+    </div>
+    
+    
+    
+    <script>
+      function auto_copyright($year) {
+        var $currentdate = new Date();
+        var $currentyear = $currentdate.getFullYear();
+        var $cty = $currentyear.toString();
+        var $sty = $year.toString();
+        if ($currentyear > $year) {
+          document.getElementById("year").innerHTML=$sty + ' - ' + $cty;
+          console.log($cty);
+        } else {
+          document.getElementById("year").innerHTML = $cty;
+        }
+      }
+      auto_copyright(1999);
     </script>
     
     <script> 
