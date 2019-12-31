@@ -126,8 +126,10 @@ toc: true
   - 优化：退出延时完毕后查询分区状态。
   - 优化：优化定时器的用法，增加驱动稳定性。
 - 更新时间：20190710
-  - 新增：定时全自动升级驱动。
+  - 新增：自动升级驱动。
   - 新增：手动一键升级驱动。
+- 更新时间：20191231
+  - 变更：驱动属性`Auto Get Panel Status Interval`变为`Polling Period`，属性参数默认值改为5分钟。
 
 ## 准备工作
 
@@ -223,18 +225,17 @@ PRT3模块和安防主机是采用枫叶总线方式通信，枫叶总线的通�
 ![用户密码](images/user-code.png)
 
 - **Number of Partitions**，默认是`1`，分区数量就是开启了多少个分区。分区数量太多会让用户感觉繁琐复杂，管理起来容易混乱，通常我们建议最多开启2个分区，室外一个区，室内一个区是最典型的应用。Babyware中设置：
-![分区数量](images/partitions.png)
-
-Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Composer设置才能出现其他分区，Babyware中设置：
-![开启分区](images/partition-eable.gif)
+![分区数](images/partitions.png)
 
 - **Number of Zones**，默认是`1`，防区数量就是开启了多少个防区，Babyware中设置：
-![防区数量](images/zones.png)
+![防区数](images/zones.png)
 
 - **Exit Delay**，默认是`60秒`，请将安防系统的每一个分区退出延时设置为相同的时间，因Control4目前不支持对某一分区单独设置退出延时时间，Babyware中设置：
 ![退出延时](images/exit-delay.png)
 
 - **Keep Open When Zone Alarm**，表示当防区报警，状态是否需要保持直到系统撤防，根据实际需要设置。
+
+- **Polling Period**，同步安防主机状态周期，单位是分钟，默认5分钟同步一次。
 
 ### 步骤五：分配防区
 
@@ -371,6 +372,15 @@ Control4 OS2不需要设置此步，OS3默认只显示一个分区，需要在Co
 ![效果2](images/history-alarm.png)
 
 ## 常见问题
+
+### C4只显示1个分区，其余分区无法显示
+
+Control4低于3.0系统不需要设置此步，3.0以上默认只显示一个分区，需要在Composer设置才能显示其他分区，设置步骤如下：
+![开启分区](images/partition-eable.gif)
+
+### C4主机重启后安防离线
+
+由于驱动无法得知C4是否重启，所以不能及时同步状态。为了解决这个问题，请配置驱动属性**Polling Period**（自动同步周期），默认是5分钟同步一次，这个时间不是越短越好，为了系统稳定建议设置5分钟。
 
 ### 键盘上显示分区锁定
 
