@@ -1,6 +1,6 @@
 <devicedata>
   <copyright>Copyright 2015-2019 Senboll Corporation. All rights reserved.</copyright>
-  <version>1006</version>
+  <version>1007</version>
   <creator>James</creator>
   <manufacturer>Paradox</manufacturer>
   <name>ParadoxDriver</name>
@@ -228,13 +228,13 @@
         </items>
       </property>
       <property>
-        <name>Auto Get Panel Status Interval</name>
+        <name>Polling Period</name>
         <type>RANGED_INTEGER</type>
         <readonly>false</readonly>
-        <default>120</default>
-        <minimum>1</minimum>
+        <default>5</default>
+        <minimum>2</minimum>
         <maximum>720</maximum>
-        <tooltip>自动获取状态间隔(单位:分钟)。</tooltip>
+        <tooltip>同步状态周期(单位:分钟)。</tooltip>
       </property>
       <property>
         <name>Exit Delay</name>
