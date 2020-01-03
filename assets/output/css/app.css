@@ -2273,12 +2273,14 @@ img { max-width: 100%; }
   .relative-m  { position: relative; }
   .absolute-m  { position: absolute; }
   .fixed-m  { position: fixed; }
+  .sticky-top  { top: 45px; bottom: 0px; overflow: auto; }
 }
 @media screen and (min-width: 60em) {
   .static-l { position: static; }
   .relative-l  { position: relative; }
   .absolute-l  { position: absolute; }
   .fixed-l  { position: fixed; }
+  .sticky-top  { top: 58px; bottom: 0px; overflow: auto; }
 }
 /*
 
