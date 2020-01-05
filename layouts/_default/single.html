@@ -7,11 +7,11 @@
 
     <div class="flex-l">
 
-      <div class="pb5 pb6-ns pt4-ns order-2 w-100 w-20-l ph5-m ph3-l mb4 fixed-l right-0-l dn db-l">
+      <div id="right-container" class="pb5 pb6-ns pt5-ns order-2 w-100 w-20-l ph5-m ph3-l mb4 right-0-l dn db-l">
         {{- partial "toc.html" . -}}
       </div>
 
-      <div class="pl4 pr3 pb5 pb6-ns pt1 pt5-ns order-0 w-20-l fixed-l dn db-l bg-near-white h-100 top-0">
+      <div id="left-container" class="pl4 pr3 pb5 pb6-ns pt1 pt5-ns order-0 w-20-l dn db-l h-100 top-0">
         {{ partial "nav-links-docs.html" . }}
       </div>
       

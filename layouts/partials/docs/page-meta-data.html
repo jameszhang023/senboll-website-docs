@@ -1,4 +1,4 @@
-<p class="f5 dark-gray mb2 tc"> 
+<!-- <p class="f5 dark-gray mb2 tc"> 
     <a href="{{ .Permalink }}" class="hide-child link primary-color pl2 pr2">
       {{ .Name}}
       <span class="fill-current hover-accent-color-light">
@@ -15,4 +15,16 @@
         </span>    
       </a>
     {{end}}
+</p> -->
+<p class="f5 dark-gray mb2"> 
+  {{ $lastmodify := .Lastmod.Format "2006年1月2日" }}
+  更新时间:
+  {{ with .GitInfo }}
+    <a class="hide-child link primary-color" href="{{ $.Site.Params.ghrepo }}commit/{{ .Hash }}">
+      {{$lastmodify}}
+      <span class="fill-current hover-accent-color-light">
+        {{ partial "svg/link-permalink.svg" (dict "size" "16px") }}
+      </span>    
+    </a>
+  {{end}}
 </p>

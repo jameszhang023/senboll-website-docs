@@ -161,3 +161,20 @@ function PreviewImageInit(){
       previewImage.start(obj);
   });
 };
+
+
+var oTop = $("#right-container").offset().top;//默认上边距离
+$(document).scroll(function(){//body滚动事件
+  var topp = $(document).scrollTop();
+  if( topp > oTop ){
+      $("#right-container").addClass("fixed-l top-0 pt3-ns vh-100");
+      $("#left-container").addClass("fixed-l top-0 pt3-ns vh-100");
+      $("#left-container").removeClass("pt5-ns");
+      $("#right-container").removeClass("pt5-ns");
+  }else{
+      $("#right-container").removeClass("fixed-l top-0 pt3-ns");
+      $("#left-container").removeClass("fixed-l top-0 pt3-ns");
+      $("#right-container").addClass("pt5-ns vh-100");
+      $("#left-container").addClass("pt5-ns vh-100");
+  }
+});
