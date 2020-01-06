@@ -162,19 +162,41 @@ function PreviewImageInit(){
   });
 };
 
-
-var oTop = $("#right-container").offset().top;//默认上边距离
+// fixed container when scrolling
+var oTop = $("#left-container").offset().top;//默认上边距离
 $(document).scroll(function(){//body滚动事件
   var topp = $(document).scrollTop();
   if( topp > oTop ){
-      $("#right-container").addClass("fixed-l top-0 pt3-ns vh-100");
-      $("#left-container").addClass("fixed-l top-0 pt3-ns vh-100");
-      $("#left-container").removeClass("pt5-ns");
-      $("#right-container").removeClass("pt5-ns");
+      $("#right-container").addClass("top-0 mt3-l");
+      $("#left-container").addClass("top-0 pt3-ns");
   }else{
-      $("#right-container").removeClass("fixed-l top-0 pt3-ns");
-      $("#left-container").removeClass("fixed-l top-0 pt3-ns");
-      $("#right-container").addClass("pt5-ns vh-100");
-      $("#left-container").addClass("pt5-ns vh-100");
+      $("#right-container").removeClass(" top-0 mt3-l");
+      $("#left-container").removeClass("top-0 pt3-ns");
   }
+});
+
+// go to top
+function goTop(min_height) {
+  $(".goTop").click(
+      function() {
+          $('html,body').animate({
+              scrollTop: 0
+          }, 700);
+      });
+  //获取页面的最小高度，无传入值则默认为600像素
+  min_height=min_height?min_height:400;
+  //为窗口的scroll事件绑定处理函数
+  $(window).scroll(function() {
+      //获取窗口的滚动条的垂直位置
+      var s = $(window).scrollTop();
+      //当窗口的滚动条的垂直位置大于页面的最小高度时，让返回顶部元素渐现，否则渐隐
+      if (s > min_height) {
+          $(".goTop").fadeIn(100);
+      } else {
+          $(".goTop").fadeOut(200);
+      }
+  });
+}
+$(function() {
+  goTop();
 });

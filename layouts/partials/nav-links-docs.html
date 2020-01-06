@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-<nav role="navigation ">
+<nav id="left-container" class="fixed-l pl4 w-20-l" style="max-width: 320px;" role="navigation">
   <ul class="list pa0 mh0 mv0 vh-80 overflow-y-auto overflow-x-hidden">
     {{ range .Site.Menus.docs.ByWeight }}
       {{ $post := printf "%s" .Post }}
@@ -25,4 +25,4 @@
       </li>
     {{- end}}
   </ul>
-</nav>
+</nav id="left-container">

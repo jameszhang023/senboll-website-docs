@@ -242,3 +242,30 @@ img{
 
   .r-5{ right: 5%; }
   .vh-80{ height: 80vh; }
+
+.goTop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    display: none;
+    border: 1px solid #ddd;
+    background-color: rgba(255,255,255,0.4);
+} 
+.goTop:before {
+    font-family: "segmdl2";
+    content: "\E70E";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    width: 40px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+}
+.goTop:hover{    
+    background-color: #ddd;
+}

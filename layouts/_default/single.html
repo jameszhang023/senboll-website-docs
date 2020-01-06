@@ -3,15 +3,15 @@
   <div class="order-3 bg-white black db dn-l w-100 ">
       {{- partial "nav-links-docs-mobile.html" . -}}
   </div>
-  <article class="min-vh-100 w-100-l center">
+  <article class="min-vh-100 w-100-l" style="margin-right: auto; margin-left: auto; max-width: 1600px;">
 
     <div class="flex-l">
 
-      <div id="right-container" class="pb5 pb6-ns pt5-ns order-2 w-100 w-20-l ph5-m ph3-l mb4 right-0-l dn db-l">
+      <div class="pb5 pb6-ns pt5-ns order-2 w-100 w-20-l ph5-m mb4 right-0-l dn db-l">
         {{- partial "toc.html" . -}}
       </div>
 
-      <div id="left-container" class="pl4 pr3 pb5 pb6-ns pt1 pt5-ns order-0 w-20-l dn db-l h-100 top-0">
+      <div class="pb5 pb6-ns pt1 pt5-ns order-0 w-20-l dn db-l top-0">
         {{ partial "nav-links-docs.html" . }}
       </div>
       
@@ -25,13 +25,14 @@
       </div>
 
     </div>
-  </article>
+    <a class="goTop right-2-l bottom-2-l right-2 bottom-2 z-9999"></a>
+  </article>  
 
-  <div class="w-100">
+  <!-- <div class="w-100">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       {{ partial "docs/page-meta-data.html" . }}
       {{ partial "page-edit.html" . }}
       {{ partial "tags.html" . }}
     </div>
-  </div>
+  </div> -->
 {{ end }}
