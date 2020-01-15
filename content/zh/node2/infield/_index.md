@@ -35,7 +35,7 @@ Infield软件是专门用来刷枫叶设备固件的工具软件，支持串口�
 
 - Serial是串口方式，需要307USB通讯模块。
 - Internet网络方式，需要网络模块，通过天鹅云方式连接，Panel S/N填入主机8位序列号，IP password默认是`paradox`。
-- Static IP，通过IP地址连接，填入IP地址和端口号（端口默认是10001），IP password默认是`paradox`。
+- Static IP，通过IP地址连接，填入IP地址和端口号（默认：10001），IP password默认是`paradox`。
 
 ![设置通讯方式](images/infield-setting.png)
 
