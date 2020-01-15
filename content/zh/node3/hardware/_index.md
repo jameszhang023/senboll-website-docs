@@ -195,7 +195,7 @@ EVO系列请参考下面的步骤：
 步骤一，点击右下角电源图标：
 ![亮度设置步骤](images/touch-keypad-setting-light-1-1.png)
 
-步骤二，设置屏幕待机亮度即可：
+步骤二，设置屏幕待机亮度到最低即可：
 ![亮度设置步骤](images/touch-keypad-setting-light-2-2.png)
 
 ### K10V/K32
