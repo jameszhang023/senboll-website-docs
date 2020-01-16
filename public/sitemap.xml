@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>http://support.senboll.com:8888/help/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://support.senboll.com:8888/help/zh/sitemap.xml</loc>
+		
+	   	<lastmod>2019-10-24T09:45:17+08:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>
