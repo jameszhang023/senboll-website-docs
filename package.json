@@ -44,6 +44,7 @@
     "lodash": "^4.17.11",
     "pos": "^0.4.2",
     "remove-markdown": "^0.2.0",
+    "standard": "^14.3.4",
     "stopword": "^0.1.8",
     "striptags": "^3.0.1",
     "to-snake-case": "^1.0.0",
