@@ -1,0 +1,271 @@
+
+@font-face {
+    font-family:segmdl2;
+    src: url('../fonts/segmdl2.woff');
+}
+
+.font-segmdl2 {
+    font-family: "segmdl2";
+}
+
+ul, ol {
+    /* margin-top: 0.1rem; */
+    margin-left: -1.5rem;
+    /* margin-bottom: 0.1rem; */
+}
+.prose ul li, .prose ol li {
+    margin-bottom: 0em;
+}
+.prose ul, .prose ol {
+    margin-bottom: 0.2em;
+}
+
+
+/* Hides non-meaningful TOC items*/
+#TableOfContents ul li ul li ul li{
+    margin-left: 1.0rem;
+}
+
+
+/* Add index to table of contents */
+#TableOfContents ul li ul{
+    counter-reset: id1;
+}
+#TableOfContents ul li ul li a:before{
+    content: counter(id1) " "; /* 获取计数器值，把它填写在 content 中 */
+    counter-increment: id1; /* 自动将计数器加 1 */
+}
+#TableOfContents ul li ul li ul{
+    counter-reset: id01;
+}
+#TableOfContents ul li ul li ul li a:before{
+    counter-increment: id01; 
+    content: counter(id1) "." counter(id01) " ";
+} 
+#TableOfContents ul li ul li ul ul li{
+    counter-reset: id001;
+}
+#TableOfContents ul li ul li ul li ul li a:before{
+    content: counter(id1) "." counter(id01) "." counter(id001) " ";
+    counter-increment: id001; 
+} 
+
+
+/* 文章编号 */
+body{
+  counter-reset: index0;  /* 创建一个计数器 */
+}
+h2 {
+    counter-reset: index1;
+}
+h3 {
+    counter-reset: index2;
+}
+h4 {
+    counter-reset: index3;
+}
+h5 {
+    counter-reset: index4;
+}
+
+h2:before {
+    counter-increment: index0; /* 自动将计数器加 1 */
+    content: counter(index0) " "; /* 获取计数器值，把它填写在 content 中 */
+}
+h3:before {
+    counter-increment: index1;
+    content: counter(index0) "." counter(index1) " ";
+}
+h4:before {
+    counter-increment: index2;
+    content: counter(index0) "." counter(index1) "." counter(index2) " ";
+}
+h5:before {
+    counter-increment: index3;
+    content: counter(index0) "." counter(index1) "." counter(index2) "." counter(index3) " ";
+}
+h6:before {
+    counter-increment: index4;
+    content: counter(index0) "." counter(index1) "." counter(index2) "." counter(index3) "." counter(index4) " ";
+}
+
+.querybtn:focus {
+    outline:0;
+} 
+
+#mobile-menu[aria-expanded='false'] {
+    display: none;
+}
+#mobile-menu {
+    display: block;
+    min-height: calc(100vh - 38px);
+}
+
+#nav-mobile[aria-expanded='true'] {
+    width: fit-content;
+}
+#nav-mobile[aria-expanded='false'] {
+    width: 100%;
+}
+
+
+#mobile-menu-button[aria-expanded='true']::before {
+    font-family: "segmdl2";
+    content: "\E711";
+}
+#mobile-menu-button::before {
+    font-family: "segmdl2";
+    content: "\E700";
+}
+#mobile-submenu-button-docs[aria-expanded='true']::before {
+    font-family: "segmdl2";
+    content: "\E70E";
+}
+#mobile-submenu-button-docs[aria-expanded='false']::before {
+    font-family: "segmdl2";
+    content: "\E70D";
+}
+#mobile-submenu-docs[aria-expanded='false'] {
+    display: none;
+}
+#mobile-submenu-docs {
+    display: block;    
+}
+#mobile-submenu-button-docs-page[aria-expanded='true']::after {
+    font-family: "segmdl2";
+    content: "\E70E";
+}
+#mobile-submenu-button-docs-page[aria-expanded='false']::after {
+    font-family: "segmdl2";
+    content: "\E70D";
+}
+#mobile-submenu-docs-page[aria-expanded='false'] {
+    display: none;
+}
+#mobile-submenu-docs-page {
+    display: block;    
+}
+
+
+#mobile-search-button[aria-expanded='true']::before {
+    font-family: "segmdl2";
+    content: "\E711";
+}
+#mobile-search-button::before {
+    font-family: "segmdl2";
+    content: "\E721";
+}
+#mobile-search-button[aria-hidden='true'] {
+    display: none;
+}
+#mobile-search-button {
+    display: block;    
+}
+
+#mobile-menu-logo[aria-hidden='true'] {
+    display: none;
+}
+#mobile-menu-logo {
+    display: block;    
+}
+#mobile-menu-button[aria-hidden='true'] {
+    display: none;
+}
+#mobile-menu-button {
+    display: block;
+}
+
+#menu-search-input {
+    display: block;
+}
+#menu-search-input[aria-hidden='true'] {
+    display: none;
+}
+
+#menu-search-input[aria-expanded='true'] {
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+
+
+p {
+    text-align: justify;
+    text-justify: inter-character
+}
+
+
+em {
+    color: red;
+}
+
+.algolia-autocomplete{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 60em) {
+    .dn-lx { display: none; }
+}
+
+#menu-search-input[aria-expanded='true'] span{
+    min-width: 100%;
+}
+
+img{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    max-height: 100%;
+}
+
+.previewImage-image{
+    cursor: move;
+}
+
+.about{    
+  line-height: 1.875;
+  background-image: url('../images/world-map1.svg');
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+
+
+/* video.js shortcode */
+.video-js {
+    /* margin: 2rem auto; */
+    width: 100%;
+  }
+    
+  .video-js:focus {
+    outline: none;
+  }
+
+  .r-5{ right: 5%; }
+  .vh-80{ height: 80vh; }
+
+.goTop {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    display: none;
+    border: 1px solid #ddd;
+    background-color: rgba(255,255,255,0.4);
+} 
+.goTop:before {
+    font-family: "segmdl2";
+    content: "\E70E";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    width: 40px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+}
+.goTop:hover{    
+    background-color: #ddd;
+}

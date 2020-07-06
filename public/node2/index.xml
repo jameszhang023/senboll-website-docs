@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安装和维护 on 报警器_防盗报警_枫叶报警_智能报警_加拿大枫叶_盛波尔科技</title>
+    <link>http://support.senboll.com:8888/help/node2/</link>
+    <description>Recent content in 安装和维护 on 报警器_防盗报警_枫叶报警_智能报警_加拿大枫叶_盛波尔科技</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://support.senboll.com:8888/help/node2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>编程调试和维护</title>
+      <link>http://support.senboll.com:8888/help/node2/babyware/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://support.senboll.com:8888/help/node2/babyware/</guid>
+      <description>简介 枫叶为安装人员专门提供了一套工具软件Babyware，Babyware软件是用来设置、调试、售后维护枫叶安防系统的专用工具软件，非常直观，高效。支持汉语，支持枫叶全系列主机，支持串口、网络、拨号等通讯方式。
+视频教程 视频介绍较简单，仅供参考，请以文档为准。
+   
+准备工作 安装软件 下载软件，下载Babyware请访问资料服务器（账户和密码咨询设备提供商）。 安装驱动 如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问资料服务器（账户和密码咨询设备提供商）。请根据Windows系统版本下载并安装驱动，如下图： &amp;#xE82F&amp;nbsp特别提醒 安装的过程有时候需要两次才能安装成功。 安装驱动之前，请插好设备再操作，否则无法安装。 
+如果安装驱动遇到困难，请参考下面的步骤。 必备硬件 串口直连方式需要准备307USB模块： 以太网方式需要准备网络模块： 初始化 步骤一：启动Babyware，默认用户名是Admin,密码是1234。
+步骤二：创建账户，选择主机型号，汉化软件，设置连接参数。
+&amp;#xE945&amp;nbsp警告在创建账户后，请选择相应的主机型号，再连接或打开账户。
+请参考下面演示动画： 设置连接方式，选择合适的方式建立连接。
+ 串口方式，需要307USB通讯模块。307USB的USB端连接电脑，另一端连枫叶主机Serial端口，如图：  IP方式，需要网络模块，将网络模块的Panel端和枫叶主机的Serial端口连接，插上网线。  IP/Panel S/N方式，需要网络模块，通过天鹅云方式连接，Panel S/N 填主机8位序列号，IP模块访问密码默认是paradox。如图：  IP/Static静态地址，通过IP地址连接，填入IP地址和IP Port（默认：10001），IP Module Password默认是paradox。如图：    &amp;#xE82F&amp;nbsp特别提醒网络模块联网成功后，Internet指示灯是绿灯常亮状态，如果不亮或闪烁说明网络不通，请检查网络或相关设置。
+软件操作说明 编程防区 防区分为有线防区和无线防区，其中有线防区分为板载防区和扩展防区，板载防区是主机板自带的防区，扩展防区是其他模块上的防区。下面演示一下编程方法：
+提示：防区类型的概念参考请点防区类型说明。
+板载防区编程方法： 扩展防区编程方法： 无线防区编程方法： 编程遥控器 请参考： 编程密码和权限 主机支持多用户，每个用户拥有单独的密码和权限，编程用户密码请参考： 编程用户权限请参考： 编程警号 下面是无线警号编程方法演示： 警号鸣笛时间设置请看下面演示： 编程退出延时 &amp;#xE82F&amp;nbsp特别提醒退出延时的概念请访问 → 退出延时概念。</description>
+    </item>
+    
+    <item>
+      <title>刷固件工具(In-Field)说明书</title>
+      <link>http://support.senboll.com:8888/help/node2/infield/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://support.senboll.com:8888/help/node2/infield/</guid>
+      <description> 简介 Infield软件是专门用来刷枫叶设备固件的工具软件，支持串口，网络，拨号等通讯方式。
+准备工作 由于Infield被集成到Babyware中，所以请先下载安装Babyware，具体步骤请访问Babyware使用说明-安装软件。
+操作说明 步骤一：启动Babyware，Infield启动入口如图： 步骤二：设置连接方式，选择合适的方式建立连接。请参考Babyware使用说明-初始化。
+ Serial是串口方式，需要307USB通讯模块。 Internet网络方式，需要网络模块，通过天鹅云方式连接，Panel S/N填入主机8位序列号，IP password默认是paradox。 Static IP，通过IP地址连接，填入IP地址和端口号（默认：10001），IP password默认是paradox。  步骤三：选择需要升级的设备，准备好固件，开始升级。最新固件下载请访问资料服务器（账户和密码咨询设备提供商）。升级的过程有时候比较慢，请耐心等待，切记不要中断通讯线路、关闭电脑或者Infield软件，否则有可能升级失败，甚至报废。如图： </description>
+    </item>
+    
+    <item>
+      <title>手机APP(Insite Gold)说明书</title>
+      <link>http://support.senboll.com:8888/help/node2/insite-gold/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://support.senboll.com:8888/help/node2/insite-gold/</guid>
+      <description>简介 Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用APP，集成了报警，视频复核，门禁控制和自动化控制功能，是报警系统、监控系统、门禁系统和智能家居控制的“一站式”解决方案。
+功能  支持多语言； 支持系统级推送（国内安卓无法推送）； 支持布撤防操作； 支持多用户不同权限； 支持视频实时查看，报警视频下载； 支持门禁直接控制； 支持通过系统继电器直接控制电器，家电等； 故障实时提醒，比如蓄电池故障，模块离线故障； 设备状态提醒，比如掉线等； 不限制用户手机的数量。  版本日志  更新日期：20190901，版本：2.6.1，安卓请点下载；  Android 5 and 6 support. Bug fixes.  更新日期：20190821，版本：2.6.0；  Stay/Sleep All areas buttons.. Master panel users management- master can delete, edit user VOD permissions and select notifications sent per user. Zones sorting by Name/Number/State/Bypass. Panel type and firmware version in Site Details.. Bug fixes.  更新日期：20190611，版本：2.5.2；  Migration of “Paradox my home” sites to new SWAN.</description>
+    </item>
+    
+    <item>
+      <title>触摸键盘标签工具说明书</title>
+      <link>http://support.senboll.com:8888/help/node2/touchscreen-lable/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://support.senboll.com:8888/help/node2/touchscreen-lable/</guid>
+      <description> 简介 触摸屏操作键盘提供多国语言，借助触摸键盘标签工具可以对其中的标签（如：防区标签、分区标签、用户标签等）自定义，本文介绍工具的使用方法。
+视频教程 视频介绍较简单，仅供参考，请以文档为准。
+   
+操作步骤  步骤一：安装软件  工具软件下载请访问 → 资料服务器（账户和密码咨询设备提供商），打开枫叶软件目录，TM50和TM70有独立的标签工具，请根据实际选择使用。
+ 步骤二：请将触摸屏操作键盘的SD卡插入电脑，读卡成功后如下图，然后点击导入。   &amp;#xEDFB&amp;nbsp注意 如果电脑无法读SD卡，有可能是读卡器的问题或者损坏请更换再尝试。 SD卡的文件不能空白或者损坏，存储的文件是键盘默认的文件，如果文件损坏或者丢失，下载请访问 → 资料服务器（账户和密码咨询设备提供商）。根据操作键盘型号找相应的SD卡文件，拷贝文件到SD卡根目录，下面是TM50的文件路径，如图：  
+ 步骤三：选择主机，更具实际选择相应的系列主机：  步骤四：编辑标签，可以对分区，防区，用户，平面图，门等常用标签自定义，如图：   &amp;#xEDFB&amp;nbsp注意默认标签不能修改，只可以自定义标签。
+ 步骤五：编辑完成点击传送：   </description>
+    </item>
+    
+    <item>
+      <title>驱动(对接Control4)说明书</title>
+      <link>http://support.senboll.com:8888/help/node2/paradox-to-control4-driver/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://support.senboll.com:8888/help/node2/paradox-to-control4-driver/</guid>
+      <description>简介 为智能集成商提供的枫叶和Control4集成方案。
+我们提供Control4集成解决方案的目的为了满足智能家居的个性化需求，整合各系统的资源，更加灵活、智能和人性化。目前功能已经成熟稳定，并且有大量的应用案例，将来会持续升级更新。
+这是驱动的唯一官方网站，提供驱动的下载，授权，使用指南和售后。
+感谢各位合作伙伴关注和支持。
+功能  最大支持8个分区和192个防区； 通过Control4执行分区布/撤防、报警状态展示、取消报警等操作； 通过Control4一键紧急报警求救(110,120,119)； Control4可实时获取并展示防区开路、闭合或报警状态； 支持退出延时； 支持分区、防区标签自定义； 分区、防区状态自动和安防主机双向实时自动同步； 防区分配至所属分区； 分区状态(布防、撤防、报警和紧急报警)、防区状态、故障、门禁事件可用于联动； 通过Composer编程可对分区布/撤防、一键紧急报警； 通过驱动中的智能按钮联动安防主机的继电器，实现更加个性化的智能体验； 支持状态信息、故障信息和报警信息日志。  版本更新日志  更新时间：20160327  发布第一个版本； 新增：退出延时； 新增：立即、强制和留守布防类型和撤防。  更新时间：20160827  新增：3种紧急报警110，119，120功能； 新增：防区状态文字提示； Bug修复：钥匙开关自动撤防界面不同步撤防状态。  更新时间：20160914  新增：安防系统中的用户刷卡输出不同的信号，可用于中控联动。  更新时间：20160919  新增：驱动在初始化的时候，主动发起分区状态查询；  更新时间：20160921  新增：192个防区状态实时显示功能； 新增：单独实时输出防区状态信号，可以用来联动灯光等用途； 新增：支持防区自动分配到相应的分区。  更新时间：20170415  新增：最大支持8个分区和192个防区； 新增：支持在Composer上自定义防区和分区中文标签； Bug修复：分区显示消失问题； 新增：为了提供更好的和有针对性的服务，增加注册码授权机制； 新增：自动更新统分区，防区状态，保持状态实时同步到中控主机。  更新时间：20170418  优化：提高串口并发处理数据的能力，增强稳定性； Bug修复：重启中控主机后分区内的防区消失的问题；  更新时间：20170426  优化：针对有些操作系统Composer上驱动属性的描述显示问题，修改驱动属性说明为ToolTip方式。  更新时间：20170818  优化：去掉EntryDelay属性； 优化：减少全局变量，提高运行效率； 优化：自动同步状态功能和算法，提高可靠性； 新增：增加防区报警后状态保持，直到撤防后恢复，此功能是APP无法查看报警记录的替代解决方案； 新增：增加防区报警状态字段； Bug修复：撤防或者取消报警时偶尔不弹出密码输入界面。 新增：增加5个智能按钮，智能按钮对应安防主机里面的功能键，可以根据需要作为触发继电器的条件； 新增：Composer中可以联动一键撤防主机。  更新时间：20170823  新增：Composer中增加获取分配防区命令按钮； 新增：Composer中增加全局变量命令按钮。  更新时间：20170907  Bug修复：Control4主机重启分区的防区列表为空； Bug修复：防区被分配到多个分区(枫叶安防系统规定一个防区只能属于一个分区)； 新增：驱动试用，试用时间延长到300分钟。  更新时间：20171016  新增：新增智能按钮事件，当按钮被按下会以Event(事件)方式通知Control4，实现联动功能。  更新时间：20180314  退出延时时间上限增加到255秒。  更新时间：20180503  新增：门禁状态反馈事件：外出请求成功 新增：门禁状态反馈事件：进入请求失败 新增：门禁状态反馈事件：开门时间超时报警 新增：门禁状态反馈事件：开门时间超时报警后恢复 新增：门禁状态反馈事件：门被强制打开报警 新增：门禁状态反馈事件：门被强制打开报警后恢复 新增：门禁状态反馈事件：某个用户请求进入成功 新增：门禁状态反馈事件：某个用户请求进入失败  更新时间：20180615  新增：报警后防区状态是否保持驱动属性可选项。  更新时间：20180625  Bug修复：在退出延时未结束之前取消布防后分区状态依然显示正在布防。  更新时间：20181105  优化：提升用户体验，解决Control4部分主机重启后，防区显示不全的问题。  更新时间：20181214  Bug修复：强制/留守/立即布防状态同步问题。  更新时间：20181227  新增：增加医疗、应急和火灾事件，可用于联动场景。  更新时间：20190102  优化：驱动图标（更换为枫叶触摸屏键盘）。 新增：增加电话线故障和恢复事件。 新增：增加交流电故障和恢复事件。 新增：增加AUX输出过载故障和恢复事件。 新增：增加警号输出过载故障和恢复事件。 新增：增加警号未接故障和恢复事件。 新增：增加时钟丢失故障和恢复事件。  更新时间：20190603  变更：用于驱动Key属性。 变更：驱动在线帮助链接地址。  更新时间：20190625  新增：增加布撤防失败的提示。 优化：去掉布防模式前缀。 汉化：刷新功能按钮。  更新时间：20190701  优化：退出延时完毕后查询分区状态。 优化：优化定时器的用法，增加驱动稳定性。  更新时间：20190710  新增：自动升级驱动。 新增：手动一键升级驱动。  更新时间：20200101  变更：驱动属性Auto Get Panel Status Interval变为Polling Period，属性参数默认值改为5分钟。   准备工作 具备的软硬件  Control4：  Control4主机(带双向通信串口)； 编程软件Composer；  枫叶：  编程软件Babyware，关于软件的使用说明请访问编程调试和维护，如果是通过307USB编程安防主机请下载307USB驱动； 编程模块，串口307USB模块或网口IP150模块（选择一个即可）； 安防主机(EVO192/EVOHD)； 对接专用模块，型号APR-PRT3（简称PRT3）或BUS2SER。  其他：  枫叶驱动； 串口线，用来连接对接模块和中控主机，有些Control4中控主机带9针串口输出用RS232标准直连串口线连接即可，有些Control4主机串口是3.</description>
+    </item>
+    
+    <item>
+      <title>远程协助软件(Anydesk)说明书</title>
+      <link>http://support.senboll.com:8888/help/node2/anydesk/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://support.senboll.com:8888/help/node2/anydesk/</guid>
+      <description> 简介 Teamviewer确实是当今最好用的远程工具，但免费版越来越多的限制，很难满足正常的网站支持和个人用途。
+因此为大家推荐Anydesk。AnyDesk Software GmbH由前TeamViewer员工于2014年创立。它提供运行Windows，macOS，Linux，FreeBSD，Android，iOS的个人计算机之间的双向远程访问。
+功能  运行不同操作系统的计算机之间的双向远程控制。 从移动Android和iOS单向访问[3] 安全的TLS-1.2协议[4] 文件传输 客户端到客户端聊天 剪贴板集成 具有代表性的状态转移（REST）兼容 会话记录 自定义客户端别名  下载 途径一：官网下载：https://anydesk.com/platforms。
+途径二：本网站下载(仅Windows版):Anydesk安装包。
+使用方法 直接启动软件，提供启动界面给需要控制此电脑的一方即可。如图： </description>
+    </item>
+    
+  </channel>
+</rss>
