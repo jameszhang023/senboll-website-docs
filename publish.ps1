@@ -7,5 +7,5 @@ Copy-Item C:\Users\zhang\Documents\Control4\PublishedDrivers\ParadoxDriver.c4z  
 Copy-Item D:\develop\Control4\ParadoxDriver\driver.xml  content\zh\node2\paradox-to-control4-driver\_index.files\
 hugo 
 Remove-Item \\192.168.8.8\webroot$\help\* -Recurse
-Copy-Item D:\develop\WebSite\senboll-support-website\public\*  \\192.168.8.8\webroot$\help\ -recurse
+Copy-Item D:\develop\website\senboll-support-website\public\*  \\192.168.8.8\webroot$\help\ -recurse
 npm run algolia
