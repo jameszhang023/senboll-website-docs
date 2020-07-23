@@ -7,14 +7,14 @@ sections:
     cta: 
     link: http://www.senboll.com
     color_classes: bg-primary-color-light black
-    image: images/one-solution.png
+    image: images/homepage-insitegold-pc.png
     copy: "集成了报警，视频复核，门禁控制和自动化控制功能，是报警系统、监控系统、门禁系统和智能家居控制的“一站式”解决方案"
 
   - heading: "个性化，模块化设计，方案灵活多变"
     cta: 
     link: 
     color_classes: bg-accent-color-dark light-gray
-    image: images/2019-home.png
+    image: images/homepage-allproducts-pc.png
     copy: "枫叶提供的报警，门禁，视频和智能控制一体化解决方案，功能高度模块化，这样能对于配置方案更加灵活，系统更加稳定，成本也得到很好的控制"
 
 scenario:

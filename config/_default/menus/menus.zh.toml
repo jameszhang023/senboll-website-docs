@@ -46,14 +46,14 @@
   weight = 1
   identifier = "home"
   post = "break"
-  url = "/"
+  url = "https://www.senboll.com"
 
 [[global]]
   name = "关于"
   weight = 2
   identifier = "about"
   post = "break"
-  url = "/about/"
+  url = "https://www.senboll.com/zh-hans/about"
 
 [[global]]
   name = "文档中心"
