@@ -26,7 +26,7 @@ toc: true
 
 视频介绍较简单，仅供参考，请以文档为准。
 
-{{% video "../../video/babyware.mp4" %}}
+<!-- {{% video "../../video/babyware.mp4" %}} -->
 
 ## 准备工作
 

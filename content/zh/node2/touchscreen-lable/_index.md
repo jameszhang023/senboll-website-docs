@@ -26,7 +26,7 @@ toc: true
 
 视频介绍较简单，仅供参考，请以文档为准。
 
-{{% video "../../video/label-tool.mp4" %}}
+<!-- {{% video "../../video/label-tool.mp4" %}} -->
 
 ## 操作步骤
 
