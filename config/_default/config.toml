@@ -1,5 +1,5 @@
 # baseURL = "https://gohugo.io/"
-baseurl = "https://support.senboll.com/help"
+baseurl = "http://support.senboll.com:8888/help"
 paginate = 100
 defaultContentLanguage = "zh"
 enableEmoji = true

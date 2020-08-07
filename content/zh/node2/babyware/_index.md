@@ -32,12 +32,12 @@ toc: true
 
 ### 安装软件
 
-下载软件，下载Babyware请访问[资料服务器（账户和密码咨询设备提供商）](https://support.senboll.com/)。
+下载软件，下载Babyware请访问[资料服务器（账户和密码咨询设备提供商）](http://support.senboll.com:8888/)。
 ![Babyware下载](images/babyware-download.png)
 
 ### 安装驱动
 
-如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问[资料服务器（账户和密码咨询设备提供商）](https://support.senboll.com/)。请根据Windows系统版本下载并安装驱动，如下图：
+如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问[资料服务器（账户和密码咨询设备提供商）](http://support.senboll.com:8888/)。请根据Windows系统版本下载并安装驱动，如下图：
 ![307USB驱动下载](images/307usb-driver-download.png)
 
 {{< tip >}}
