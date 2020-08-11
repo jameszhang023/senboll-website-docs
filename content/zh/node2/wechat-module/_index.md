@@ -84,7 +84,7 @@ toc: true
 #### 平台设置
 
 平台设置是接入枫叶微信服务器的重要一步，请按照图上标注的设置内容设置即可，如图：
-![平台设置-添加微信服务器域名和端口](images/web-settings-1.png)
+![平台设置-添加微信服务器域名和端口](images/web-settings-wechat-server.png)
 
 设置完请重启设备，也可以打开左侧菜单**系统设置**，找到重新启动系统选项执行软件重启。如图：
 ![web-重启](images/web-settings-reboot.png)
