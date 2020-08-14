@@ -32,13 +32,11 @@ toc: true
 
 ### 安装软件
 
-下载软件，下载Babyware请访问[资料服务器（账户和密码咨询设备提供商）](http://support.senboll.com:8888/)。
-![Babyware下载](images/babyware-download.png)
+下载软件，下载Babyware请访问 → [枫叶安防官网（需要注册登陆）](https://senboll.com/zh-hans/product-detail/96)。
 
-### 安装驱动
+### 安装Windows驱动
 
-如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。驱动下载请访问[资料服务器（账户和密码咨询设备提供商）](http://support.senboll.com:8888/)。请根据Windows系统版本下载并安装驱动，如下图：
-![307USB驱动下载](images/307usb-driver-download.png)
+如果是串口通讯方式，需要准备好307USB通讯模块，请先安装串口驱动。Windows驱动下载请访问 → [枫叶安防官网（需要注册登陆）](https://senboll.com/zh-hans/product-detail/80)。请根据Windows系统版本下载并安装驱动。
 
 {{< tip >}}
 1. 安装的过程有时候需要两次才能安装成功。

@@ -37,40 +37,17 @@ Insite Gold是枫叶针对枫叶安防系统自主开发的手机应用APP，集
 
 ## 版本日志
 
-- 更新日期：20190901，版本：2.6.1，安卓请点[下载](attachment/InsiteGold-V2.6.1.apk)；
-  - Android 5 and 6 support.
-  - Bug fixes.
-- 更新日期：20190821，版本：2.6.0；
-  - Stay/Sleep All areas buttons..
-  - Master panel users management- master can delete, edit user VOD permissions and select notifications sent per user.
-  - Zones sorting by Name/Number/State/Bypass.
-  - Panel type and firmware version in Site Details..
-  - Bug fixes.
-- 更新日期：20190611，版本：2.5.2；
-  - Migration of “Paradox my home” sites to new SWAN.
-  - Fixed push notification language support (only on IP150 v4.40.011)
-  - Bug and stability fixes.  
-- 更新日期：20190530，版本：2.5.1；
-  - Migration of “Paradox my home” sites to new SWAN.
-  - Fixed push notification language support (only on IP150 v4.40.011)
-  - Bug and stability fixes.
-- 更新日期：20190522，版本：2.5.0；
-  - Migration of “Paradox my home” sites to new SWAN.
-  - Panel language support.
-  - New info button with option to share site details.
-  - Hostname support on fixed IP mode.
-  - Bug and stability fixes.
-  - 关于功能的详细描述请访问：[了解更多](http://aboutswan.paradox.com/version_insitegold)
+版本日志请访问 → [这里](https://senboll.com/zh-hans/product-detail/95)；
   
 ## 准备工作
 
 ### 硬件
 
-枫叶主机和网络模块IP150，并接入互联⽹（连接IP150的路由器需要开启DHCP）。 
+枫叶主机和网络模块IP150/IP150+，并接入互联⽹（路由器需要开启DHCP）。
 
 ### 软件
 
-手机上安装Insite Gold软件，IOS用户到商店搜索Insite Gold。
+手机上安装 Insite Gold 软件，安卓版下载请访问 → [这里](https://senboll.com/zh-hans/product-detail/95)，IOS用户到商店搜索Insite Gold。
 
 ## 初始化设置
 
