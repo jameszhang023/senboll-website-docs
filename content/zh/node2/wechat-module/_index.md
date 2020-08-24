@@ -187,7 +187,7 @@ WAN口默认IP地址服从路由器的DHCP自动分配，当然支持手动指�
 ![开通试用1](images/payment-1.png)
 
 接下来的页面中选择**一年/或三年**，点击**确认支付**，如图：
-![开通试用2](images/payment-3.png)
+![开通试用2](images/payment-4.png)
 
 ### 售后服务
 
