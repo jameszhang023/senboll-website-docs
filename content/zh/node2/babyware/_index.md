@@ -25,6 +25,7 @@ toc: true
 ## 视频教程
 
 视频介绍较简单，仅供参考，请以文档为准。
+{{% video "https://cdn.senboll.com/media/video/babyware-teaching-video-cover-picture.mp4" %}}
 
 <!-- {{% video "../../video/babyware.mp4" %}} -->
 
