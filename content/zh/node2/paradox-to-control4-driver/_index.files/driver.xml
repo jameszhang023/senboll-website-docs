@@ -1,12 +1,12 @@
 <devicedata>
   <copyright>Copyright 2015-2020 Senboll Corporation. All rights reserved.</copyright>
-  <version>1008</version>
+  <version>1009</version>
   <creator>James</creator>
   <manufacturer>Paradox</manufacturer>
   <name>ParadoxDriver</name>
   <model>Paradox PRT3 or UBS2SER 3.0</model>
   <created>05/05/2014 9:21 PM</created>
-  <modified>01/03/2020 10:01 AM</modified>
+  <modified>10/22/2020 2:51 PM</modified>
   <small>icons/paradox_16.png</small>
   <large>icons/paradox_32.png</large>
   <control>lua_gen</control>
