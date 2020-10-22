@@ -134,6 +134,8 @@ toc: true
   - 新增：手动一键升级驱动。
 - 更新时间：20200101
   - 变更：驱动属性`Auto Get Panel Status Interval`变为`Polling Period`，属性参数默认值改为5分钟。
+- 更新时间：20201022
+  - 优化：性能。
 
 ## 准备工作
 
