@@ -8,7 +8,7 @@ lastmod: 2017-02-01
 keywords: [ssg，static，performance，security]
 menu:
   docs:
-    parent: "用户使用说明书"
+    parent: "用户指南"
     weight: 15
 weight: 90
 sections_weight: 30

@@ -1,5 +1,5 @@
 ---
-title : "用户使用说明书"
+title : "用户指南"
 linktitle: 用户使用说明
 description: Hugo's features, roadmap, license, and motivation.
 date: 2020-11-25
@@ -9,7 +9,7 @@ categories: []
 keywords: []
 menu:
   docs:
-    parent: "用户使用说明书"
+    parent: "用户指南"
     weight: 1
 weight: 3
 draft: false
