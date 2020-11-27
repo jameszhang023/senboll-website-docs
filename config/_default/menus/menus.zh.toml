@@ -16,11 +16,18 @@
   url = "/node2/"
 
 [[docs]]
+  name = "用户使用说明书"
+  weight = 10
+  identifier = "用户使用说明书"
+  post = "break"
+  url = "/node3/"
+
+[[docs]]
   name = "常见问题"
   weight = 15
   identifier = "常见问题"
   post = "break"
-  url = "/node3/"
+  url = "/node4/"
 
 [[docs]]
   name = "枫叶系统框架"
