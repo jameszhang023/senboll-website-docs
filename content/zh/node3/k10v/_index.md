@@ -22,7 +22,7 @@ toc: true
 
 这款键盘最多支持10个防区，面板上只有按钮和led指示灯，如果熟练掌握了使用方法，会很简单易用，缺点是不够直观。
 
-![k10v操作键盘](https://senboll.com/sites/default/files/styles/large/public/media/products/image/keypad-k10v-english-thumbnail.png?itok=4kM5t2xT)
+![k10v操作键盘](images/keypad-k10v-english-thumbnail.png)
 
 ## 功能
 

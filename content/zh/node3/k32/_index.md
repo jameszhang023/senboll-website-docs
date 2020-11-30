@@ -22,7 +22,7 @@ toc: true
 
 这款键盘最多支持32个防区，面板上只有按钮和led指示灯，如果熟练掌握了使用方法，会很简单易用，缺点是不够直观。
 
-![k32操作键盘](https://senboll.com/sites/default/files/styles/max_650x650/public/media/products/image/keypad-k32%2B-english-thumbnail.png?itok=ppKP-l0Z)
+![k32操作键盘](images/keypad-k32+-english-thumbnail.png)
 
 ## 功能
 

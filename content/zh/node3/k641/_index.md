@@ -23,7 +23,7 @@ toc: true
 这款键盘带液晶屏，支持所有分区的控制，状态显示，支持多国语言（遗憾的是不支持中文），LCD屏幕实时显示系统的状态，故障和时间等，相对比较直观。
 
 k641操作键盘:
-![k641操作键盘](https://senboll.com/sites/default/files/styles/max_650x650/public/media/products/image/keypad-k641%2B-english-thumbnail.png?itok=GqHwozB2)
+![k641操作键盘](images/keypad-k641+-english-thumbnail.png)
 
 ## 功能
 
