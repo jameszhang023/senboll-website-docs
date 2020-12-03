@@ -1,6 +1,6 @@
 ---
 title : "键盘（K10V）说明书"
-linktitle: 键盘（K10V）说明
+linktitle: 键盘（K10V）使用说明
 description: 这是K10V操作键盘说明书
 date: 2020-11-27
 publishdate: 2020-11-27
