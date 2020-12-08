@@ -1,7 +1,7 @@
 ---
-title : "键盘（TM50-SPMG）说明书"
-linktitle: 键盘（TM50-SPMG）使用说明
-description: 这是TM50触摸屏针对SPMG系列主机（SP4000 / SP5500 / SP65 / SP6000 / SP7000 / MG5000 / MG5050 / MG5075）操作键盘说明书
+title : "键盘（TM70-SPMG）说明书"
+linktitle: 键盘（TM70-SPMG）使用说明
+description: 这是TM70触摸屏针对SPMG系列主机（SP4000 / SP5500 / SP65 / SP6000 / SP7000 / MG5000 / MG5050 / MG5075）操作键盘说明书
 date: 2020-11-30
 publishdate: 2020-11-30
 lastmod: 2020-11-30
@@ -22,8 +22,8 @@ toc: true
 
 这款全屏触摸键盘，支持所有分区的控制，状态显示，支持多国语言（包括中文），具有直观的菜单和图标，滚动页面时超快的响应时间以及清晰，精确的菜单驱动提示；使用户体验比以往更轻松，更友好。
 
-TM50触摸屏操作键盘:
-![TM50操作键盘](images/tm50-all-color.png)
+TM70触摸屏操作键盘:
+![TM70操作键盘](images/TM70-all-color.png)
 
 ## 功能
 
@@ -41,7 +41,7 @@ TM50触摸屏操作键盘:
 ## 使用指南
 
 主界面说明：
-![TM50操作键盘](images/tm50-white-chinese-spmg-home-page-icon-markup.png)
+![TM70操作键盘](images/TM70-white-chinese-spmg-home-page-icon-markup.png)
 
 ① 布撤防操作  
 ② 时间日期  
@@ -62,16 +62,18 @@ TM50触摸屏操作键盘:
   - 方式三：[留守]，仅布防部分防区（非留守防区），通俗的讲，就是暂时禁用内部的防区，只启用外围的防区。如：周界防区，您仍然可以在室内活动。
 - 步骤3  
 步骤2执行后，如果有防区正在处于触发状态（未就绪），将出现一个提示界面：
-![TM50操作键盘](images/tm50-white-chinese-spmg-arm-failed.png)
-  - 先点[确认]来检查这些防区，以排除隐患；
+![TM70操作键盘](images/TM70-white-chinese-spmg-arm-failed.png)
+  - 先点[查看未就绪的防区]来检查这些防区，以排除隐患；
   - 在确认未就绪的防区无安全隐患，可以选择[强制布防]或者[旁路与布防]，此时这些未就绪的防区将会失效。
 - 步骤4  
 执行完上面的步骤，系统将进入布防倒计时，直到布防。
 
 ### 撤防
 
-- 步骤1：按[分区1]键（仅有一个分区）或[布防/撤防]键（多个分区） → 输入用户密码（默认是1234）
-- 步骤2：若只有一个分区，直接可以撤防，若多个分区，先选择所需分区再执行撤防即可。|
+|步骤|操作|
+|---|---|
+|1|按[分区1]键（仅有一个分区）或[布防/撤防]键（多个分区） → 输入用户密码（默认是1234）|
+|2|若只有一个分区，直接可以撤防，若多个分区，先选择所需分区再执行撤防即可。|
 
 ### 解除报警
 
@@ -84,7 +86,7 @@ TM50触摸屏操作键盘:
 ### 查看防区状态
 
 在撤防状态，有两种方法，如下图：
-![TM50操作键盘-查看防区状态](images/tm50-white-chinese-spmg-view-zone-status.png)
+![TM70操作键盘-查看防区状态](images/TM70-white-chinese-spmg-view-zone-status.png)
 
 - 方法1：进入防区列表逐个查看；
 - 方法2：预览所有防区实时状态。
@@ -96,10 +98,10 @@ TM50触摸屏操作键盘:
 {{< /warning >}}
 
 在撤防状态下，在首页点击信息按钮：
-![TM50操作键盘-查看信息入口](images/tm50-white-chinese-spmg-info-entry.png)
+![TM70操作键盘-查看信息入口](images/TM70-white-chinese-spmg-info-entry.png)
 
 进入信息查询页面：
-![TM50操作键盘-查看信息](images/tm50-white-chinese-spmg-info.png)
+![TM70操作键盘-查看信息](images/TM70-white-chinese-spmg-info.png)
 
 通过此页面可以查询报警记录，故障，旁路信息，事件记录。其中事件记录包括用户报警日志，操作日志，门禁日志，故障日志。
 
@@ -108,7 +110,7 @@ TM50触摸屏操作键盘:
 如果有个防区触发后，键盘或主机会有类似门铃的声音提示，这就是门铃防区功能。可以用来提示是否有人出现，通常在出入口会用到。
 
 在首页，点[菜单] → [门铃管理] → 输入用户密码（默认1234），进入如下页面：
-![TM50操作键盘- 设置门铃防区](images/tm50-white-chinese-spmg-setting-chime-zone.png)
+![TM70操作键盘- 设置门铃防区](images/TM70-white-chinese-spmg-setting-chime-zone.png)
 
 - 选择防区：选择需要设置门铃功能的防区
 - 门铃触发：门铃触发的方式，可将防区触发或恢复作为触发门铃的条件
@@ -119,6 +121,6 @@ TM50触摸屏操作键盘:
 对于整个系统来说，需要记录所有发生的事件或者日志所发生的时间，就需要时钟功能，由于系统的时钟通常不能联网自动校准，时间长了会有误差，就需要人为校正。
 
 在首页，点**菜单** → [系统设置] → 输入用户密码（默认1234），进入如下页面：
-![TM50操作键盘- 设置时间/日期](images/tm50-white-chinese-spmg-system-setting-time.png)
+![TM70操作键盘- 设置时间/日期](images/TM70-white-chinese-spmg-system-setting-time.png)
 
 点[时间/日期]，按照提示设置即可。
