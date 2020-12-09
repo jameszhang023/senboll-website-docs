@@ -9,7 +9,7 @@ keywords: [ssg，static，performance，security]
 menu:
   docs:
     parent: "用户指南"
-    weight: 15
+    weight: 5
 weight: 90
 sections_weight: 30
 draft: false
