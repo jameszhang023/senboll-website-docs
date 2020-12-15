@@ -107,8 +107,8 @@ k656操作键盘:
 
 |防区状态|键盘显示|
 |---|---|
-|防区全部闭合（未触发）状态|键盘显示[All Disarmed]+时间|
-|有防区是触发状态|键盘显示[Area 1 Not Ready]+[ 001 Zone Open]+[防区标签]|
+|防区全部闭合（未触发）状态|键盘显示`All Disarmed+时间`|
+|有防区是触发状态|键盘显示`Area 1 Not Ready + 001 Zone Open + 防区标签`|
 
 ### 查看故障
 
@@ -127,16 +127,16 @@ k656操作键盘:
 
 | 故障主菜单 | 故障子菜单 |
 |---|---|
-|[1]System（系统故障）|[1]AC failure（交流电故障）</br>[2]Battery trouble（后备电源故障）</br>[3]Aux. current limit（辅助电源输出过载）</br>[4]Bell current limit（警号输出接口过载）</br>[5]Bell absent（警号未接）</br>[6]ROM check error（ROM错误）</br>[7]RAM check error（RAM错误）|
-|[2]Communicator（通讯故障）|[1]TLM1（电话线故障）</br>[2]Fail to Com. 1（com1故障）</br>[3]Fail to Com. 2（com2故障）</br>[4]Fail to Com. 3（com3故障）</br>[5]Fail to Com. 4（com4故障）</br>[6]Fail to Com. PC（PC通信错误）|
-|[3]Module Trouble（模块故障）|[1]Module tamper（模块防拆故障）</br>[2]Module ROM check error（模块ROM故障）</br>[3]Module TLM trouble（模块拨号故障）</br>[4]Module Fail to Com.（模块通信故障）</br>[5]Printer trouble（打印机故障）</br>[6]Module AC failure（模块交流电源故障）</br>[7]Module battery failure（模块后备电源故障）</br>[8]Module supply output（模块电源输出故障）|
-|[4]Network (Combus) Troubles（总线故障）|[1]Missing keypad（键盘离线）</br>[2]Missing module（模块离线）</br>[3]Missing voice module（语音模块离线）</br>[6]General failure（一般总线故障）</br>[7]Combus overload（总线过载）|
-|[5]Zone Tamper（防区防拆故障）|按5显示防拆故障的所有防区|
-|[6]Zone Low Battery（防区电池电量不足故障）|按6显示电池电量不足的所有防区|
-|[7]Zone Fault（防区故障）|按7显示火警回路防区故障|
-|[8]Clock Loss（时间丢失）|按8重新设置时间|
-|[9]GSM Troubles（GSM移动网故障）|[1]Missing GSM module（GSM模块掉线）</br>[2]GSM RF jam supervision（移动网发生干扰故障）</br>[3]No service（移动网无服务）</br>[5]Fail to communicate with IP receiver 1（IP中心1通信失败）</br>[6]Fail to communicate with IP receiver 2（IP中心2通信失败）</br>[7]Fail to communicate with IP receiver 3（IP中心3通信失败）</br>[8]Fail to communicate with IP receiver 4（IP中心14通信失败）</br>[9]IP receiver unregistered（IP中心注册失败）|
-|[10]IP Troubles（以太网故障）|[1]Missing IP module（网络模块掉线）</br>[2]No service（无以太网）</br>[3]Fail to communicate with IP receiver 1（IP中心1通信失败）</br>[4]Fail to communicate with IP receiver 2（IP中心2通信失败）</br>[5]Fail to communicate with IP receiver 3（IP中心3通信失败）</br>[6]Fail to communicate with IP receiver 4（IP中心14通信失败）</br>[7]IP receiver unregistered（IP中心注册失败）|
+|{{< button >}}1{{< /button >}}System（系统故障）|{{< button >}}1{{< /button >}}AC failure（交流电故障）</br>{{< button >}}2{{< /button >}}Battery trouble（后备电源故障）</br>{{< button >}}3{{< /button >}}Aux. current limit（辅助电源输出过载）</br>{{< button >}}4{{< /button >}}Bell current limit（警号输出接口过载）</br>{{< button >}}5{{< /button >}}Bell absent（警号未接）</br>{{< button >}}6{{< /button >}}ROM check error（ROM错误）</br>{{< button >}}7{{< /button >}}RAM check error（RAM错误）|
+|{{< button >}}2{{< /button >}}Communicator（通讯故障）|{{< button >}}1{{< /button >}}TLM1（电话线故障）</br>{{< button >}}2{{< /button >}}Fail to Com. 1（com1故障）</br>{{< button >}}3{{< /button >}}Fail to Com. 2（com2故障）</br>{{< button >}}4{{< /button >}}Fail to Com. 3（com3故障）</br>{{< button >}}5{{< /button >}}Fail to Com. 4（com4故障）</br>{{< button >}}6{{< /button >}}Fail to Com. PC（PC通信错误）|
+|{{< button >}}3{{< /button >}}Module Trouble（模块故障）|{{< button >}}1{{< /button >}}Module tamper（模块防拆故障）</br>{{< button >}}2{{< /button >}}Module ROM check error（模块ROM故障）</br>{{< button >}}3{{< /button >}}Module TLM trouble（模块拨号故障）</br>{{< button >}}4{{< /button >}}Module Fail to Com.（模块通信故障）</br>{{< button >}}5{{< /button >}}Printer trouble（打印机故障）</br>{{< button >}}6{{< /button >}}Module AC failure（模块交流电源故障）</br>{{< button >}}7{{< /button >}}Module battery failure（模块后备电源故障）</br>{{< button >}}8{{< /button >}}Module supply output（模块电源输出故障）|
+|{{< button >}}4{{< /button >}}Network (Combus) Troubles（总线故障）|{{< button >}}1{{< /button >}}Missing keypad（键盘离线）</br>{{< button >}}2{{< /button >}}Missing module（模块离线）</br>{{< button >}}3{{< /button >}}Missing voice module（语音模块离线）</br>{{< button >}}6{{< /button >}}General failure（一般总线故障）</br>{{< button >}}7{{< /button >}}Combus overload（总线过载）|
+|{{< button >}}5{{< /button >}}Zone Tamper（防区防拆故障）|按5显示防拆故障的所有防区|
+|{{< button >}}6{{< /button >}}Zone Low Battery（防区电池电量不足故障）|按6显示电池电量不足的所有防区|
+|{{< button >}}7{{< /button >}}Zone Fault（防区故障）|按7显示火警回路防区故障|
+|{{< button >}}8{{< /button >}}Clock Loss（时间丢失）|按8重新设置时间|
+|{{< button >}}9{{< /button >}}GSM Troubles（GSM移动网故障）|{{< button >}}1{{< /button >}}Missing GSM module（GSM模块掉线）</br>{{< button >}}2{{< /button >}}GSM RF jam supervision（移动网发生干扰故障）</br>{{< button >}}3{{< /button >}}No service（移动网无服务）</br>{{< button >}}5{{< /button >}}Fail to communicate with IP receiver 1（IP中心1通信失败）</br>{{< button >}}6{{< /button >}}Fail to communicate with IP receiver 2（IP中心2通信失败）</br>{{< button >}}7{{< /button >}}Fail to communicate with IP receiver 3（IP中心3通信失败）</br>{{< button >}}8{{< /button >}}Fail to communicate with IP receiver 4（IP中心14通信失败）</br>{{< button >}}9{{< /button >}}IP receiver unregistered（IP中心注册失败）|
+|{{< button >}}10{{< /button >}}IP Troubles（以太网故障）|{{< button >}}1{{< /button >}}Missing IP module（网络模块掉线）</br>{{< button >}}2{{< /button >}}No service（无以太网）</br>{{< button >}}3{{< /button >}}Fail to communicate with IP receiver 1（IP中心1通信失败）</br>{{< button >}}4{{< /button >}}Fail to communicate with IP receiver 2（IP中心2通信失败）</br>{{< button >}}5{{< /button >}}Fail to communicate with IP receiver 3（IP中心3通信失败）</br>{{< button >}}6{{< /button >}}Fail to communicate with IP receiver 4（IP中心14通信失败）</br>{{< button >}}7{{< /button >}}IP receiver unregistered（IP中心注册失败）|
 
 ### 查看报警记录
 
