@@ -1,5 +1,5 @@
 ---
-title : "MG6250S使用说明"
+title : "MG6250使用说明"
 linktitle: 一体化报警主机MG6250使用说明
 description: 这是一体化报警主机MG6250使用说明书
 date: 2020-11-30
