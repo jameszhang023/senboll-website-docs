@@ -25,9 +25,9 @@ toc: true
 ## 视频教程
 
 视频介绍较简单，仅供参考，请以文档为准。
-{{% video "https://cdn.senboll.com/media/video/tm50-touchscreen-label-manage-teching-video-cover-picture.mp4" %}}
+{{< video "https://cdn.senboll.com/media/video/tm50-touchscreen-label-manage-teching-video-cover-picture.mp4" >}}
 
-<!-- {{% video "../../video/label-tool.mp4" %}} -->
+<!-- {{< video "../../video/label-tool.mp4" >}} -->
 
 ## 操作步骤
 

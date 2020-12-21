@@ -82,7 +82,12 @@ window.onresize = function(){
 window.onload = function(){
   MenuSearchInputResetDiplay();
   PreviewImageInit();
-}
+  jQuery(".jquery-accordion-menu").jqueryAccordionMenu();
+};
+
+jQuery(document).ready(function ($) {
+  jQuery(".jquery-accordion-menu").jqueryAccordionMenu();
+});
 
 function MenuSearchInputResetDiplay(){
   //获取网页可见区域宽度

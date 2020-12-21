@@ -27,4 +27,4 @@ layout: about
 
 Paradox Production: The Art of Technology
 
-<!-- {{% video "../video/paradox-manufacture.mp4" %}} -->
+<!-- {{< video "../video/paradox-manufacture.mp4" >}} -->

@@ -1,10 +1,11 @@
 {{ $currentPage := . }}
-<nav id="left-container" class="fixed-l pl4 w-20-l" style="max-width: 320px;" role="navigation">
+<div class="f4 fw6 pv2 ph2 bb b--moon-gray mid-gray mb2">文档目录</div>
+{{/*  <nav id="left-container" class="fixed-l- w-100" role="navigation">
   <ul class="list pa0 mh0 mv0 vh-80 overflow-y-auto overflow-x-hidden">
     {{ range .Site.Menus.docs.ByWeight }}
       {{ $post := printf "%s" .Post }}
-      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw8{{ if eq $post "break" }} mb1 {{ end }}">
-        <a href="{{ .URL }}" class="js-toggle dib w-100 link mid-gray hover-accent-color-light pl2 pr2 pv2 {{if or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) }} primary-color{{end}}" data-target=".{{ .Identifier }}">{{ .Name }}</a>
+      <li class="f5 w-100 hover-bg-light-gray hover-accent-color-light fw4{{ if eq $post "break" }} mb1 {{ end }} bb b--moon-gray">
+        <a href="{{ .URL }}" class="js-toggle dib w-100 link mid-gray hover-accent-color-light ph2 pv2 {{if or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) }} primary-color{{end}}" data-target=".{{ .Identifier }}">{{ .Name }}</a>
         {{- if .HasChildren }}
         <ul class="{{ .Identifier }} desktopmenu animated list nl4 {{if $currentPage.HasMenuCurrent "docs" . }} db{{ else }} dn{{ end }}">
           {{- range .Children }}
@@ -15,7 +16,7 @@
             {{ else if eq .URL "/help/node9/" }}
             {{ else }}
               <li class="f6 fw4">
-                <a href="{{ .URL }}" class="db link hover-bg-gray hover-white pl3 pr2 pv2 {{if $currentPage.IsMenuCurrent "docs" . }}primary-color {{ else }}black {{end}}">
+                <a href="{{ .URL }}" class="db link hover-bg-gray hover-white pl3 pr2 pv1 {{if $currentPage.IsMenuCurrent "docs" . }}primary-color {{ else }}black {{end}}">
                   {{ .Name }}
                 </a>
               </li>
@@ -26,4 +27,33 @@
       </li>
     {{- end}}
   </ul>
-</nav id="left-container">
+</nav id="left-container">  */}}
+
+<nav id="left-container- " class="jquery-accordion-menu white navbar-collapse collapse" role="navigation">
+  <ul class="submenu">
+    {{ range .Site.Menus.docs.ByWeight }}
+      {{ $post := printf "%s" .Post }}
+      <li class="f5">
+        <a href="{{ .URL }}" class="w-100 ph2 pv2" >{{ .Name }}</a>
+        {{- if .HasChildren }}
+        <ul class="submenu">
+          {{- range .Children }}
+            {{ if eq .URL "/help/node1/" }}
+            {{ else if eq .URL "/help/node2/" }}
+            {{ else if eq .URL "/help/node3/" }}
+            {{ else if eq .URL "/help/node4/" }}
+            {{ else if eq .URL "/help/node9/" }}
+            {{ else }}
+              <li class="f6 fw4">
+                <a href="{{ .URL }}" class="pv1">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          {{- end}}
+        </ul>        
+        {{- end}}        
+      </li>
+    {{- end}}
+  </ul>
+</nav id="left-container-">

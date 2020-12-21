@@ -22,30 +22,30 @@ ul, ol {
 
 
 /* Hides non-meaningful TOC items*/
-#TableOfContents ul li ul li ul li{
-    margin-left: 1.0rem;
+#TableOfContents ul li ul li{
+    margin-left: 1.0em;
 }
 
 
 /* Add index to table of contents */
-#TableOfContents ul li ul{
+#TableOfContents ul{
     counter-reset: id1;
 }
-#TableOfContents ul li ul li a:before{
+#TableOfContents ul li a:before{
     content: counter(id1) " "; /* 获取计数器值，把它填写在 content 中 */
     counter-increment: id1; /* 自动将计数器加 1 */
 }
-#TableOfContents ul li ul li ul{
+#TableOfContents ul li ul{
     counter-reset: id01;
 }
-#TableOfContents ul li ul li ul li a:before{
+#TableOfContents ul li ul li a:before{
     counter-increment: id01; 
     content: counter(id1) "." counter(id01) " ";
 } 
-#TableOfContents ul li ul li ul ul li{
+#TableOfContents ul li ul ul li{
     counter-reset: id001;
 }
-#TableOfContents ul li ul li ul li ul li a:before{
+#TableOfContents ul li ul li ul li a:before{
     content: counter(id1) "." counter(id01) "." counter(id001) " ";
     counter-increment: id001; 
 } 

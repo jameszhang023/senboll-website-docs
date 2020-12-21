@@ -55,16 +55,16 @@
   post = "break"
   url = "https://www.senboll.com"
 
+# [[global]]
+#   name = "关于"
+#   weight = 2
+#   identifier = "about"
+#   post = "break"
+#   url = "https://www.senboll.com/zh-hans/about"
+
 [[global]]
   name = "关于"
   weight = 2
-  identifier = "about"
-  post = "break"
-  url = "https://www.senboll.com/zh-hans/about"
-
-[[global]]
-  name = "文档中心"
-  weight = 3
   identifier = "docs"
   url = "/documentation/"
 
