@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-<div class="f4 fw6 pv2 ph2 bb b--moon-gray mid-gray mb2">文档目录</div>
+<div class="f4 fw6 pv2 ph2 bb b--moon-gray mid-gray mb2 w-100">文档目录</div>
 {{/*  <nav id="left-container" class="fixed-l- w-100" role="navigation">
   <ul class="list pa0 mh0 mv0 vh-80 overflow-y-auto overflow-x-hidden">
     {{ range .Site.Menus.docs.ByWeight }}
@@ -29,7 +29,7 @@
   </ul>
 </nav id="left-container">  */}}
 
-<nav id="left-container- " class="jquery-accordion-menu white navbar-collapse collapse" role="navigation">
+<nav id="left-container-" class="jquery-accordion-menu white navbar-collapse collapse" role="navigation">
   <ul class="submenu">
     {{ range .Site.Menus.docs.ByWeight }}
       {{ $post := printf "%s" .Post }}
