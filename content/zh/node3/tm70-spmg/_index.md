@@ -1,6 +1,6 @@
 ---
-title : "键盘（TM70-SPMG）说明书"
-linktitle: 键盘（TM70-SPMG）使用说明
+title : "键盘(TM70-SPMG)说明书"
+linktitle: 键盘(TM70-SPMG)使用说明
 description: 这是TM70触摸屏针对SPMG系列主机（SP4000 / SP5500 / SP65 / SP6000 / SP7000 / MG5000 / MG5050 / MG5075）操作键盘说明书
 date: 2020-11-30
 publishdate: 2020-11-30

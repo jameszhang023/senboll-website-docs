@@ -1,47 +1,49 @@
 {{ $currentPage := . }}
 
 
+<div class="w-100 bg-primary-color-dark bb b--dark-gray">
+  <nav class="flex items-center justify-center z-999" style="margin-right: auto; margin-left: auto; max-width: 1600px;" role="navigation">
+  
+    <div class="flex items-center ph3 dn-lx dib-l w-80" >
+      <a href="https://www.senboll.com" class="flex items-center pv0 f4 tc w-10">
+        {{ partial "svg/senboll-logo.svg" (dict "size" "48px" ) }}
+      </a>
+      <ul class="list flex justify-between w-60-l">
+        {{ range .Site.Menus.global }}
+          <li class="f5 dib tc" role="menuitem">
+              {{/* TODO: Create an "Global" active class to show which site one is currently at */}}
+            <a href="{{ .URL }}" class="dim link{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
+              {{ .Name }}
+                {{/* using ".Post" from the menu system to determine if we should show an icon for external links */}}
+              {{ $post_status := printf "%s" .Post }}
+              {{ if eq $post_status "external" }}
+                <span class="pl1">
+                  {{ partial "svg/link-ext.svg" (dict "size" "5") }}
+                </span>
+              {{ end }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>   
+    </div> 
+  <!-- 
+    <span class="pv4 absolute mt1 mt2-l pr3 right-0 top-0 dn dib-l">
+    {{- partialCached "social-follow.html" . -}}
+    </span> -->
+  
+    <div id="menu-search-input" aria-hidden="true" aria-expanded="false" class="dn-m dn-ns w-100 w-30-l">
+      {{if not .Site.Params.isDisableSearch}}
+        {{- partial "site-search.html" . -}}
+      {{end}}
+    </div>  
+  
+    <div id="nav-mobile" aria-expanded="false" class="dn-l w-100-l">
+      {{- partial "nav-mobile.html" . -}}
+    </div>
+  
+  </nav>
 
-<nav class="flex items-center justify-center w-100 bg-primary-color-dark bb b--dark-gray z-999" role="navigation">
-
-  <div class="flex items-center justify-center dn-lx dib-l w-60">
-    <a href="https://www.senboll.com" class="flex items-center justify-center pv0 f4 tc w-20">
-      {{ partial "svg/senboll-logo.svg" (dict "size" "48px" ) }}
-    </a>
-    <ul class="list flex items-center justify-between w-60-l">
-      {{ range .Site.Menus.global }}
-        <li class="f5 dib tc" role="menuitem">
-            {{/* TODO: Create an "Global" active class to show which site one is currently at */}}
-          <a href="{{ .URL }}" class="dim link{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
-            {{ .Name }}
-              {{/* using ".Post" from the menu system to determine if we should show an icon for external links */}}
-            {{ $post_status := printf "%s" .Post }}
-            {{ if eq $post_status "external" }}
-              <span class="pl1">
-                {{ partial "svg/link-ext.svg" (dict "size" "5") }}
-              </span>
-            {{ end }}
-          </a>
-        </li>
-      {{ end }}
-    </ul>   
-  </div> 
-<!-- 
-  <span class="pv4 absolute mt1 mt2-l pr3 right-0 top-0 dn dib-l">
-  {{- partialCached "social-follow.html" . -}}
-  </span> -->
-
-  <div id="menu-search-input" aria-hidden="true" aria-expanded="false" class="dn-m dn-ns w-100 w-30-l">
-    {{if not .Site.Params.isDisableSearch}}
-      {{- partial "site-search.html" . -}}
-    {{end}}
-  </div>  
-
-  <div id="nav-mobile" aria-expanded="false" class="dn-l w-100-l">
-    {{- partial "nav-mobile.html" . -}}
-  </div>
-
-</nav>
+</div>
 
 <!-- 
 <nav class="pv4 dn dib-l bb b--dark-gray" role="navigation">

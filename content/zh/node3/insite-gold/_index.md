@@ -1,7 +1,7 @@
 ---
-title : "手机APP（Insite Gold）使用说明"
-linktitle: 手机APP（Insite Gold）使用说明
-description: 枫叶APP（Insite Gold）的使用说明
+title : "手机APP(Insite Gold)使用说明"
+linktitle: 手机APP(Insite Gold)使用说明
+description: 手机APP(Insite Gold)的使用说明
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01

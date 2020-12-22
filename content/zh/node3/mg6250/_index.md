@@ -1,7 +1,7 @@
 ---
-title : "MG6250使用说明"
-linktitle: 一体化报警主机MG6250使用说明
-description: 这是一体化报警主机MG6250使用说明书
+title : "一体化主机(MG6250)使用说明"
+linktitle: 一体化主机(MG6250)使用说明
+description: 这是一体化主机MG6250使用说明书
 date: 2020-11-30
 publishdate: 2020-11-30
 lastmod: 2020-11-30
@@ -9,7 +9,7 @@ keywords: [ssg，static，performance，security]
 menu:
   docs:
     parent: "用户指南"
-    weight: 93
+    weight: 3
 weight: 90
 sections_weight: 30
 draft: false

@@ -1,6 +1,6 @@
 ---
-title : "键盘（K641）说明书"
-linktitle: 键盘（K641）使用说明
+title : "键盘(K641)说明书"
+linktitle: 键盘(K641)使用说明
 description: 这是K641操作键盘说明书
 date: 2020-11-30
 publishdate: 2020-11-30

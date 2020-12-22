@@ -1,6 +1,6 @@
 ---
-title : "键盘（TM50-EVO）说明书"
-linktitle: 键盘（TM50-EVO）使用说明
+title : "键盘(TM50-EVO)说明书"
+linktitle: 键盘(TM50-EVO)使用说明
 description: 这是TM50触摸屏针对EVO系列主机（EVO192 / EVOHD / EVO48 / EVO96）的操作键盘说明书
 date: 2020-11-30
 publishdate: 2020-11-30
