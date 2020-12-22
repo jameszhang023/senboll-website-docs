@@ -22,3 +22,6 @@ name = "系统拓扑图"
 identifier = "ds"
 url = "/paradox-frame/"
 weight = 10
+
+[markup.goldmark.renderer]
+unsafe= true
