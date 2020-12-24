@@ -24,7 +24,7 @@ toc: true
 
 ## 视频教程
 
-视频介绍较简单，仅供参考，请以文档为准。
+视频介绍较简单，仅供参考，请以文档为准。  
 {{< video "https://cdn.senboll.com/media/video/tm50-touchscreen-label-manage-teching-video-cover-picture.mp4" >}}
 
 <!-- {{< video "../../video/label-tool.mp4" >}} -->
@@ -46,7 +46,7 @@ toc: true
 - TM70请访问 → [TM70键盘内存卡初始文件](https://senboll.com/zh-hans/product-detail/47)
 
 找到对应的触摸屏操作键盘在**其他文件**下载。根据操作键盘型号找相应的内存卡文件，拷贝文件到内存卡根目录。请参考下面TM50的内存卡的文件，如图：
-![内存卡初始化文件](images/tm50-内存-file.png)
+![内存卡初始化文件](images/tm50-sd-file.png)
 
 ### 编辑标签
 

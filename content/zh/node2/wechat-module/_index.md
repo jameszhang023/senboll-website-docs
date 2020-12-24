@@ -150,7 +150,7 @@ WAN口默认IP地址服从路由器的DHCP自动分配，当然支持手动指�
 #### 设置防区，分区，用户，门，通道等
 
 回到公众号首页点击**账户管理** → **账户管理**，在弹出的页面按住已添加的主机左滑，将打开更多配置选项，如图：
-![更多主机设置](images/more-panel-settings.png)
+![更多主机设置](images/wechat-settings-account-manage.png)
 
 打开资源设置页面，对主机的一些资源设置，包含防区，分区，用户，门，视频通道的标签等，如图：
 ![对主机的一些资源设置](images/source-panel-settings.png)
