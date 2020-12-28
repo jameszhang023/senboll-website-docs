@@ -8,7 +8,7 @@ lastmod: 2017-02-01
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "理论基础"
+    parent: "基础知识"
     weight: 11
 weight: 10
 sections_weight: 30

@@ -1,5 +1,5 @@
 ---
-title : "理论基础"
+title : "基础知识"
 linktitle: 本节预览
 description: Hugo's features, roadmap, license, and motivation.
 date: 2017-02-01
@@ -9,7 +9,7 @@ categories: []
 keywords: []
 menu:
   docs:
-    parent: "理论基础"
+    parent: "基础知识"
     weight: 1
 weight: 1
 draft: false

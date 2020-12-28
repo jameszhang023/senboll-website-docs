@@ -8,8 +8,8 @@ lastmod: 2017-02-01
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "理论基础"
-    weight: 15
+    parent: "安装和维护"
+    weight: 21
 weight: 60
 sections_weight: 30
 draft: false
