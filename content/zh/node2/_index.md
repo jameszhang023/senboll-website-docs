@@ -1,6 +1,6 @@
 ---
-title : "安装和维护"
-linktitle: 安装和维护预览
+title : "安装调试"
+linktitle: 安装调试预览
 description: Hugo's features, roadmap, license, and motivation.
 date: 2017-02-01
 publishdate: 2017-02-01
@@ -9,7 +9,7 @@ categories: []
 keywords: []
 menu:
   docs:
-    parent: "安装和维护"
+    parent: "安装调试"
     weight: 1
 weight: 2
 draft: false

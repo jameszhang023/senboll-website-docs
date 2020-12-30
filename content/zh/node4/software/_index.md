@@ -18,18 +18,6 @@ layout: single
 toc: true
 ---
 
-## Babyware软件
-
-下面收集了，在调试过程中，Babyware常见的问题。
-
-### 无效的登录名和密码
-
-当建立账户的时候没有选主机型号的时候，会出现这个错误，为了避免，请建立账户后先选择主机型号再连接。
-![无效的登录名和密码](images/babyware-invalid-account-password.png)
-
-连接EVO主机的时候，可能会出现上面图示的情况，请输入正确的帐户名`0000`和密码`0000`。如图：
-![正确的登录名和密码](images/babyware-valid-account-password.png)
-
 ## PA2000软件
 
 ---

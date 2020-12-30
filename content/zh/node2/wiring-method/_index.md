@@ -1,6 +1,6 @@
 ---
-title : "枫叶系统布线"
-linktitle: 枫叶系统布线
+title : "系统布线"
+linktitle: 系统布线
 description: 本文主要针对安防系统设计和施工人员，一个项目能否取得成功，前期的设计是非常重要的一步。
 date: 2017-02-01
 publishdate: 2017-02-01
@@ -8,7 +8,7 @@ lastmod: 2017-02-01
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "安装和维护"
+    parent: "安装调试"
     weight: 10
 weight: 40
 sections_weight: 30

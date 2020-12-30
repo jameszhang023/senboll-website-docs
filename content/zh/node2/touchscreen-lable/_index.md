@@ -1,15 +1,15 @@
 ---
-title : "触摸键盘标签工具说明书"
-linktitle: 触摸键盘标签工具说明书
-description: 枫叶触摸键盘标签工具使用说明
+title : "安装设置-触摸键盘相关的设置"
+linktitle: 安装设置-触摸键盘相关的设置
+description: 通过枫叶触摸键盘标签工具可以对触摸键盘的防区，分区等名称进行自定义，支持中文。
 date: 2017-02-01
 publishdate: 2017-02-01
 lastmod: 2017-02-01
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "安装和维护"
-    weight: 13
+    parent: "安装调试"
+    weight: 12
 weight: 30
 sections_weight: 30
 draft: false

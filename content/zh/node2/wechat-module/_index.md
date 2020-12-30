@@ -1,6 +1,6 @@
 ---
-title : "微信模块说明书"
-linktitle: 微信模块说明书
+title : "安装设置-微信通知"
+linktitle: 安装设置-微信通知
 description: 微信模块的安装调试和使用说明
 date: 2020-08-10
 publishdate: 2020-08-10
@@ -8,8 +8,8 @@ lastmod: 2020-08-10
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "安装和维护"
-    weight: 14
+    parent: "安装调试"
+    weight: 13
 weight: 30
 sections_weight: 30
 draft: false

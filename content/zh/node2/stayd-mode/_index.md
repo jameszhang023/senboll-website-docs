@@ -1,6 +1,6 @@
 ---
-title : "枫叶StayD模式"
-linktitle: 枫叶StayD模式
+title : "高级功能-StayD模式"
+linktitle: 高级功能-StayD模式
 description: 本文讲述枫叶StayD模式的使用和说明
 date: 2017-02-01
 publishdate: 2017-02-01
@@ -8,8 +8,8 @@ lastmod: 2017-02-01
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "安装和维护"
-    weight: 21
+    parent: "安装调试"
+    weight: 22
 weight: 60
 sections_weight: 30
 draft: false

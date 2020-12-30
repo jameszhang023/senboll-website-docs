@@ -9,9 +9,9 @@
   url = "/node1/"
 
 [[docs]]
-  name = "安装和维护"
+  name = "安装调试"
   weight = 5
-  identifier = "安装和维护"
+  identifier = "安装调试"
   post = "break"
   url = "/node2/"
 
@@ -30,7 +30,7 @@
   url = "/node4/"
 
 [[docs]]
-  name = "枫叶系统框架"
+  name = "系统框架"
   weight = 20
   identifier = "paradox-frame"
   post = "break"

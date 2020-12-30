@@ -1,6 +1,6 @@
 ---
-title : "手机APP(Insite Gold)说明书"
-linktitle: 手机APP(Insite Gold)说明书
+title : "安装设置-手机APP(Insite Gold)"
+linktitle: 安装设置-手机APP(Insite Gold)
 description: 枫叶APP（Insite Gold）的安装调试和使用说明
 date: 2017-02-01
 publishdate: 2017-02-01
@@ -8,8 +8,8 @@ lastmod: 2017-02-01
 keywords: [ssg,static,performance,security]
 menu:
   docs:
-    parent: "安装和维护"
-    weight: 13
+    parent: "安装调试"
+    weight: 15
 weight: 30
 sections_weight: 30
 draft: false
