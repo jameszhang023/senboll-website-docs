@@ -25,7 +25,7 @@ toc: true
 TM70触摸屏操作键盘:
 ![TM70操作键盘](images/tm70-white-poster.png)
 
-## 功能
+## 功能参数
 
 - 7英寸生动的彩色显示屏
 - 内置防区输入

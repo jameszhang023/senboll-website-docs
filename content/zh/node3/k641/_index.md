@@ -25,7 +25,7 @@ toc: true
 k641操作键盘:
 ![k641操作键盘](images/keypad-k641+-english-thumbnail.png)
 
-## 功能
+## 功能参数
 
 - 美观大方的3D弧面设计
 - 防区警报显示：锁定显示警报中的防区，直到系统撤防为止

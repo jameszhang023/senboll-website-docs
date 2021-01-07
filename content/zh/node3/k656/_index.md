@@ -25,7 +25,7 @@ toc: true
 k656操作键盘:
 ![k656操作键盘](images/keypad-k656-thumbnail.png)
 
-## 功能
+## 功能参数
 
 - 带LED背光的触摸感应键
 - 流线型紧凑设计

@@ -24,7 +24,7 @@ toc: true
 
 ![k10v操作键盘](images/keypad-k10v-english-thumbnail.png)
 
-## 功能
+## 功能参数
 
 - 支持StayD模式
 - 10防区LED显示屏

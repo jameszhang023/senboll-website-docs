@@ -24,7 +24,7 @@ toc: true
 
 ![k32操作键盘](images/keypad-k32+-english-thumbnail.png)
 
-## 功能
+## 功能参数
 
 - 时尚的3D外观设计
 - 支持StayD安全模式
