@@ -1,6 +1,6 @@
 ---
-title : "高级功能-智能防区"
-linktitle: 高级功能-智能防区
+title : "高级功能 - 智能防区"
+linktitle: 高级功能 - 智能防区
 description: 本文讲述枫叶智能防区的使用和说明
 date: 2017-02-01
 publishdate: 2017-02-01

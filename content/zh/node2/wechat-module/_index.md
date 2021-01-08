@@ -1,6 +1,6 @@
 ---
-title : "安装设置-微信通知"
-linktitle: 安装设置-微信通知
+title : "安装设置 - 微信模块"
+linktitle: 安装设置 - 微信模块
 description: 通过对微信模块的安装调试，实现消息推送到用户手机微信上。
 date: 2020-08-10
 publishdate: 2020-08-10

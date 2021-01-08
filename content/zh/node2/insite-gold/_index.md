@@ -1,6 +1,6 @@
 ---
-title : "安装设置-手机APP(Insite Gold)"
-linktitle: 安装设置-手机APP(Insite Gold)
+title : "安装设置 - 手机APP(Insite Gold)"
+linktitle: 安装设置 - 手机APP(Insite Gold)
 description: 枫叶APP（Insite Gold）的安装调试和使用说明
 date: 2017-02-01
 publishdate: 2017-02-01

@@ -1,7 +1,7 @@
 ---
-title : "手机微信端使用说明"
-linktitle: 手机微信端使用说明
-description: 手机微信端使用说明
+title : "微信端使用说明"
+linktitle: 微信端使用说明
+description: 微信端使用说明
 date: 2020-08-10
 publishdate: 2020-08-10
 lastmod: 2020-08-10
@@ -9,7 +9,7 @@ keywords: [ssg,static,performance,security]
 menu:
   docs:
     parent: "用户指南"
-    weight: 19
+    weight: 3
 weight: 30
 sections_weight: 30
 draft: false
