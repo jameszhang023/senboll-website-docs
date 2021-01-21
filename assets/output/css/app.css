@@ -1329,7 +1329,7 @@ img { max-width: 100%; }
   }
 }
 @media screen and (min-width: 60em) {
-  .dn-l {              display: none; }
+  .dn-l {              display: none!important; }
   .di-l {              display: inline; }
   .db-l {              display: block; }
   .dib-l {             display: inline-block; }

@@ -166,7 +166,7 @@ h6:before {
     display: none;
 }
 #mobile-menu-logo {
-    display: block;    
+    display: flex;    
 }
 #mobile-menu-button[aria-hidden='true'] {
     display: none;

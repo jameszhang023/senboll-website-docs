@@ -1,24 +1,25 @@
 {{ $currentPage := . }}
 
 
-<div class="w-100 bg-primary-color-dark bb b--dark-gray">
-  <nav class="flex items-center justify-center z-999" style="margin-right: auto; margin-left: auto; max-width: 1600px;" role="navigation">
+<div class="w-100 shadow-1 z-999">
+  <nav class="flex z-999-" role="navigation">
   
-    <div class="flex items-center ph3 dn-lx dib-l w-80" >
-      <a href="https://www.senboll.com" class="flex items-center pv0 f4 tc w-10">
-        {{ partial "svg/senboll-logo.svg" (dict "size" "48px" ) }}
+    <div class="flex items-center ph3 dn-lx dib-l mr-auto" >
+      <a href="https://www.senboll.com" class="flex items-center pv0 f4 tc pr0 ph3">
+        {{ partial "svg/logo.svg" (dict "size" "36px" ) }}
       </a>
-      <ul class="list flex justify-between w-60-l">
+      <div class="ph3 f5 br b--moon-gray black">文档中心</div>
+      <ul class="list flex ">
         {{ range .Site.Menus.global }}
-          <li class="f5 dib tc" role="menuitem">
+          <li class="f5 dib tc pr4" role="menuitem">
               {{/* TODO: Create an "Global" active class to show which site one is currently at */}}
-            <a href="{{ .URL }}" class="dim link{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} light-silver{{ end }}">
+            <a href="{{ .URL }}" class="dim link{{ if $currentPage.IsMenuCurrent "global" . }} gray {{else}} mid-gray {{ end }}">
               {{ .Name }}
                 {{/* using ".Post" from the menu system to determine if we should show an icon for external links */}}
               {{ $post_status := printf "%s" .Post }}
               {{ if eq $post_status "external" }}
                 <span class="pl1">
-                  {{ partial "svg/link-ext.svg" (dict "size" "5") }}
+                  {{ partial "svg/link-ext.svg" (dict "size" "10") }}
                 </span>
               {{ end }}
             </a>
@@ -37,11 +38,15 @@
       {{end}}
     </div>  
   
-    <div id="nav-mobile" aria-expanded="false" class="dn-l w-100-l">
+    <div id="nav-mobile" aria-expanded="false" class="flex items-center-l dn-l w-100-l">
       {{- partial "nav-mobile.html" . -}}
     </div>
   
   </nav>
+
+  <div aria-expanded="false" id="mobile-menu" class="globalmenu mobilemenu pb2 dn w-100">
+    {{ partial "nav-links-global-mobile.html" . }}
+  </div>
 
 </div>
 

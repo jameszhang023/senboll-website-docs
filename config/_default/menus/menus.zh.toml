@@ -63,7 +63,7 @@
 #   url = "https://www.senboll.com/zh-hans/about"
 
 [[global]]
-  name = "首页"
+  name = "主页"
   weight = 1
   identifier = "docs"
   url = "/documentation/"

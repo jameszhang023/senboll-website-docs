@@ -1,12 +1,12 @@
 
-<div class="dn-l flex justify-between bg-primary-color-dark w-100 h-auto pv1">
+<div class="dn-l flex items-center justify-between w-100 h-auto pv1">
   <button id="mobile-menu-button" onclick="mobileMenuButtonOnclick()" aria-expanded="false" aria-hidden="false" 
-    class="querybtn dib dn-l f3 tc db pl3 pt1 white bg-transparent bn">
+    class="querybtn dib dn-l f4 tc db pl3 pt1- black bg-transparent bn">
   </button>
-  <a id="mobile-menu-logo" href="https://www.senboll.com" aria-hidden="false" class="link dib db dn-l tc v-mid w-80">
-        {{ partial "svg/senboll-logo.svg" (dict "size" "36px" "class" "v-mid") }}
+  <a id="mobile-menu-logo" href="https://www.senboll.com" aria-hidden="false" class="link dib db dn-l tc h-mid w-80- flex w-auto ph5-">
+        {{ partial "svg/logo.svg" (dict "size" "30px" "class" "v-mid") }}
   </a>
-<!-- 
+  <!-- 
   <div id="mobile-search-input" aria-hidden="true" class="db dib-ns pl3 w-90 pv2">
     {{if not .Site.Params.isDisableSearch}}
       {{- partial "site-search.html" . -}}
@@ -14,12 +14,9 @@
   </div> -->
 
   <button id="mobile-search-button" onclick="mobileSearchButtonOnclick()" aria-expanded="false" 
-    class="querybtn v-mid link dib dn-l f4 tr db pr3 pt1 white bg-transparent bn"></button>
+    class="querybtn v-mid link dib dn-l f4 tr db pr3 pt2 black bg-transparent bn">
+  </button>
   <!-- <button class="js-toggle flex-auto dib dn-l f6 tc db mt4-ns ph3 pv2 link white bg-primary-color-dark hover-bg-primary-color ba b--white-40 w-auto" data-target=".docsmenu">文档目录</button> -->
-</div>
-
-<div aria-expanded="false" id="mobile-menu" class="globalmenu mobilemenu pb2 dn bg-primary-color-dark w-auto">
-  {{ partial "nav-links-global-mobile.html" . }}
 </div>
 
 <!-- 

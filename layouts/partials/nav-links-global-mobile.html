@@ -5,7 +5,7 @@
   {{ range $menu }}
     <li  class="tl dib hover-bg-black w-100 bb b--mid-gray pv2">
         <div class="flex">
-            <a href="{{.URL}}" class="f6 link primary-color-light overflow hover-white db brand-font w-100 pv1 pl2 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
+            <a href="{{.URL}}" class="f6 link dark-gray overflow hover-white db brand-font w-100 pv1 pl2 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">
               {{ .Name }}
             </a>
             <!-- {{if eq .Name "文档中心"  }}

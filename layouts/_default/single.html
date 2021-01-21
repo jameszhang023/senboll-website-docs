@@ -3,19 +3,19 @@
   <div class="order-3 bg-white black db dn-l w-100 ">
       {{- partial "nav-links-docs-mobile.html" . -}}
   </div>
-  <article class="min-vh-100 w-100-l bg-white" style="margin-right: auto; margin-left: auto; max-width: 1600px;">
+  <article class="min-vh-100 w-100-l bg-white" style="margin-right: auto; margin-left: auto;">
 
     <div class="flex-l">
 
-      <div class="pb5 pb6-ns pt5-ns order-2 w-100 w-20-l ph5-m right-0-l dn db-l bg-near-white">
+      <div class="pb5 pb6-ns pt5-ns order-2 w-100 w-20-l ph5-m right-0-l dn db-l bg-near-white-" style="max-width: 320px; min-width: 320px;">
         {{- partial "toc.html" . -}}
       </div>
 
-      <div id="left-container" class="pb5 pb6-ns pt1 pt5-ns order-0 w-20-l dn db-l top-0 bg-near-white ph2 min-vh-100">
+      <div id="left-container" class="pb5 pb6-ns pt1 pt5-ns order-0 w-20-l dn db-l top-0 ph2 br b--light-gray" style="max-width: 320px; min-width: 320px;">
         {{ partial "nav-links-docs.html" . }}
       </div>
       
-      <div class="ph3 pb5 pb6-ns pt1 pt5-ns order-1 center w-100 w-60-l ph0 ph3-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns">
+      <div class="ph3 pb5 pb6-ns pt1 pt5-ns order-1 center- w-100 w-auto-l ph0 ph3-ns mid-gray nested-copy-line-height no-underline nested-links nested-img nested-copy-seperator nested-blockquote mt0-ns">
         <div class="documentation-copy center w-100">
           <div id="readout" class="fixed right-0 bottom-0">
           </div>
