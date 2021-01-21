@@ -1,14 +1,14 @@
 {{ $currentPage := . }}
 
 
-<div class="w-100 shadow-1 z-999">
-  <nav class="flex z-999-" role="navigation">
+<div class="w-100 shadow-1 sticky z-999 bg-white top-0">
+  <nav class="flex" role="navigation">
   
     <div class="flex items-center ph3 dn-lx dib-l mr-auto" >
       <a href="https://www.senboll.com" class="flex items-center pv0 f4 tc pr0 ph3">
         {{ partial "svg/logo.svg" (dict "size" "36px" ) }}
       </a>
-      <div class="ph3 f5 br b--moon-gray black">文档中心</div>
+      <div class="ph3 f5 b br b--moon-gray black">文档中心</div>
       <ul class="list flex ">
         {{ range .Site.Menus.global }}
           <li class="f5 dib tc pr4" role="menuitem">

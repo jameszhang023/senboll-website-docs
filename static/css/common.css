@@ -109,14 +109,19 @@ h6:before {
 }
 
 
-#mobile-menu-button[aria-expanded='true']::before {
-    font-family: "segmdl2";
-    content: "\E711";
+#mobile-menu-button[aria-expanded='true'] .menu-list-open {
+    display: none;
 }
-#mobile-menu-button::before {
-    font-family: "segmdl2";
-    content: "\E700";
+#mobile-menu-button[aria-expanded='true'] .menu-list-close {
+    display: block;
 }
+#mobile-menu-button[aria-expanded='false'] .menu-list-open {
+    display: block;
+}
+#mobile-menu-button[aria-expanded='false'] .menu-list-close {
+    display: none;
+}
+
 #mobile-submenu-button-docs[aria-expanded='true']::before {
     font-family: "segmdl2";
     content: "\E70E";

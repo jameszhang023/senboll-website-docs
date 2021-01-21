@@ -4,9 +4,9 @@
     {{ partial "nav-links-docs-mobile.html" .context }}
 </div>
 
-<div class="min-vh-100 w-100-l bg-white" style="margin-right: auto; margin-left: auto;">
+<div class="w-100-l bg-white" style="margin-right: auto; margin-left: auto; min-height: calc(100vh - 215px);">
   <div class="flex-l">
-    <div class="ph4 pb5 pb6-ns pt1 mt0 pt5-ns order-1 w-100 w-auto-l ph0 ph4-l">
+    <div class="ph4 pb5 pb6-ns pt1 mt0 pt4-ns order-1 w-100 w-auto-l ph0 ph4-l">
       <article class="w-100 nested-copy-line-height nested-links nested-img">
         <h1 class="primary-color-dark f2">
           {{ with $.context.Data.Singular }}{{ . | humanize }}: {{ end }}{{ .context.Title }}
@@ -28,7 +28,7 @@
       </div>
 
     </div>
-    <div class="ph2 pb5 pb6-ns pt1 pt5-ns order-0 w-20-l dn db-l top-0 pt5-ns br b--light-gray" style="max-width: 320px; min-width: 320px;">
+    <div class="ph2 pb5 pb6-ns pt1 pt4-ns order-0 w-20-l dn db-l top-0 br b--light-gray" style="max-width: 320px; min-width: 320px; position: sticky; top: 4rem; max-height: calc(100vh - 4rem);">
         {{ partial "nav-links-docs.html" .context }}
     </div>
   </div>
