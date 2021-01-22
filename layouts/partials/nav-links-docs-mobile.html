@@ -7,7 +7,7 @@
     <li  class="tl dib hover-bg-black w-100 pv1 mb2 ph2 ba br3 b--moon-gray">
         <div class="flex justify-between f5 pv1 ph1" 
           id="mobile-submenu-button-docs-page" onclick="mobileSubMenuButtonDocsPageOnclick()" aria-expanded="false" >
-          <a href="{{.URL}}" class="link dark-gray" >下拉查看所有文档</a>
+          <a class="link dark-gray" >下拉查看所有文档</a>
         </div>
         <ul id="mobile-submenu-docs-page" aria-expanded="false" class="list dib scrolling-touch tc pl4" style="max-height: calc(100vh - 64px); overflow-y: auto;">
           {{ range $menuDocs }}{{ $post := printf "%s" .Post }}
