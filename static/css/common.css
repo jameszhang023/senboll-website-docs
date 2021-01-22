@@ -158,7 +158,7 @@ h6:before {
 }
 #mobile-search-button::before {
     font-family: "segmdl2";
-    content: "\E721";
+    content: "\E71E";
 }
 #mobile-search-button[aria-hidden='true'] {
     display: none;

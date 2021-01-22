@@ -1,6 +1,6 @@
 {{ $section_to_display := .section_to_display  }}
 
-<div class="bg-white black db dn-l w-100 ">
+<div class="bg-white black db dn-l w-100 sticky top-0 z-998">
     {{ partial "nav-links-docs-mobile.html" .context }}
 </div>
 
@@ -28,7 +28,7 @@
       </div>
 
     </div>
-    <div class="ph2 pb5 pb6-ns pt1 pt4-ns order-0 w-20-l dn db-l top-0 br b--light-gray" style="max-width: 320px; min-width: 320px; position: sticky; top: 4rem; max-height: calc(100vh - 4rem);">
+    <div class="ph2 pb5 pb6-ns pt1 pt4-ns order-0 w-20-l dn db-l top-0 br b--light-gray" style="max-width: 320px; min-width: 320px; position: sticky; top: 0rem; max-height: calc(100vh - 2rem);">
         {{ partial "nav-links-docs.html" .context }}
     </div>
   </div>
