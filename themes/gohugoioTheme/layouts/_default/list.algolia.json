@@ -1,19 +1,20 @@
 
-[{{- range $index, $page := .Site.Pages -}}
-  {{ if ne $page.Type "json" }}
+[{{- range $index, $page := .Site.Pages -}} 
+
+  {{ if and (ne $page.Type "json") (ne $page.Parent nil)}}
     {{$page_content := replaceRE "(<h)(.|\n)*?" "<end>$1" $page.Content}}
     {{$page_content := replaceRE "(^.*?)" "<h id=\"null\">$1" $page_content}}
     {{$page_content := replaceRE "(.*?)($)" "$2<end>" $page_content}}
 
-    {{- range $index, $html :=  findRE "<h(.|\n)*?<end>" $page_content -}}  
+    {{- range $index, $html := findRE "<h(.|\n)*?<end>" $page_content -}}  
       {{ $html_id := findRE "id=(.|\n)*?>" . }} 
       {{ $html_id_f := delimit $html_id "" ""}}
       {{ $html_id_f := replace $html_id_f "id=\"" "#"}}
       {{ $html_id_f := replace $html_id_f "\">" ""}}
 
       {{ if eq $html_id_f "#null" }}
-        {{ $html_id_f := ""}}  
-        {{- range $index, $html :=  findRE "<p(.|\n)*?</p>" . -}}        
+        {{ $html_id_f := ""}} 
+        {{- range $index, $html := findRE "<p(.|\n)*?</p>" . -}}        
           {{ $content := . | plainify }}
           {      
             "objectID": "{{ md5 . }}",
@@ -21,7 +22,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_id_f }}",
               "lvl3": "",
@@ -39,7 +40,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_id_f }}",
               "lvl3": "",
@@ -57,7 +58,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_id_f }}",
               "lvl3": "",
@@ -77,7 +78,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_no_id_f }}",
               "lvl3": "",
@@ -95,7 +96,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_no_id_f }}",
               "lvl3": "",
@@ -113,7 +114,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_no_id_f }}",
               "lvl3": "",
@@ -131,7 +132,7 @@
             "title": "{{ htmlEscape $page.Title}}",
             "content": {{ $content | jsonify }},
             "hierarchy": { 
-              "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+              "lvl0": "{{ $page.Parent.Title }}",
               "lvl1": "{{ htmlEscape $page.Title}}",
               "lvl2": "{{ $html_no_id_f }}",
               "lvl3": "",
@@ -151,7 +152,7 @@
         "title": "{{ htmlEscape $page.Title}}",
         "content": {{ $content | jsonify }},
         "hierarchy": { 
-          "lvl0": "{{ htmlEscape $page.Parent.Title }}",
+          "lvl0": "{{ $page.Parent.Title }}",
           "lvl1": "{{ htmlEscape $page.Title}}",
           "lvl2": "",
           "lvl3": "",

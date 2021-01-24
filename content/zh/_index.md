@@ -1,68 +1,36 @@
 ---
-
-title : "首页"
-date: 2017-03-02T12:00:00-05:00
-sections:
-  - heading: "一站式安防解决方案"
-    cta: 
-    link: http://www.senboll.com
-    color_classes: bg-primary-color-light black
-    image: images/homepage-insitegold-pc.png
-    copy: "集成了报警，视频复核，门禁控制和自动化控制功能，是报警系统、监控系统、门禁系统和智能家居控制的“一站式”解决方案"
-
-  - heading: "个性化，模块化设计，方案灵活多变"
-    cta: 
-    link: 
-    color_classes: bg-accent-color-dark light-gray
-    image: images/homepage-allproducts-pc.png
-    copy: "枫叶提供的报警，门禁，视频和智能控制一体化解决方案，功能高度模块化，这样能对于配置方案更加灵活，系统更加稳定，成本也得到很好的控制"
-
-scenario:
-  - heading: 联网报警
-    cta: 
-    link: 
-    color_classes: bg-light-blue black
-    image: images/cms.jpg
-    copy: 联网报警运营服务，从前端到后端一整套解决方案
-
-  - heading: 银行，金库，厂矿，酒店等
-    cta: 
-    link: 
-    color_classes: bg-light-green black
-    image: images/bank.jpg
-    copy: 金融场所对安防系统有较高的要求，枫叶在金融领域的案例有很多，也积累了很多金融安防的经验。
-
-  - heading: 办公场所、居家住宅
-    cta: 
-    link: 
-    color_classes: bg-primary-color-light black
-    image: images/house.jpg
-    copy: 在欧美发达国家，民用安防系统基本上是标配，中国正处在快速的发展期，对于安防的需要日益增多，未来的前景会越来越好
-
-  - heading: 医院、学校、养老院
-    cta: 
-    link: 
-    color_classes: bg-accent-color-dark light-gray
-    image: images/school.jpg
-    copy: 为医院、学校和养老院定制的一键求助紧急报警解决方案，目前在国内有大量的应用案例
-
-  - heading: 名胜景点、文物单位、博物馆
-    cta: 
-    link: 
-    color_classes: bg-gray moon-gray
-    image: images/history.jpg
-    copy: 文物对安防系统有较高的要求，我们为文博行业专门定制了全套解决方案，包括前端设备和软件平台
-
-  - heading: 部队，公安，拘留所或监狱
-    cta: 
-    link: 
-    color_classes: bg-blue moon-gray
-    image: images/police.jpg
-    copy: 为防越狱，紧急求助报警，门禁控制视频监控提供一体化解决方案，提供高安全性和可靠性保障
-
-features:
-  - heading: 
-    image_path: /images/icon-fast.svg
-    tagline: 
-    copy: 
+title: 文档中心
+linktitle: 文档中心
+description: 中国10大安防品牌枫叶安防的文档帮助系统，提供安装者和用户的在线帮助文档，实时更新。
+date: 2017-02-01
+publishdate: 2017-02-01
+menu:
+  main:
+    parent: "section name"
+    weight: 02
+weight: 02	#rem
+draft: false
+slug:
+aliases: []
+toc: false
+layout: documentation-home
 ---
+
+{{< read-more >}}
+企业运作多年，但能留下来的东西非常有限，许多事情都是一遍遍重做，许多错误也是一遍遍重犯。没有核心的运作体系，许多业务开展是走野路子，大多时候在救火，效率非常低，很容易随意的否认昨天的做法。同样的一个业务问题，需要解答很多遍；有好的案例，但全放在PPT中、邮件中；这个事情三年前就做过了，今天他们才开始做；这个PPT五年前的，作者也离职了。
+
+想帮助同事或客户快速成长，除了培训讲课，有没有更好的方式？
+{{< /read-more >}}
+
+这就是我们建站的目的，这里收集了**实时、全面、准确和权威**的资料，希望能更有效率地寻找和学习到更多的知识，解决实际问题，能够提高个人技能，减少重复劳动，节省作业时间，提高沟通和协作的效率。
+
+本站会动态更新，恕不另行通知，感谢各位合作伙伴的支持，如果有好的意见和建议，请联系我们。
+
+{{< tip >}}
+
+- 为了适应移动用户，本站除了支持PC，在移动端采用响应式布局，让阅读更加便捷；
+- 本站采用国际知名的搜索引擎[Algolia](https://www.algolia.com/)，快速得到搜索结果，只需输入关键字，将会实时返回搜索结果；
+- 文章中图片如果看不清，请单击图片，将全屏显示图片，再次单击将恢复，在移动端支持手势缩放；
+- 每一篇文档都有内容索引，能更加快速的检索内容；
+- 文章内标题支持超链接，在移动端长按超链接符号获取链接，在PC端右击获取链接，让转发分享更加便利。
+{{< /tip >}}
