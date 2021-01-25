@@ -70,7 +70,7 @@
 
 {{ if .IsNamedParams }}
 
-  <video class="video-js vjs-big-play-centered" controls preload="auto" poster="{{ or (.Get "poster") $poster.RelPermalink }}" data-setup="{}">
+  <video class="video-js vjs-big-play-centered mv2 br2 shadow-1" controls preload="auto" poster="{{ or (.Get "poster") $poster.RelPermalink }}" data-setup="{}">
     <source src="{{ .Get "mp4" }}" type="video/mp4"></source>
     <source src="{{ .Get "webm" }}" type="video/webm"></source>
     <source src="{{ .Get "ogv" }}" type=video/ogg></source>
@@ -78,7 +78,7 @@
 
 {{ else }}
 
-  <video class="video-js vjs-big-play-centered" controls preload="auto" poster="" data-setup="{}">
+  <video class="video-js vjs-big-play-centered mv2 br2 shadow-1" controls preload="auto" poster="" data-setup="{}">
     <source src="{{ .Get 0 }}" type="video/mp4"></source>
     <source src="{{ .Get 1 }}" type="video/webm"></source>
     <source src="{{ .Get 2 }}" type="video/ogg"></source>
