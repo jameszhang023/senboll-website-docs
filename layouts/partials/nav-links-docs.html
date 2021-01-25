@@ -29,7 +29,7 @@
   </ul>
 </nav id="left-container">  */}}
 
-<nav id="left-container-" class="jquery-accordion-menu white navbar-collapse collapse" role="navigation">
+<nav id="left-container-" class="jquery-accordion-menu white navbar-collapse collapse" style="max-height: calc(100vh - 120px); overflow-y: auto;" role="navigation">
   <ul class="submenu">
     {{ range .Site.Menus.docs.ByWeight }}
       {{ $post := printf "%s" .Post }}
