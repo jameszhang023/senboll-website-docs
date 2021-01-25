@@ -1,5 +1,4 @@
-baseurl = "http://support.senboll.com:8888/help"
-# baseurl = "https://jameszhang023.github.io/"
+baseURL = "http://support.senboll.com:8888/help"
 languageCode = "zh-CN"
 defaultContentLanguage = "en"
 
