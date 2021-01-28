@@ -23,11 +23,11 @@
                   {{- if .HasChildren }}
                   <ul class="list dib scrolling-touch tc">
                     {{- range .Children }}
-                      {{ if eq .URL "/help/node1/" }}
-                      {{ else if eq .URL "/help/node2/" }}
-                      {{ else if eq .URL "/help/node3/" }}
-                      {{ else if eq .URL "/help/node4/" }}
-                      {{ else if eq .URL "/help/node9/" }}
+                      {{ if eq .URL "/docs/node1/" }}
+                      {{ else if eq .URL "/docs/node2/" }}
+                      {{ else if eq .URL "/docs/node3/" }}
+                      {{ else if eq .URL "/docs/node4/" }}
+                      {{ else if eq .URL "/docs/node9/" }}
                       {{ else }}
                         <li class="tl dib hover-bg-black w-100 pl3">
                           <a href="{{ .URL }}" class="f7 link primary-color-light  hover-white db brand-font mb0 w-100 pv0 {{if $currentPage.IsMenuCurrent "main" . }} bg-primary-color{{end}}">

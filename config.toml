@@ -1,4 +1,4 @@
-baseURL = "http://support.senboll.com:8888/help"
+baseURL = "http://support.senboll.com:8888/docs"
 languageCode = "zh-CN"
 defaultContentLanguage = "en"
 

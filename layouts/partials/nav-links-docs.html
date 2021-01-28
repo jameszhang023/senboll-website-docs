@@ -9,11 +9,11 @@
         {{- if .HasChildren }}
         <ul class="{{ .Identifier }} desktopmenu animated list nl4 {{if $currentPage.HasMenuCurrent "docs" . }} db{{ else }} dn{{ end }}">
           {{- range .Children }}
-            {{ if eq .URL "/help/node1/" }}
-            {{ else if eq .URL "/help/node2/" }}
-            {{ else if eq .URL "/help/node3/" }}
-            {{ else if eq .URL "/help/node4/" }}
-            {{ else if eq .URL "/help/node9/" }}
+            {{ if eq .URL "/docs/node1/" }}
+            {{ else if eq .URL "/docs/node2/" }}
+            {{ else if eq .URL "/docs/node3/" }}
+            {{ else if eq .URL "/docs/node4/" }}
+            {{ else if eq .URL "/docs/node9/" }}
             {{ else }}
               <li class="f6 fw4">
                 <a href="{{ .URL }}" class="db link hover-bg-gray hover-white pl3 pr2 pv1 {{if $currentPage.IsMenuCurrent "docs" . }}primary-color {{ else }}black {{end}}">
@@ -38,11 +38,11 @@
         {{- if .HasChildren }}
         <ul class="submenu">
           {{- range .Children }}
-            {{ if eq .URL "/help/node1/" }}
-            {{ else if eq .URL "/help/node2/" }}
-            {{ else if eq .URL "/help/node3/" }}
-            {{ else if eq .URL "/help/node4/" }}
-            {{ else if eq .URL "/help/node9/" }}
+            {{ if eq .URL "/docs/node1/" }}
+            {{ else if eq .URL "/docs/node2/" }}
+            {{ else if eq .URL "/docs/node3/" }}
+            {{ else if eq .URL "/docs/node4/" }}
+            {{ else if eq .URL "/docs/node9/" }}
             {{ else }}
               <li class="f6 fw4">
                 <a href="{{ .URL }}" class="pv1">
