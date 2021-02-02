@@ -92,7 +92,7 @@ toc: true
 
 防区分为有线防区和无线防区，其中有线防区分为板载防区和扩展防区，板载防区是主机板自带的防区，扩展防区是其他模块上的防区。下面演示一下编程方法：
 
-**提示：防区类型的概念参考请点[防区类型说明](../../node1/important-knowledge/#防区（Zone）)。**
+**提示：防区类型的概念参考请点[防区类型说明](../../node1/important-knowledge/#防区zone)。**
 
 板载防区编程方法：
 ![板载防区编程](images/babyware-programing-wire-zone-1.gif)
