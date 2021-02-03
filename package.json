@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/hugo-algolia/-/hugo-algolia-1.2.14.tgz",
   "_shasum": "00ee21884d7da387e2e42a7b275d80a241fe1ece",
   "_spec": "hugo-algolia",
-  "_where": "D:\\Devlop\\WebSite\\senboll-support-website",
+  "_where": "D:\\develop\\website\\senboll-website-docs",
   "author": {
     "name": "Sloane Smith",
     "email": "s10dimensional@gmail.com"
@@ -36,7 +36,7 @@
   "bundleDependencies": false,
   "dependencies": {
     "algoliasearch": "^3.24.1",
-    "atomic-algolia": "^0.3.17",
+    "atomic-algolia": "^0.3.19",
     "bytes": "^3.0.0",
     "commander": "^2.11.0",
     "glob": "^7.1.2",
